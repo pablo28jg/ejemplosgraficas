@@ -1,0 +1,7 @@
+parameters:
+#    mastercel_chart.example.class: Mastercel\ChartBundle\Example
+
+services:
+#    mastercel_chart.example:
+#        class: %mastercel_chart.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

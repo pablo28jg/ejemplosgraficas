@@ -1,0 +1,4 @@
+mastercel_chart:
+    resource: "@MastercelChartBundle/Resources/config/routing.yml"
+    prefix:   /
+
