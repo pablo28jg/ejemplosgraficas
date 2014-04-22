@@ -1,0 +1,66 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Impuestosgruposdetalles
+ *
+ * @ORM\Table(name="ImpuestosGruposDetalles", indexes={@ORM\Index(name="Indice_1", columns={"NumRegionImpuesto_id"}), @ORM\Index(name="Indice_2", columns={"NumClaseImpuesto_id"}), @ORM\Index(name="Indice_3", columns={"NumImpuesto_id"})})
+ * @ORM\Entity
+ */
+class Impuestosgruposdetalles
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGrupoImpuesto_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numgrupoimpuestoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumRegionImpuesto_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numregionimpuestoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClaseImpuesto_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numclaseimpuestoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImpuesto_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numimpuestoId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteEfectiva", type="datetime", nullable=true)
+     */
+    private $dteefectiva;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteExpiracion", type="datetime", nullable=true)
+     */
+    private $dteexpiracion;
+
+
+}

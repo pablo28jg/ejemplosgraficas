@@ -1,0 +1,473 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Articulos
+ *
+ * @ORM\Table(name="Articulos", indexes={@ORM\Index(name="Indice_1", columns={"StrDescripcion"}), @ORM\Index(name="Indice_10", columns={"StrModelo_ky", "StrArticulo_ky"}), @ORM\Index(name="Indice_11", columns={"NumEstadoComunicacion"}), @ORM\Index(name="Indice_2", columns={"NumFamilia_id"}), @ORM\Index(name="Indice_3", columns={"NumTemporada_id"}), @ORM\Index(name="Indice_4", columns={"StrModelo_ky", "NumColor_id", "NumLargo_id", "NumTalla_id"}), @ORM\Index(name="Indice_5", columns={"StrModelo_ky", "NumTalla_id", "NumLargo_id", "NumColor_id"}), @ORM\Index(name="Indice_7", columns={"DteActualizacion"}), @ORM\Index(name="Indice_8", columns={"NumMarca_id"}), @ORM\Index(name="Indice_9", columns={"NumTipoSurtido"}), @ORM\Index(name="Indice_12", columns={"StrCuentaInventario_ky"}), @ORM\Index(name="Indice_13", columns={"StrCuentaIngreso_ky"}), @ORM\Index(name="Indice_14", columns={"StrCuentaCostoVenta_ky"}), @ORM\Index(name="Indice_15", columns={"StrCuentaDevolucionVenta_ky"})})
+ * @ORM\Entity
+ */
+class Articulos
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticulo_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $strarticuloKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=100, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumFamilia_id", type="integer", nullable=true)
+     */
+    private $numfamiliaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipo", type="integer", nullable=true)
+     */
+    private $numtipo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCoordinado_id", type="integer", nullable=true)
+     */
+    private $numcoordinadoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMarca_id", type="integer", nullable=true)
+     */
+    private $nummarcaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrModeloProducto", type="string", length=20, nullable=true)
+     */
+    private $strmodeloproducto;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNumeroParte", type="string", length=20, nullable=true)
+     */
+    private $strnumeroparte;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTemporada_id", type="integer", nullable=true)
+     */
+    private $numtemporadaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGrupoEtiqueta_id", type="integer", nullable=true)
+     */
+    private $numgrupoetiquetaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCodigoBarra_id", type="integer", nullable=true)
+     */
+    private $numcodigobarraId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCuerpo_id", type="integer", nullable=true)
+     */
+    private $numcuerpoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumUnidadMedida_id", type="integer", nullable=true)
+     */
+    private $numunidadmedidaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoInventario", type="integer", nullable=true)
+     */
+    private $numtipoinventario = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogControlPedimentos", type="boolean", nullable=true)
+     */
+    private $logcontrolpedimentos = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogControlLotes", type="boolean", nullable=true)
+     */
+    private $logcontrollotes = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogControlSeries", type="boolean", nullable=true)
+     */
+    private $logcontrolseries = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMesesGarantia", type="integer", nullable=true)
+     */
+    private $nummesesgarantia = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticuloRelacionado_ky", type="string", length=20, nullable=true)
+     */
+    private $strarticulorelacionadoKy;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogRelacionarArticuloVenta", type="boolean", nullable=true)
+     */
+    private $logrelacionararticuloventa = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogPagaComisionSerie", type="boolean", nullable=true)
+     */
+    private $logpagacomisionserie = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogSolicitarReferenciaVenta", type="boolean", nullable=true)
+     */
+    private $logsolicitarreferenciaventa = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogSolicitarDescripcionVenta", type="boolean", nullable=true)
+     */
+    private $logsolicitardescripcionventa = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogSolicitarPrecioVenta", type="boolean", nullable=true)
+     */
+    private $logsolicitarprecioventa = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConteoCiclico_id", type="integer", nullable=true)
+     */
+    private $numconteociclicoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGrupoImpuesto_id", type="integer", nullable=true)
+     */
+    private $numgrupoimpuestoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClaseImpuesto_id", type="integer", nullable=true)
+     */
+    private $numclaseimpuestoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGrupoFiscal_id", type="integer", nullable=true)
+     */
+    private $numgrupofiscalId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoSurtido", type="integer", nullable=true)
+     */
+    private $numtiposurtido = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCaracteristica_id", type="integer", nullable=true)
+     */
+    private $numcaracteristicaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrListaMaterial_ky", type="string", length=20, nullable=true)
+     */
+    private $strlistamaterialKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoPaquete", type="integer", nullable=true)
+     */
+    private $numtipopaquete = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumListaPrecio_id", type="integer", nullable=true)
+     */
+    private $numlistaprecioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAtributoModelo_id", type="integer", nullable=true)
+     */
+    private $numatributomodeloId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrModelo_ky", type="string", length=20, nullable=true)
+     */
+    private $strmodeloKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumColor_id", type="integer", nullable=true)
+     */
+    private $numcolorId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLargo_id", type="integer", nullable=true)
+     */
+    private $numlargoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTalla_id", type="integer", nullable=true)
+     */
+    private $numtallaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPaisOrigen_id", type="integer", nullable=true)
+     */
+    private $numpaisorigenId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemComposicion", type="text", length=16, nullable=true)
+     */
+    private $memcomposicion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemLavado", type="text", length=16, nullable=true)
+     */
+    private $memlavado;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogPesable", type="boolean", nullable=true)
+     */
+    private $logpesable = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTara", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtara = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPeso", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numpeso = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumAncho", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numancho = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumAlto", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numalto = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFondo", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfondo = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumVolumen", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvolumen = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImagen_id", type="integer", nullable=true)
+     */
+    private $numimagenId = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogMostrarImagenVenta", type="boolean", nullable=true)
+     */
+    private $logmostrarimagenventa = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuentaInventario_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuentainventarioKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuentaIngreso_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuentaingresoKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuentaCostoVenta_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuentacostoventaKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_1_id", type="integer", nullable=true)
+     */
+    private $numclasificacion1Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_2_id", type="integer", nullable=true)
+     */
+    private $numclasificacion2Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_3_id", type="integer", nullable=true)
+     */
+    private $numclasificacion3Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_4_id", type="integer", nullable=true)
+     */
+    private $numclasificacion4Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuentaActivoGasto_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuentaactivogastoKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuentaDevolucionVenta_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuentadevolucionventaKy;
+
+
+}

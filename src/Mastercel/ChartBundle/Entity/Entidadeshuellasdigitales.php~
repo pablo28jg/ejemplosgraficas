@@ -1,0 +1,62 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Entidadeshuellasdigitales
+ *
+ * @ORM\Table(name="EntidadesHuellasDigitales")
+ * @ORM\Entity
+ */
+class Entidadeshuellasdigitales
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEntidad_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numentidadId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoDedo", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtipodedo = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ObjHuellaDigital", type="text", length=16, nullable=true)
+     */
+    private $objhuelladigital;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLongitud", type="integer", nullable=true)
+     */
+    private $numlongitud = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+
+}

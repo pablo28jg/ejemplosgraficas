@@ -1,0 +1,76 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tablasindices
+ *
+ * @ORM\Table(name="TablasIndices", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_1", columns={"NumTabla_id", "StrIndice_ky"})})
+ * @ORM\Entity
+ */
+class Tablasindices
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTabla_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtablaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumIndice_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numindiceId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrIndice_ky", type="string", length=30, nullable=true)
+     */
+    private $strindiceKy;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogExpresion", type="boolean", nullable=true)
+     */
+    private $logexpresion = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogLlavePrimaria", type="boolean", nullable=true)
+     */
+    private $logllaveprimaria = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogLlaveUnica", type="boolean", nullable=true)
+     */
+    private $logllaveunica = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogOrdenDescendente", type="boolean", nullable=true)
+     */
+    private $logordendescendente = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogSensibleLetras", type="boolean", nullable=true)
+     */
+    private $logsensibleletras = '0';
+
+
+}

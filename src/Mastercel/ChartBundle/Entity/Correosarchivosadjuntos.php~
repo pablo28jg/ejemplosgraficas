@@ -1,0 +1,76 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Correosarchivosadjuntos
+ *
+ * @ORM\Table(name="CorreosArchivosAdjuntos")
+ * @ORM\Entity
+ */
+class Correosarchivosadjuntos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMensajeCorreo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $nummensajecorreoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumArchivoAdjunto_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numarchivoadjuntoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreArchivo", type="string", length=260, nullable=true)
+     */
+    private $strnombrearchivo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTamanoArchivo", type="integer", nullable=true)
+     */
+    private $numtamanoarchivo = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ImgArchivoAdjunto", type="text", length=16, nullable=true)
+     */
+    private $imgarchivoadjunto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

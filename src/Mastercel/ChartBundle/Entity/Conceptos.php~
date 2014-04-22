@@ -1,0 +1,235 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Conceptos
+ *
+ * @ORM\Table(name="Conceptos", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_1", columns={"NumTipoModulo", "StrConcepto_ky"})}, indexes={@ORM\Index(name="Indice_2", columns={"StrDescripcion"}), @ORM\Index(name="Indice_3", columns={"StrAbreviacion"}), @ORM\Index(name="Indice_4", columns={"NumTipoMovimientoInventario", "StrDescripcion"}), @ORM\Index(name="Indice_5", columns={"DteActualizacion"}), @ORM\Index(name="Indice_6", columns={"NumEstadoComunicacion"}), @ORM\Index(name="Indice_7", columns={"StrCuentaContable_ky"})})
+ * @ORM\Entity
+ */
+class Conceptos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConcepto_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numconceptoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrConcepto_ky", type="string", length=10, nullable=true)
+     */
+    private $strconceptoKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrAbreviacion", type="string", length=5, nullable=true)
+     */
+    private $strabreviacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTransaccion", type="integer", nullable=true)
+     */
+    private $numtipotransaccion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEntidad", type="integer", nullable=true)
+     */
+    private $numtipoentidad = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoNaturalezaCuenta", type="integer", nullable=true)
+     */
+    private $numtiponaturalezacuenta = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoNaturalezaBanco", type="integer", nullable=true)
+     */
+    private $numtiponaturalezabanco = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoMovimientoCuenta", type="integer", nullable=true)
+     */
+    private $numtipomovimientocuenta = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoMovimientoBanco", type="integer", nullable=true)
+     */
+    private $numtipomovimientobanco = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoMovimientoInventario", type="integer", nullable=true)
+     */
+    private $numtipomovimientoinventario = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoAfectacion", type="integer", nullable=true)
+     */
+    private $numtipoafectacion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoControlRegistro", type="integer", nullable=true)
+     */
+    private $numtipocontrolregistro = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoModulo", type="integer", nullable=true)
+     */
+    private $numtipomodulo = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogMovimientoInterno", type="boolean", nullable=true)
+     */
+    private $logmovimientointerno = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConceptoGenerar_id", type="integer", nullable=true)
+     */
+    private $numconceptogenerarId = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogAfectaCuentaCobrar", type="boolean", nullable=true)
+     */
+    private $logafectacuentacobrar = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogAfectaCuentaPagar", type="boolean", nullable=true)
+     */
+    private $logafectacuentapagar = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogAfectaBanco", type="boolean", nullable=true)
+     */
+    private $logafectabanco = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogAfectaInventario", type="boolean", nullable=true)
+     */
+    private $logafectainventario = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuentaContable_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuentacontableKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumFolio_id", type="integer", nullable=true)
+     */
+    private $numfolioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDiario_id", type="integer", nullable=true)
+     */
+    private $numdiarioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGrupoImpuesto_id", type="integer", nullable=true)
+     */
+    private $numgrupoimpuestoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoDocumento", type="integer", nullable=true)
+     */
+    private $numtipodocumento = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumFlujoTrabajo_id", type="integer", nullable=true)
+     */
+    private $numflujotrabajoId = '0';
+
+
+}

@@ -1,0 +1,88 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Parametros
+ *
+ * @ORM\Table(name="Parametros", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_1", columns={"StrParametro_ky"})}, indexes={@ORM\Index(name="Indice_2", columns={"DteActualizacion"}), @ORM\Index(name="Indice_3", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Parametros
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumParametro_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numparametroId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrParametro_ky", type="string", length=20, nullable=true)
+     */
+    private $strparametroKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreTabla", type="string", length=60, nullable=true)
+     */
+    private $strnombretabla;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArchivoAyuda", type="string", length=30, nullable=true)
+     */
+    private $strarchivoayuda;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumContextoAyuda", type="integer", nullable=true)
+     */
+    private $numcontextoayuda = '0';
+
+
+}

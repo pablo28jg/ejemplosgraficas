@@ -1,0 +1,64 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Perfilesdetalle
+ *
+ * @ORM\Table(name="PerfilesDetalle")
+ * @ORM\Entity
+ */
+class Perfilesdetalle
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPerfil_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numperfilId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumModulo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $nummoduloId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOpcion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numopcionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAcceso", type="integer", nullable=true)
+     */
+    private $numacceso = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAccesoAtributo", type="integer", nullable=true)
+     */
+    private $numaccesoatributo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumContrasenaAlta", type="integer", nullable=true)
+     */
+    private $numcontrasenaalta = '0';
+
+
+}

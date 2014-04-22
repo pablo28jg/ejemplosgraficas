@@ -1,0 +1,46 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Caracteristicasgeneralesdetalles
+ *
+ * @ORM\Table(name="CaracteristicasGeneralesDetalles", indexes={@ORM\Index(name="Indice_1", columns={"NumCaracteristica_id", "StrDescripcion"}), @ORM\Index(name="Indice_2", columns={"NumCaracteristica_id", "StrOpcion"})})
+ * @ORM\Entity
+ */
+class Caracteristicasgeneralesdetalles
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCaracteristicaGeneral_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numcaracteristicageneralId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCaracteristica_id", type="integer", nullable=true)
+     */
+    private $numcaracteristicaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=100, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrOpcion", type="string", length=100, nullable=true)
+     */
+    private $stropcion;
+
+
+}

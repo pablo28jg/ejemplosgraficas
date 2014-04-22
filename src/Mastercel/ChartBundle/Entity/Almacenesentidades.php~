@@ -1,0 +1,55 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Almacenesentidades
+ *
+ * @ORM\Table(name="AlmacenesEntidades", indexes={@ORM\Index(name="Indice_1", columns={"NumEntidad_id", "NumAlmacen_id"})})
+ * @ORM\Entity
+ */
+class Almacenesentidades
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEntidad_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numentidadId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

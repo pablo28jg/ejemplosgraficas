@@ -1,0 +1,158 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Entidadesvendedores
+ *
+ * @ORM\Table(name="EntidadesVendedores", indexes={@ORM\Index(name="Indice_3", columns={"DteActualizacion"}), @ORM\Index(name="Indice_4", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Entidadesvendedores
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEntidad_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numentidadId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipo", type="integer", nullable=true)
+     */
+    private $numtipo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=true)
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogMostrarPuntoVenta", type="boolean", nullable=true)
+     */
+    private $logmostrarpuntoventa = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogRecibeComision", type="boolean", nullable=true)
+     */
+    private $logrecibecomision = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGrupoComisionVenta_id", type="integer", nullable=true)
+     */
+    private $numgrupocomisionventaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivelComision_id", type="integer", nullable=true)
+     */
+    private $numnivelcomisionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoFormaPagoComision", type="integer", nullable=true)
+     */
+    private $numtipoformapagocomision = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoPagoComision", type="integer", nullable=true)
+     */
+    private $numtipopagocomision = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPoliticaComision_id", type="integer", nullable=true)
+     */
+    private $numpoliticacomisionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumContrasena", type="integer", nullable=true)
+     */
+    private $numcontrasena = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemObservaciones", type="text", length=16, nullable=true)
+     */
+    private $memobservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivelAutorizacion", type="integer", nullable=true)
+     */
+    private $numnivelautorizacion = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogRegistrarComoCajero", type="boolean", nullable=true)
+     */
+    private $logregistrarcomocajero = '0';
+
+
+}

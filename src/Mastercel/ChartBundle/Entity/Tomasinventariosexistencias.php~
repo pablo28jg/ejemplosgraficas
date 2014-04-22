@@ -1,0 +1,168 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tomasinventariosexistencias
+ *
+ * @ORM\Table(name="TomasInventariosExistencias", indexes={@ORM\Index(name="Indice_1", columns={"NumAlmacen_id", "StrArticulo_ky", "StrPedimento_ky", "StrLote_ky", "StrSerie_ky"})})
+ * @ORM\Entity
+ */
+class Tomasinventariosexistencias
+{
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteInventario", type="datetime", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $dteinventario;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticulo_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strarticuloKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrPedimento_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strpedimentoKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrLote_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strloteKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrSerie_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strserieKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumUnidadMedida_id", type="integer", nullable=true)
+     */
+    private $numunidadmedidaId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorConversion", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactorconversion = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidadRegistro", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidadregistro = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidadInventario", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidadinventario = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMoneda_id", type="integer", nullable=true)
+     */
+    private $nummonedaId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTipoCambio", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtipocambio = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPrecioVenta", type="integer", nullable=true)
+     */
+    private $numprecioventa = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumProveedor_id", type="integer", nullable=true)
+     */
+    private $numproveedorId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoCompra", type="integer", nullable=true)
+     */
+    private $numcostocompra = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoEstandar", type="integer", nullable=true)
+     */
+    private $numcostoestandar = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoPromedio", type="integer", nullable=true)
+     */
+    private $numcostopromedio = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoPEPS", type="integer", nullable=true)
+     */
+    private $numcostopeps = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoUEPS", type="integer", nullable=true)
+     */
+    private $numcostoueps = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPeso", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numpeso = '0';
+
+
+}

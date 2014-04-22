@@ -1,0 +1,218 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Transaccionescomisionesdetalles
+ *
+ * @ORM\Table(name="TransaccionesComisionesDetalles", indexes={@ORM\Index(name="Indice_1", columns={"NumAlmacen_id"}), @ORM\Index(name="Indice_10", columns={"NumAlmacenComision_id"}), @ORM\Index(name="Indice_12", columns={"NumTransaccionVenta_id", "NumAlmacenVenta_id", "NumTipoTransaccionVenta", "NumConsecutivoVenta_id", "NumTransaccionRegistroVenta_id"}), @ORM\Index(name="Indice_13", columns={"NumTransaccionPago_id", "NumAlmacenPago_id", "NumTipoTransaccionPago"}), @ORM\Index(name="Indice_14", columns={"NumTipoEstado"}), @ORM\Index(name="Indice_2", columns={"NumGrupoComision_id"}), @ORM\Index(name="Indice_3", columns={"StrArticulo_ky"}), @ORM\Index(name="Indice_4", columns={"StrSerie_ky"}), @ORM\Index(name="Indice_5", columns={"StrArticuloRelacionado_ky"}), @ORM\Index(name="Indice_6", columns={"StrSerieRelacionado_ky"}), @ORM\Index(name="Indice_7", columns={"StrTelefono"}), @ORM\Index(name="Indice_8", columns={"NumCliente_id"}), @ORM\Index(name="Indice_9", columns={"NumVendedor_id"})})
+ * @ORM\Entity
+ */
+class Transaccionescomisionesdetalles
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTransaccion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtransaccionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numconsecutivoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGrupoComision_id", type="integer", nullable=true)
+     */
+    private $numgrupocomisionId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticulo_ky", type="string", length=20, nullable=true)
+     */
+    private $strarticuloKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrSerie_ky", type="string", length=20, nullable=true)
+     */
+    private $strserieKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticuloRelacionado_ky", type="string", length=20, nullable=true)
+     */
+    private $strarticulorelacionadoKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrSerieRelacionado_ky", type="string", length=20, nullable=true)
+     */
+    private $strserierelacionadoKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTelefono", type="string", length=20, nullable=true)
+     */
+    private $strtelefono;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrPlanTarifario", type="string", length=20, nullable=true)
+     */
+    private $strplantarifario;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCaracteristica_id", type="integer", nullable=true)
+     */
+    private $numcaracteristicaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrReferencia", type="string", length=20, nullable=true)
+     */
+    private $strreferencia;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCliente_id", type="integer", nullable=true)
+     */
+    private $numclienteId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumVendedor_id", type="integer", nullable=true)
+     */
+    private $numvendedorId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacenComision_id", type="integer", nullable=true)
+     */
+    private $numalmacencomisionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumComisionVendedor", type="integer", nullable=true)
+     */
+    private $numcomisionvendedor = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPrecioVenta", type="integer", nullable=true)
+     */
+    private $numprecioventa = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_id", type="integer", nullable=true)
+     */
+    private $numclasificacionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTransaccionVenta_id", type="integer", nullable=true)
+     */
+    private $numtransaccionventaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacenVenta_id", type="integer", nullable=true)
+     */
+    private $numalmacenventaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTransaccionVenta", type="integer", nullable=true)
+     */
+    private $numtipotransaccionventa = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivoVenta_id", type="integer", nullable=true)
+     */
+    private $numconsecutivoventaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTransaccionRegistroVenta_id", type="integer", nullable=true)
+     */
+    private $numtransaccionregistroventaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTransaccionPago_id", type="integer", nullable=true)
+     */
+    private $numtransaccionpagoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacenPago_id", type="integer", nullable=true)
+     */
+    private $numalmacenpagoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTransaccionPago", type="integer", nullable=true)
+     */
+    private $numtipotransaccionpago = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrMonedero_ky", type="string", length=20, nullable=true)
+     */
+    private $strmonederoKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+
+}

@@ -1,0 +1,151 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Cuentascorreoelectronico
+ *
+ * @ORM\Table(name="CuentasCorreoElectronico", indexes={@ORM\Index(name="Indice_1", columns={"DteActualizacion"}), @ORM\Index(name="Indice_2", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Cuentascorreoelectronico
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCuentaCorreo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numcuentacorreoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombre", type="string", length=60, nullable=true)
+     */
+    private $strnombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDireccionCorreo", type="string", length=60, nullable=true)
+     */
+    private $strdireccioncorreo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrUsuario", type="string", length=60, nullable=true)
+     */
+    private $strusuario;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrContrasena", type="string", length=60, nullable=true)
+     */
+    private $strcontrasena;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrServidorEntrante", type="string", length=60, nullable=true)
+     */
+    private $strservidorentrante;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPuertoEntrante", type="integer", nullable=true)
+     */
+    private $numpuertoentrante = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrServidorSaliente", type="string", length=60, nullable=true)
+     */
+    private $strservidorsaliente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPuertoSaliente", type="integer", nullable=true)
+     */
+    private $numpuertosaliente = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogRequiereAutenticacion", type="boolean", nullable=true)
+     */
+    private $logrequiereautenticacion = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogInicioSesionSPA", type="boolean", nullable=true)
+     */
+    private $loginiciosesionspa = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumIntentosConexion", type="integer", nullable=true)
+     */
+    private $numintentosconexion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTiempoEsperaConexion", type="integer", nullable=true)
+     */
+    private $numtiempoesperaconexion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

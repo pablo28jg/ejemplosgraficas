@@ -1,0 +1,43 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Validacionescontablesdetalles
+ *
+ * @ORM\Table(name="ValidacionesContablesDetalles")
+ * @ORM\Entity
+ */
+class Validacionescontablesdetalles
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumValidacion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numvalidacionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCentroControl_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numcentrocontrolId = '0';
+
+
+}

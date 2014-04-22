@@ -1,0 +1,99 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Caracteristicasasignaciones
+ *
+ * @ORM\Table(name="CaracteristicasAsignaciones", indexes={@ORM\Index(name="Indice_1", columns={"NumCaracteristica_id", "NumConsecutivo_id", "NumCaracteristicaEspecifica_id"}), @ORM\Index(name="Indice_2", columns={"NumCaracteristicaEspecifica_id"})})
+ * @ORM\Entity
+ */
+class Caracteristicasasignaciones
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numconsecutivoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCaracteristica_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numcaracteristicaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCaracteristicaEspecifica_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numcaracteristicaespecificaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoDato", type="integer", nullable=true)
+     */
+    private $numtipodato = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDatoTexto", type="string", length=150, nullable=true)
+     */
+    private $strdatotexto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDatoEntero", type="integer", nullable=true)
+     */
+    private $numdatoentero = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogDatoLogico", type="boolean", nullable=true)
+     */
+    private $logdatologico = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumDatoReal", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numdatoreal = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteDatoFechaHora", type="datetime", nullable=true)
+     */
+    private $dtedatofechahora;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemDatoMemo", type="text", length=16, nullable=true)
+     */
+    private $memdatomemo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ImgDatoImagen", type="text", length=16, nullable=true)
+     */
+    private $imgdatoimagen;
+
+
+}

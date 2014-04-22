@@ -1,0 +1,90 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Reporteslenguaje
+ *
+ * @ORM\Table(name="ReportesLenguaje")
+ * @ORM\Entity
+ */
+class Reporteslenguaje
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumReporte_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numreporteId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLenguaje_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numlenguajeId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcionReporte", type="string", length=100, nullable=true)
+     */
+    private $strdescripcionreporte;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcionSeleccion", type="string", length=100, nullable=true)
+     */
+    private $strdescripcionseleccion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcionOpciones", type="string", length=100, nullable=true)
+     */
+    private $strdescripcionopciones;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcionImpresion", type="string", length=100, nullable=true)
+     */
+    private $strdescripcionimpresion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemAyuda", type="text", length=16, nullable=true)
+     */
+    private $memayuda;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemAyudaSeleccion", type="text", length=16, nullable=true)
+     */
+    private $memayudaseleccion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemAyudaOpciones", type="text", length=16, nullable=true)
+     */
+    private $memayudaopciones;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemAyudaImpresion", type="text", length=16, nullable=true)
+     */
+    private $memayudaimpresion;
+
+
+}

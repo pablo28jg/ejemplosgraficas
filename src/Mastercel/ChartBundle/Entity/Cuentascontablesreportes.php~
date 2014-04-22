@@ -1,0 +1,95 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Cuentascontablesreportes
+ *
+ * @ORM\Table(name="CuentasContablesReportes", indexes={@ORM\Index(name="Indice_1", columns={"StrReporte_ky"}), @ORM\Index(name="Indice_2", columns={"StrDescripcion"}), @ORM\Index(name="Indice_3", columns={"NumTipo"}), @ORM\Index(name="Indice_4", columns={"DteActualizacion"}), @ORM\Index(name="Indice_5", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Cuentascontablesreportes
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumReporte_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numreporteId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrReporte_ky", type="string", length=60, nullable=true)
+     */
+    private $strreporteKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipo", type="integer", nullable=true)
+     */
+    private $numtipo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotalLineas", type="integer", nullable=true)
+     */
+    private $numtotallineas = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotalColumnas", type="integer", nullable=true)
+     */
+    private $numtotalcolumnas = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

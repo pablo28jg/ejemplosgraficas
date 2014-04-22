@@ -1,0 +1,97 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Promocionalesgruposdetalles
+ *
+ * @ORM\Table(name="PromocionalesGruposDetalles", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_1", columns={"NumPromocionalGrupo_id", "StrArticulo_ky", "NumOpcion_id"})}, indexes={@ORM\Index(name="Indice_2", columns={"StrArticulo_ky", "NumPromocionalGrupo_id"})})
+ * @ORM\Entity
+ */
+class Promocionalesgruposdetalles
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPromocionalGrupo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numpromocionalgrupoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numconsecutivoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrden", type="integer", nullable=true)
+     */
+    private $numorden = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticulo_ky", type="string", length=20, nullable=true)
+     */
+    private $strarticuloKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=100, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumUnidadMedida_id", type="integer", nullable=true)
+     */
+    private $numunidadmedidaId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidad", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidad = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivelPrecio", type="integer", nullable=true)
+     */
+    private $numnivelprecio = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPrecioVenta", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numprecioventa = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCaracteristica_id", type="integer", nullable=true)
+     */
+    private $numcaracteristicaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOpcion_id", type="integer", nullable=true)
+     */
+    private $numopcionId = '0';
+
+
+}

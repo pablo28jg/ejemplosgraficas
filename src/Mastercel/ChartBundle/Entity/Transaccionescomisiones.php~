@@ -1,0 +1,237 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Transaccionescomisiones
+ *
+ * @ORM\Table(name="TransaccionesComisiones", indexes={@ORM\Index(name="Indice_1", columns={"NumAlmacen_id"}), @ORM\Index(name="Indice_2", columns={"StrTransaccion"}), @ORM\Index(name="Indice_3", columns={"DteTransaccion"}), @ORM\Index(name="Indice_4", columns={"NumEjercicio_id", "NumPeriodo", "NumSemana"}), @ORM\Index(name="Indice_5", columns={"NumEmpresa_id"}), @ORM\Index(name="Indice_6", columns={"NumVendedor_id"}), @ORM\Index(name="Indice_7", columns={"NumClasificacion_id"}), @ORM\Index(name="Indice_8", columns={"DteActualizacion"}), @ORM\Index(name="Indice_9", columns={"NumTipoEstado"}), @ORM\Index(name="Indice_11", columns={"DtePago"})})
+ * @ORM\Entity
+ */
+class Transaccionescomisiones
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTransaccion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtransaccionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGrupoComision_id", type="integer", nullable=true)
+     */
+    private $numgrupocomisionId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTransaccion", type="string", length=10, nullable=true)
+     */
+    private $strtransaccion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteTransaccion", type="datetime", nullable=true)
+     */
+    private $dtetransaccion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeTransaccion", type="datetime", nullable=true)
+     */
+    private $tmetransaccion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCancelacion", type="datetime", nullable=true)
+     */
+    private $dtecancelacion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeCancelacion", type="datetime", nullable=true)
+     */
+    private $tmecancelacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEjercicio_id", type="integer", nullable=true)
+     */
+    private $numejercicioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPeriodo", type="integer", nullable=true)
+     */
+    private $numperiodo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSemana", type="integer", nullable=true)
+     */
+    private $numsemana = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=true)
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCentroControl_id", type="integer", nullable=true)
+     */
+    private $numcentrocontrolId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumVendedor_id", type="integer", nullable=true)
+     */
+    private $numvendedorId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMoneda_id", type="integer", nullable=true)
+     */
+    private $nummonedaId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTipoCambio", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtipocambio = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrReferencia", type="string", length=20, nullable=true)
+     */
+    private $strreferencia;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticuloComision_ky", type="string", length=20, nullable=true)
+     */
+    private $strarticulocomisionKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoPagoComision", type="integer", nullable=true)
+     */
+    private $numtipopagocomision = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DtePago", type="datetime", nullable=true)
+     */
+    private $dtepago;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTurno_id", type="integer", nullable=true)
+     */
+    private $numturnoId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTotalPartidas", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtotalpartidas = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotal", type="integer", nullable=true)
+     */
+    private $numtotal = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_id", type="integer", nullable=true)
+     */
+    private $numclasificacionId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemObservaciones", type="text", length=16, nullable=true)
+     */
+    private $memobservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

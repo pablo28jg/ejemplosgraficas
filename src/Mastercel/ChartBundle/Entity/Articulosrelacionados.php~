@@ -1,0 +1,34 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Articulosrelacionados
+ *
+ * @ORM\Table(name="ArticulosRelacionados", indexes={@ORM\Index(name="Indice_1", columns={"StrArticuloRelacionado_ky", "StrArticulo_ky"})})
+ * @ORM\Entity
+ */
+class Articulosrelacionados
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticulo_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strarticuloKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticuloRelacionado_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strarticulorelacionadoKy;
+
+
+}

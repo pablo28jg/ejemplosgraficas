@@ -1,0 +1,228 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Proyectos
+ *
+ * @ORM\Table(name="Proyectos", indexes={@ORM\Index(name="Indice_1", columns={"StrProyecto_ky"}), @ORM\Index(name="Indice_10", columns={"NumNivel_5_id"}), @ORM\Index(name="Indice_11", columns={"NumNivel_6_id"}), @ORM\Index(name="Indice_12", columns={"NumNivel_7_id"}), @ORM\Index(name="Indice_13", columns={"NumNivel_8_id"}), @ORM\Index(name="Indice_14", columns={"NumNivel_9_id"}), @ORM\Index(name="Indice_15", columns={"NumNivel_10_id"}), @ORM\Index(name="Indice_16", columns={"NumEstadoComunicacion"}), @ORM\Index(name="Indice_2", columns={"StrDescripcion"}), @ORM\Index(name="Indice_3", columns={"DteActualizacion"}), @ORM\Index(name="Indice_4", columns={"NumJerarquia_id", "StrProyecto_ky"}), @ORM\Index(name="Indice_5", columns={"NumOrden_id", "NumNivel_id"}), @ORM\Index(name="Indice_6", columns={"NumNivel_1_id"}), @ORM\Index(name="Indice_7", columns={"NumNivel_2_id"}), @ORM\Index(name="Indice_8", columns={"NumNivel_3_id"}), @ORM\Index(name="Indice_9", columns={"NumNivel_4_id"})})
+ * @ORM\Entity
+ */
+class Proyectos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumProyecto_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numproyectoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumJerarquia_id", type="integer", nullable=true)
+     */
+    private $numjerarquiaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrden_id", type="integer", nullable=true)
+     */
+    private $numordenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivel_id", type="integer", nullable=true)
+     */
+    private $numnivelId = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogUltimoNivel", type="boolean", nullable=true)
+     */
+    private $logultimonivel = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrProyecto_ky", type="string", length=10, nullable=true)
+     */
+    private $strproyectoKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=true)
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCliente_id", type="integer", nullable=true)
+     */
+    private $numclienteId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGerente_id", type="integer", nullable=true)
+     */
+    private $numgerenteId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSupervisor_id", type="integer", nullable=true)
+     */
+    private $numsupervisorId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_1_id", type="integer", nullable=true)
+     */
+    private $numclasificacion1Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_2_id", type="integer", nullable=true)
+     */
+    private $numclasificacion2Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_3_id", type="integer", nullable=true)
+     */
+    private $numclasificacion3Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_4_id", type="integer", nullable=true)
+     */
+    private $numclasificacion4Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivel_1_id", type="integer", nullable=true)
+     */
+    private $numnivel1Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivel_2_id", type="integer", nullable=true)
+     */
+    private $numnivel2Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivel_3_id", type="integer", nullable=true)
+     */
+    private $numnivel3Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivel_4_id", type="integer", nullable=true)
+     */
+    private $numnivel4Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivel_5_id", type="integer", nullable=true)
+     */
+    private $numnivel5Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivel_6_id", type="integer", nullable=true)
+     */
+    private $numnivel6Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivel_7_id", type="integer", nullable=true)
+     */
+    private $numnivel7Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivel_8_id", type="integer", nullable=true)
+     */
+    private $numnivel8Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivel_9_id", type="integer", nullable=true)
+     */
+    private $numnivel9Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivel_10_id", type="integer", nullable=true)
+     */
+    private $numnivel10Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

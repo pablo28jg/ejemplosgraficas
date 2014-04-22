@@ -1,1 +1,69 @@
-Hello {{ name }}!
+{% extends 'MastercelChartBundle::template.html.twig' %}
+{% block javascript %}
+<script type="text/javascript">
+var data = [{
+    name: 'Pablo',
+    data: [3000, 4750.20, 1000,10000,3000,300]
+}, {
+    name: 'Rosa',
+    data: [5300, 7000, 3430,1200,3200,1200,1000]
+}];
+	$(function () { 	    
+		var options = {
+	        chart: {
+	            renderTo: 'container',
+	            type: 'column'
+	        },
+	        title: {
+	            text: 'Fruit Consumption'
+	        },
+	        xAxis: {
+	            categories: ['Lunes', 'Martes', 'Miercoles','Jueves','Viernes','Sabado','Domingo']
+	        },
+	        yAxis: {
+	            title: {
+	                text: 'Fruit eaten'
+	            },
+	            labels: {
+	                formatter: function() {
+	                    return '$ ' + this.value;
+	                }
+	            },
+	            //tickInterval: 5000
+	        },
+	        series: [{}]
+	    };
+		options.series = data;
+	    var chart = new Highcharts.Chart(options);
+	});
+function data()
+{
+	options.series[0].data = data;
+    var chart = new Highcharts.Chart(options);
+}
+var formatNumber = {
+		 separador: ".", // separador para los miles
+		 sepDecimal: ',', // separador para los decimales
+		 formatear:function (num){
+		  num +='';
+		  var splitStr = num.split('.');
+		  var splitLeft = splitStr[0];
+		  var splitRight = splitStr.length > 1 ? this.sepDecimal + splitStr[1] : '';
+		  var regx = /(\d+)(\d{3})/;
+		  while (regx.test(splitLeft)) 
+		  {
+			  splitLeft = splitLeft.replace(regx, '$1' + this.separador + '$2');
+		  }
+		  return this.simbol + splitLeft  +splitRight;
+		 },
+		 new:function(num, simbol){
+		  this.simbol = simbol ||'';
+		  return this.formatear(num);
+		 }
+}
+</script>
+{% endblock %}
+{% block cuerpo %}
+	<div id="container" style="width:100%; height:400px;"></div>
+{% endblock %}
+

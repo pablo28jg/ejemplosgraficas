@@ -1,0 +1,473 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Objetivosplanes
+ *
+ * @ORM\Table(name="ObjetivosPlanes", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_1", columns={"StrObjetivoPlan_ky"})}, indexes={@ORM\Index(name="Indice_2", columns={"StrDescripcion"}), @ORM\Index(name="Indice_3", columns={"DteActualizacion"}), @ORM\Index(name="Indice_4", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Objetivosplanes
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumObjetivoPlan_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numobjetivoplanId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrObjetivoPlan_ky", type="string", length=10, nullable=true)
+     */
+    private $strobjetivoplanKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoObjetivo", type="integer", nullable=true)
+     */
+    private $numtipoobjetivo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoUnidad", type="integer", nullable=true)
+     */
+    private $numtipounidad = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoPeriodo", type="integer", nullable=true)
+     */
+    private $numtipoperiodo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPeriodos", type="integer", nullable=true)
+     */
+    private $numperiodos = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_1", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion1 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_2", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion2 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_3", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion3 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_4", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion4 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_5", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion5 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_6", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion6 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_7", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion7 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_8", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion8 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_9", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion9 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_10", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion10 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_11", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion11 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_12", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion12 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_13", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion13 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_14", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion14 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_15", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion15 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_16", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion16 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_17", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion17 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_18", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion18 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_19", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion19 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_20", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion20 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_21", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion21 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_22", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion22 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_23", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion23 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_24", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion24 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_25", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion25 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_26", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion26 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_27", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion27 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_28", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion28 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_29", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion29 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_30", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion30 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_31", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion31 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_32", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion32 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_33", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion33 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_34", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion34 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_35", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion35 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_36", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion36 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_37", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion37 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_38", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion38 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_39", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion39 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_40", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion40 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_41", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion41 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_42", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion42 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_43", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion43 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_44", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion44 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_45", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion45 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_46", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion46 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_47", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion47 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_48", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion48 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_49", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion49 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_50", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion50 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_51", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion51 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDistribucion_52", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordistribucion52 = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemObservaciones", type="text", length=16, nullable=true)
+     */
+    private $memobservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

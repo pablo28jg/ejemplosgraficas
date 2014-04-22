@@ -1,0 +1,130 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Modulos
+ *
+ * @ORM\Table(name="Modulos", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_1", columns={"StrModulo_ky"})}, indexes={@ORM\Index(name="Indice_2", columns={"NumTipoMenu", "NumOrdenAparicion"}), @ORM\Index(name="Indice_3", columns={"DteActualizacion"}), @ORM\Index(name="Indice_4", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Modulos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumModulo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $nummoduloId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrModulo_ky", type="string", length=20, nullable=true)
+     */
+    private $strmoduloKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoMenu", type="integer", nullable=true)
+     */
+    private $numtipomenu = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoModulo", type="integer", nullable=true)
+     */
+    private $numtipomodulo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrdenAparicion", type="integer", nullable=true)
+     */
+    private $numordenaparicion = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCodigoAcceso", type="string", length=20, nullable=true)
+     */
+    private $strcodigoacceso;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImagen_id", type="integer", nullable=true)
+     */
+    private $numimagenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEmpresa", type="integer", nullable=true)
+     */
+    private $numtipoempresa = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArchivoAyuda", type="string", length=30, nullable=true)
+     */
+    private $strarchivoayuda;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumContextoAyuda", type="integer", nullable=true)
+     */
+    private $numcontextoayuda = '0';
+
+
+}

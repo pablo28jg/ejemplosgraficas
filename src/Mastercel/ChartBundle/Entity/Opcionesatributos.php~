@@ -1,0 +1,41 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Opcionesatributos
+ *
+ * @ORM\Table(name="OpcionesAtributos")
+ * @ORM\Entity
+ */
+class Opcionesatributos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOpcion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numopcionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAtributo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numatributoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPosicion", type="integer", nullable=true)
+     */
+    private $numposicion = '0';
+
+
+}

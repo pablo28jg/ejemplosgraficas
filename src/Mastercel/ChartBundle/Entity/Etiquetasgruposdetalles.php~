@@ -1,0 +1,34 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Etiquetasgruposdetalles
+ *
+ * @ORM\Table(name="EtiquetasGruposDetalles")
+ * @ORM\Entity
+ */
+class Etiquetasgruposdetalles
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGrupoEtiqueta_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numgrupoetiquetaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEtiqueta_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numetiquetaId = '0';
+
+
+}

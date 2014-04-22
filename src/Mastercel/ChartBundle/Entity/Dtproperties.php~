@@ -1,0 +1,69 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Dtproperties
+ *
+ * @ORM\Table(name="dtproperties")
+ * @ORM\Entity
+ */
+class Dtproperties
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="property", type="string", length=64, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $property;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="objectid", type="integer", nullable=true)
+     */
+    private $objectid;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="value", type="string", length=255, nullable=true)
+     */
+    private $value;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="uvalue", type="string", length=255, nullable=true)
+     */
+    private $uvalue;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lvalue", type="text", length=16, nullable=true)
+     */
+    private $lvalue;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="version", type="integer", nullable=false)
+     */
+    private $version = '0';
+
+
+}

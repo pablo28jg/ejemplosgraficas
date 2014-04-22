@@ -1,0 +1,74 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Mensajes
+ *
+ * @ORM\Table(name="Mensajes", indexes={@ORM\Index(name="Indice_1", columns={"DteActivacion"}), @ORM\Index(name="Indice_2", columns={"DteActualizacion"}), @ORM\Index(name="Indice_3", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Mensajes
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMensaje_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $nummensajeId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrAsunto", type="string", length=100, nullable=true)
+     */
+    private $strasunto;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActivacion", type="datetime", nullable=true)
+     */
+    private $dteactivacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemMensaje", type="text", length=16, nullable=true)
+     */
+    private $memmensaje;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

@@ -1,0 +1,158 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tiposgasto
+ *
+ * @ORM\Table(name="TiposGasto", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_1", columns={"StrTipoGasto_ky"})}, indexes={@ORM\Index(name="Indice_2", columns={"StrDescripcion"}), @ORM\Index(name="Indice_3", columns={"NumCategoria_id"}), @ORM\Index(name="Indice_4", columns={"DteActualizacion"}), @ORM\Index(name="Indice_5", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Tiposgasto
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoGasto_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numtipogastoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTipoGasto_ky", type="string", length=10, nullable=true)
+     */
+    private $strtipogastoKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCategoria_id", type="integer", nullable=true)
+     */
+    private $numcategoriaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMoneda_id", type="integer", nullable=true)
+     */
+    private $nummonedaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImpuesto_id", type="integer", nullable=true)
+     */
+    private $numimpuestoId = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogImpuestoIncluido", type="boolean", nullable=true)
+     */
+    private $logimpuestoincluido = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogRequiereReferencia", type="boolean", nullable=true)
+     */
+    private $logrequierereferencia = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumUnidadMedida_id", type="integer", nullable=true)
+     */
+    private $numunidadmedidaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTarifa", type="integer", nullable=true)
+     */
+    private $numtarifa = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumUnidadesTarifa", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numunidadestarifa = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoEstandar", type="integer", nullable=true)
+     */
+    private $numcostoestandar = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoPromedio", type="integer", nullable=true)
+     */
+    private $numcostopromedio = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoReal", type="integer", nullable=true)
+     */
+    private $numcostoreal = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCuenta_id", type="integer", nullable=true)
+     */
+    private $numcuentaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

@@ -1,0 +1,60 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Mesasregalosdetalles
+ *
+ * @ORM\Table(name="MesasRegalosDetalles", indexes={@ORM\Index(name="Indice_1", columns={"NumMesaRegalo_id"}), @ORM\Index(name="Indice_2", columns={"StrArticulo_ky"})})
+ * @ORM\Entity
+ */
+class Mesasregalosdetalles
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numconsecutivoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMesaRegalo_id", type="integer", nullable=true)
+     */
+    private $nummesaregaloId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticulo_ky", type="string", length=20, nullable=true)
+     */
+    private $strarticuloKy;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidad", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidad = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAumentoRebaja_id", type="integer", nullable=true)
+     */
+    private $numaumentorebajaId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPuntosGenerados", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numpuntosgenerados = '0';
+
+
+}

@@ -1,0 +1,298 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Operacionesestandar
+ *
+ * @ORM\Table(name="OperacionesEstandar", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_1", columns={"StrOperacionEstandar_ky"})}, indexes={@ORM\Index(name="Indice_2", columns={"StrDescripcion"}), @ORM\Index(name="Indice_3", columns={"NumCentroTrabajo_id"}), @ORM\Index(name="Indice_4", columns={"DteActualizacion"}), @ORM\Index(name="Indice_5", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Operacionesestandar
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOperacionEstandar_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numoperacionestandarId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrOperacionEstandar_ky", type="string", length=10, nullable=true)
+     */
+    private $stroperacionestandarKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCentroTrabajo_id", type="integer", nullable=true)
+     */
+    private $numcentrotrabajoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOperadoresRequeridos", type="integer", nullable=true)
+     */
+    private $numoperadoresrequeridos = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumUnidadMedida_id", type="integer", nullable=true)
+     */
+    private $numunidadmedidaId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorConversion", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactorconversion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCantidadProducir", type="integer", nullable=true)
+     */
+    private $numcantidadproducir = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogRecibeInventario", type="boolean", nullable=true)
+     */
+    private $logrecibeinventario = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogGenerarSalidaInventarios", type="boolean", nullable=true)
+     */
+    private $loggenerarsalidainventarios = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogTraslaparOperacion", type="boolean", nullable=true)
+     */
+    private $logtraslaparoperacion = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogExterna", type="boolean", nullable=true)
+     */
+    private $logexterna = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogAsignarCola", type="boolean", nullable=true)
+     */
+    private $logasignarcola = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogAsignarPreparacionMaquina", type="boolean", nullable=true)
+     */
+    private $logasignarpreparacionmaquina = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogAsignarPreparacionLabor", type="boolean", nullable=true)
+     */
+    private $logasignarpreparacionlabor = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogAsignarProcesoMaquina", type="boolean", nullable=true)
+     */
+    private $logasignarprocesomaquina = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogAsignarProcesoLabor", type="boolean", nullable=true)
+     */
+    private $logasignarprocesolabor = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogAsignarEspera", type="boolean", nullable=true)
+     */
+    private $logasignarespera = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogAsignarTraslado", type="boolean", nullable=true)
+     */
+    private $logasignartraslado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTiempoCola", type="integer", nullable=true)
+     */
+    private $numtipotiempocola = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTiempoPreparacionMaquina", type="integer", nullable=true)
+     */
+    private $numtipotiempopreparacionmaquina = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTiempoPreparacionLabor", type="integer", nullable=true)
+     */
+    private $numtipotiempopreparacionlabor = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTiempoProcesoMaquina", type="integer", nullable=true)
+     */
+    private $numtipotiempoprocesomaquina = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTiempoProcesoLabor", type="integer", nullable=true)
+     */
+    private $numtipotiempoprocesolabor = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTiempoEspera", type="integer", nullable=true)
+     */
+    private $numtipotiempoespera = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTiempoTraslado", type="integer", nullable=true)
+     */
+    private $numtipotiempotraslado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCategoriaCola_id", type="integer", nullable=true)
+     */
+    private $numcategoriacolaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCategoriaPreparacionMaquina_id", type="integer", nullable=true)
+     */
+    private $numcategoriapreparacionmaquinaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCategoriaPreparacionLabor_id", type="integer", nullable=true)
+     */
+    private $numcategoriapreparacionlaborId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCategoriaProcesoMaquina_id", type="integer", nullable=true)
+     */
+    private $numcategoriaprocesomaquinaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCategoriaProcesoLabor_id", type="integer", nullable=true)
+     */
+    private $numcategoriaprocesolaborId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCategoriaEspera_id", type="integer", nullable=true)
+     */
+    private $numcategoriaesperaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCategoriaTraslado_id", type="integer", nullable=true)
+     */
+    private $numcategoriatrasladoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCategoriaGastoIndirecto_id", type="integer", nullable=true)
+     */
+    private $numcategoriagastoindirectoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemInstrucciones", type="text", length=16, nullable=true)
+     */
+    private $meminstrucciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

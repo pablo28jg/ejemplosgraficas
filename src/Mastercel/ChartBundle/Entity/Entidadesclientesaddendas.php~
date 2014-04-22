@@ -1,0 +1,76 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Entidadesclientesaddendas
+ *
+ * @ORM\Table(name="EntidadesClientesAddendas", indexes={@ORM\Index(name="Indice_1", columns={"NumEmpresa_id", "NumEntidad_id"})})
+ * @ORM\Entity
+ */
+class Entidadesclientesaddendas
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEntidad_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numentidadId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoAddenda", type="integer", nullable=true)
+     */
+    private $numtipoaddenda = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrIdentificadorEDI", type="string", length=20, nullable=true)
+     */
+    private $stridentificadoredi;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrIdentificadorEmpresa", type="string", length=20, nullable=true)
+     */
+    private $stridentificadorempresa;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrIdentificadorCliente", type="string", length=20, nullable=true)
+     */
+    private $stridentificadorcliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrIdentificadorEntrega", type="string", length=20, nullable=true)
+     */
+    private $stridentificadorentrega;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCodigoProveedor", type="string", length=20, nullable=true)
+     */
+    private $strcodigoproveedor;
+
+
+}

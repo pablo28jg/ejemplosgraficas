@@ -1,0 +1,155 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Datosfacturas
+ *
+ * @ORM\Table(name="DatosFacturas")
+ * @ORM\Entity
+ */
+class Datosfacturas
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Almacen", type="string", length=100, nullable=true)
+     */
+    private $almacen;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="Consecutivo", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $consecutivo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumeroFactura", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numerofactura = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="LineaArchivo", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $lineaarchivo = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NombreArchivo", type="string", length=60, nullable=true)
+     */
+    private $nombrearchivo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Hoja", type="string", length=60, nullable=true)
+     */
+    private $hoja;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NombrePlaza", type="string", length=60, nullable=true)
+     */
+    private $nombreplaza;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="FechaPago", type="datetime", nullable=true)
+     */
+    private $fechapago;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NombreCliente", type="string", length=120, nullable=true)
+     */
+    private $nombrecliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="CodigoArticulo", type="string", length=20, nullable=true)
+     */
+    private $codigoarticulo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Descripcion", type="string", length=100, nullable=true)
+     */
+    private $descripcion;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="Cantidad", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $cantidad;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="PrecioUnitario", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $preciounitario;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="Importe", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $importe;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Serie", type="string", length=20, nullable=true)
+     */
+    private $serie;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Telefono", type="string", length=20, nullable=true)
+     */
+    private $telefono;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NombreFactura", type="string", length=120, nullable=true)
+     */
+    private $nombrefactura;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Observaciones", type="string", length=120, nullable=true)
+     */
+    private $observaciones;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="FormaPago", type="string", length=60, nullable=true)
+     */
+    private $formapago;
+
+
+}

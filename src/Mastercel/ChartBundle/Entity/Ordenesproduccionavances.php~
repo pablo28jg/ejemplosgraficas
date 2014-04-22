@@ -1,0 +1,256 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Ordenesproduccionavances
+ *
+ * @ORM\Table(name="OrdenesProduccionAvances", indexes={@ORM\Index(name="Indice_1", columns={"NumAlmacen_id", "NumOrdenProduccion_id"}), @ORM\Index(name="Indice_2", columns={"NumAlmacen_id", "NumOrdenProduccionPadre_id"}), @ORM\Index(name="Indice_3", columns={"NumEjercicio_id", "NumPeriodo"}), @ORM\Index(name="Indice_4", columns={"DteDocumento", "NumAlmacen_id", "NumTipoEstado"}), @ORM\Index(name="Indice_5", columns={"DteDocumento", "NumAlmacenCentroTrabajo_id", "NumTipoEstado"})})
+ * @ORM\Entity
+ */
+class Ordenesproduccionavances
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numconsecutivoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrdenProduccionPadre_id", type="integer", nullable=true)
+     */
+    private $numordenproduccionpadreId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrdenProduccion_id", type="integer", nullable=true)
+     */
+    private $numordenproduccionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=true)
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrdenOperacion_id", type="integer", nullable=true)
+     */
+    private $numordenoperacionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOperacionEstandar_id", type="integer", nullable=true)
+     */
+    private $numoperacionestandarId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteDocumento", type="datetime", nullable=true)
+     */
+    private $dtedocumento;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeDocumento", type="datetime", nullable=true)
+     */
+    private $tmedocumento;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCancelacion", type="datetime", nullable=true)
+     */
+    private $dtecancelacion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeCancelacion", type="datetime", nullable=true)
+     */
+    private $tmecancelacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEjercicio_id", type="integer", nullable=true)
+     */
+    private $numejercicioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPeriodo", type="integer", nullable=true)
+     */
+    private $numperiodo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSemana", type="integer", nullable=true)
+     */
+    private $numsemana = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCentroTrabajo_id", type="integer", nullable=true)
+     */
+    private $numcentrotrabajoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacenCentroTrabajo_id", type="integer", nullable=true)
+     */
+    private $numalmacencentrotrabajoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpleado_id", type="integer", nullable=true)
+     */
+    private $numempleadoId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidadTerminada", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidadterminada = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidadDesperdiciada", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidaddesperdiciada = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTiempoRealCola", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtiemporealcola = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTiempoRealPreparacionMaquina", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtiemporealpreparacionmaquina = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTiempoRealPreparacionLabor", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtiemporealpreparacionlabor = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTiempoRealProcesoMaquina", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtiemporealprocesomaquina = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTiempoRealProcesoLabor", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtiemporealprocesolabor = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTiempoRealEspera", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtiemporealespera = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTiempoRealTraslado", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtiemporealtraslado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoRealCola", type="integer", nullable=true)
+     */
+    private $numcostorealcola = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoRealPreparacionMaquina", type="integer", nullable=true)
+     */
+    private $numcostorealpreparacionmaquina = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoRealPreparacionLabor", type="integer", nullable=true)
+     */
+    private $numcostorealpreparacionlabor = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoRealProcesoMaquina", type="integer", nullable=true)
+     */
+    private $numcostorealprocesomaquina = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoRealProcesoLabor", type="integer", nullable=true)
+     */
+    private $numcostorealprocesolabor = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoRealEspera", type="integer", nullable=true)
+     */
+    private $numcostorealespera = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoRealTraslado", type="integer", nullable=true)
+     */
+    private $numcostorealtraslado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoRealGastoIndirecto", type="integer", nullable=true)
+     */
+    private $numcostorealgastoindirecto = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+
+}

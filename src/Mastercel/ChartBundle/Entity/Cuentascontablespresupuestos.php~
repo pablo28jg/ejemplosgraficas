@@ -1,0 +1,668 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Cuentascontablespresupuestos
+ *
+ * @ORM\Table(name="CuentasContablesPresupuestos", indexes={@ORM\Index(name="Indice_1", columns={"NumAsignacion_id"}), @ORM\Index(name="Indice_2", columns={"DteActualizacion"}), @ORM\Index(name="Indice_3", columns={"NumEstadoComunicacion"}), @ORM\Index(name="Indice_4", columns={"NumEjercicio_id", "NumEmpresa_id", "NumCentroControl_id", "StrCuenta_ky"})})
+ * @ORM\Entity
+ */
+class Cuentascontablespresupuestos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEjercicio_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numejercicioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuenta_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strcuentaKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCentroControl_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numcentrocontrolId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteUltimaRevision", type="datetime", nullable=true)
+     */
+    private $dteultimarevision;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAsignacion_id", type="integer", nullable=true)
+     */
+    private $numasignacionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotalPresupuesto_1", type="integer", nullable=true)
+     */
+    private $numtotalpresupuesto1 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_1_1", type="integer", nullable=true)
+     */
+    private $numpresupuesto11 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_1_2", type="integer", nullable=true)
+     */
+    private $numpresupuesto12 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_1_3", type="integer", nullable=true)
+     */
+    private $numpresupuesto13 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_1_4", type="integer", nullable=true)
+     */
+    private $numpresupuesto14 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_1_5", type="integer", nullable=true)
+     */
+    private $numpresupuesto15 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_1_6", type="integer", nullable=true)
+     */
+    private $numpresupuesto16 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_1_7", type="integer", nullable=true)
+     */
+    private $numpresupuesto17 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_1_8", type="integer", nullable=true)
+     */
+    private $numpresupuesto18 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_1_9", type="integer", nullable=true)
+     */
+    private $numpresupuesto19 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_1_10", type="integer", nullable=true)
+     */
+    private $numpresupuesto110 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_1_11", type="integer", nullable=true)
+     */
+    private $numpresupuesto111 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_1_12", type="integer", nullable=true)
+     */
+    private $numpresupuesto112 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_1_13", type="integer", nullable=true)
+     */
+    private $numpresupuesto113 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotalPresupuesto_2", type="integer", nullable=true)
+     */
+    private $numtotalpresupuesto2 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_2_1", type="integer", nullable=true)
+     */
+    private $numpresupuesto21 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_2_2", type="integer", nullable=true)
+     */
+    private $numpresupuesto22 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_2_3", type="integer", nullable=true)
+     */
+    private $numpresupuesto23 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_2_4", type="integer", nullable=true)
+     */
+    private $numpresupuesto24 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_2_5", type="integer", nullable=true)
+     */
+    private $numpresupuesto25 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_2_6", type="integer", nullable=true)
+     */
+    private $numpresupuesto26 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_2_7", type="integer", nullable=true)
+     */
+    private $numpresupuesto27 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_2_8", type="integer", nullable=true)
+     */
+    private $numpresupuesto28 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_2_9", type="integer", nullable=true)
+     */
+    private $numpresupuesto29 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_2_10", type="integer", nullable=true)
+     */
+    private $numpresupuesto210 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_2_11", type="integer", nullable=true)
+     */
+    private $numpresupuesto211 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_2_12", type="integer", nullable=true)
+     */
+    private $numpresupuesto212 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_2_13", type="integer", nullable=true)
+     */
+    private $numpresupuesto213 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotalPresupuesto_3", type="integer", nullable=true)
+     */
+    private $numtotalpresupuesto3 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_3_1", type="integer", nullable=true)
+     */
+    private $numpresupuesto31 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_3_2", type="integer", nullable=true)
+     */
+    private $numpresupuesto32 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_3_3", type="integer", nullable=true)
+     */
+    private $numpresupuesto33 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_3_4", type="integer", nullable=true)
+     */
+    private $numpresupuesto34 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_3_5", type="integer", nullable=true)
+     */
+    private $numpresupuesto35 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_3_6", type="integer", nullable=true)
+     */
+    private $numpresupuesto36 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_3_7", type="integer", nullable=true)
+     */
+    private $numpresupuesto37 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_3_8", type="integer", nullable=true)
+     */
+    private $numpresupuesto38 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_3_9", type="integer", nullable=true)
+     */
+    private $numpresupuesto39 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_3_10", type="integer", nullable=true)
+     */
+    private $numpresupuesto310 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_3_11", type="integer", nullable=true)
+     */
+    private $numpresupuesto311 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_3_12", type="integer", nullable=true)
+     */
+    private $numpresupuesto312 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_3_13", type="integer", nullable=true)
+     */
+    private $numpresupuesto313 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_1_1", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap11 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_1_2", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap12 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_1_3", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap13 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_1_4", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap14 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_1_5", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap15 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_1_6", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap16 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_1_7", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap17 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_1_8", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap18 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_1_9", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap19 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_1_10", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap110 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_1_11", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap111 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_1_12", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap112 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_1_13", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap113 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_2_1", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap21 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_2_2", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap22 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_2_3", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap23 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_2_4", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap24 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_2_5", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap25 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_2_6", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap26 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_2_7", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap27 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_2_8", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap28 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_2_9", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap29 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_2_10", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap210 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_2_11", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap211 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_2_12", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap212 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_2_13", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap213 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_3_1", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap31 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_3_2", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap32 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_3_3", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap33 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_3_4", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap34 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_3_5", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap35 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_3_6", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap36 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_3_7", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap37 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_3_8", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap38 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_3_9", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap39 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_3_10", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap310 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_3_11", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap311 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_3_12", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap312 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPresupuesto_EAP_3_13", type="integer", nullable=true)
+     */
+    private $numpresupuestoEap313 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

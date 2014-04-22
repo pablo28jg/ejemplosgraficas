@@ -1,0 +1,83 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Modelospronosticos
+ *
+ * @ORM\Table(name="ModelosPronosticos", indexes={@ORM\Index(name="Indice_1", columns={"DteActualizacion"}), @ORM\Index(name="Indice_2", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Modelospronosticos
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrModelo_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strmodeloKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumColor_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numcolorId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidadPronostico", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidadpronostico = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidadMinimoTela", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidadminimotela = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

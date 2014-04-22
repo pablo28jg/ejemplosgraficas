@@ -1,0 +1,144 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Jornadas
+ *
+ * @ORM\Table(name="Jornadas", indexes={@ORM\Index(name="Indice_1", columns={"StrJornada_ky"}), @ORM\Index(name="Indice_2", columns={"StrDescripcion"}), @ORM\Index(name="Indice_3", columns={"DteActualizacion"}), @ORM\Index(name="Indice_4", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Jornadas
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumJornada_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numjornadaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrJornada_ky", type="string", length=10, nullable=true)
+     */
+    private $strjornadaKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeInicioJornada", type="datetime", nullable=true)
+     */
+    private $tmeiniciojornada;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeTerminoJornada", type="datetime", nullable=true)
+     */
+    private $tmeterminojornada;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeInicioLabores", type="datetime", nullable=true)
+     */
+    private $tmeiniciolabores;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeTerminoLabores", type="datetime", nullable=true)
+     */
+    private $tmeterminolabores;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmePuntualidad", type="datetime", nullable=true)
+     */
+    private $tmepuntualidad;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeToleranciaEntrada", type="datetime", nullable=true)
+     */
+    private $tmetoleranciaentrada;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeToleranciaRetardo", type="datetime", nullable=true)
+     */
+    private $tmetoleranciaretardo;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeToleranciaSalida", type="datetime", nullable=true)
+     */
+    private $tmetoleranciasalida;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeToleranciaTiempoExtra", type="datetime", nullable=true)
+     */
+    private $tmetoleranciatiempoextra;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoJornada", type="integer", nullable=true)
+     */
+    private $numtipojornada = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

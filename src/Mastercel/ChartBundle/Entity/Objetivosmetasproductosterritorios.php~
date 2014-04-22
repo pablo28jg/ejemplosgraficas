@@ -1,0 +1,407 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Objetivosmetasproductosterritorios
+ *
+ * @ORM\Table(name="ObjetivosMetasProductosTerritorios")
+ * @ORM\Entity
+ */
+class Objetivosmetasproductosterritorios
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumObjetivoMeta_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numobjetivometaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumObjetivoPlanProducto_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numobjetivoplanproductoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumObjetivoPlanTerritorio_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numobjetivoplanterritorioId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_1", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta1 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_2", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta2 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_3", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta3 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_4", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta4 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_5", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta5 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_6", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta6 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_7", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta7 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_8", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta8 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_9", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta9 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_10", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta10 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_11", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta11 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_12", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta12 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_13", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta13 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_14", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta14 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_15", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta15 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_16", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta16 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_17", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta17 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_18", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta18 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_19", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta19 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_20", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta20 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_21", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta21 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_22", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta22 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_23", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta23 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_24", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta24 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_25", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta25 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_26", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta26 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_27", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta27 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_28", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta28 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_29", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta29 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_30", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta30 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_31", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta31 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_32", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta32 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_33", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta33 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_34", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta34 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_35", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta35 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_36", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta36 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_37", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta37 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_38", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta38 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_39", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta39 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_40", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta40 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_41", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta41 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_42", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta42 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_43", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta43 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_44", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta44 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_45", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta45 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_46", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta46 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_47", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta47 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_48", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta48 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_49", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta49 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_50", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta50 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_51", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta51 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumValorMeta_52", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numvalormeta52 = '0';
+
+
+}

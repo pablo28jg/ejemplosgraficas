@@ -1,0 +1,557 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Prospectos
+ *
+ * @ORM\Table(name="Prospectos", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_1", columns={"StrProspecto_ky"})}, indexes={@ORM\Index(name="Indice_2", columns={"NumProspectoPadre_id"}), @ORM\Index(name="Indice_3", columns={"StrNombre"}), @ORM\Index(name="Indice_4", columns={"StrRFC"}), @ORM\Index(name="Indice_5", columns={"StrCURP"}), @ORM\Index(name="Indice_6", columns={"DteNacimiento"}), @ORM\Index(name="Indice_7", columns={"DteActualizacion"}), @ORM\Index(name="Indice_8", columns={"NumEstadoComunicacion"}), @ORM\Index(name="Indice_9", columns={"NumVendedor_1_id"}), @ORM\Index(name="Indice_10", columns={"NumEjecutivo_id"}), @ORM\Index(name="Indice_11", columns={"NumEntidad_id"})})
+ * @ORM\Entity
+ */
+class Prospectos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumProspecto_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numprospectoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumProspectoPadre_id", type="integer", nullable=true)
+     */
+    private $numprospectopadreId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrProspecto_ky", type="string", length=20, nullable=true)
+     */
+    private $strprospectoKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoPersona", type="integer", nullable=true)
+     */
+    private $numtipopersona = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombre", type="string", length=110, nullable=true)
+     */
+    private $strnombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrPrimerNombre", type="string", length=30, nullable=true)
+     */
+    private $strprimernombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrSegundoNombre", type="string", length=30, nullable=true)
+     */
+    private $strsegundonombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrApellidoPaterno", type="string", length=30, nullable=true)
+     */
+    private $strapellidopaterno;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrApellidoMaterno", type="string", length=30, nullable=true)
+     */
+    private $strapellidomaterno;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoSexo", type="integer", nullable=true)
+     */
+    private $numtiposexo = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteNacimiento", type="datetime", nullable=true)
+     */
+    private $dtenacimiento;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTratamiento_id", type="integer", nullable=true)
+     */
+    private $numtratamientoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoIdentificacion", type="integer", nullable=true)
+     */
+    private $numtipoidentificacion = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrIdentificacion", type="string", length=30, nullable=true)
+     */
+    private $stridentificacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrContacto", type="string", length=110, nullable=true)
+     */
+    private $strcontacto;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrProfesion", type="string", length=60, nullable=true)
+     */
+    private $strprofesion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrOcupacion", type="string", length=60, nullable=true)
+     */
+    private $strocupacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrPuesto", type="string", length=60, nullable=true)
+     */
+    private $strpuesto;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDepartamento", type="string", length=60, nullable=true)
+     */
+    private $strdepartamento;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrRFC", type="string", length=15, nullable=true)
+     */
+    private $strrfc;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCURP", type="string", length=20, nullable=true)
+     */
+    private $strcurp;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGiro_id", type="integer", nullable=true)
+     */
+    private $numgiroId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCategoria_id", type="integer", nullable=true)
+     */
+    private $numcategoriaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDireccion_id", type="integer", nullable=true)
+     */
+    private $numdireccionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDireccionEnvio_id", type="integer", nullable=true)
+     */
+    private $numdireccionenvioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDireccionCorrespondencia_id", type="integer", nullable=true)
+     */
+    private $numdireccioncorrespondenciaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTelefono_1", type="string", length=30, nullable=true)
+     */
+    private $strtelefono1;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTelefono_2", type="string", length=30, nullable=true)
+     */
+    private $strtelefono2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTelefono_3", type="string", length=30, nullable=true)
+     */
+    private $strtelefono3;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTelefono_4", type="string", length=30, nullable=true)
+     */
+    private $strtelefono4;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTelefono_5", type="string", length=30, nullable=true)
+     */
+    private $strtelefono5;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTelefono_6", type="string", length=30, nullable=true)
+     */
+    private $strtelefono6;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTelefono_7", type="string", length=30, nullable=true)
+     */
+    private $strtelefono7;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTelefono_8", type="string", length=30, nullable=true)
+     */
+    private $strtelefono8;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTelefono_9", type="string", length=30, nullable=true)
+     */
+    private $strtelefono9;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTelefono_10", type="string", length=30, nullable=true)
+     */
+    private $strtelefono10;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTelefono_11", type="string", length=30, nullable=true)
+     */
+    private $strtelefono11;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTelefono_12", type="string", length=30, nullable=true)
+     */
+    private $strtelefono12;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTelefono_13", type="string", length=30, nullable=true)
+     */
+    private $strtelefono13;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDiasHorarios_1", type="string", length=60, nullable=true)
+     */
+    private $strdiashorarios1;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDiasHorarios_2", type="string", length=60, nullable=true)
+     */
+    private $strdiashorarios2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDiasHorarios_3", type="string", length=60, nullable=true)
+     */
+    private $strdiashorarios3;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDiasHorarios_4", type="string", length=60, nullable=true)
+     */
+    private $strdiashorarios4;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDiasHorarios_5", type="string", length=60, nullable=true)
+     */
+    private $strdiashorarios5;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDiasHorarios_6", type="string", length=60, nullable=true)
+     */
+    private $strdiashorarios6;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDiasHorarios_7", type="string", length=60, nullable=true)
+     */
+    private $strdiashorarios7;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDiasHorarios_8", type="string", length=60, nullable=true)
+     */
+    private $strdiashorarios8;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDiasHorarios_9", type="string", length=60, nullable=true)
+     */
+    private $strdiashorarios9;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDiasHorarios_10", type="string", length=60, nullable=true)
+     */
+    private $strdiashorarios10;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDiasHorarios_11", type="string", length=60, nullable=true)
+     */
+    private $strdiashorarios11;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDiasHorarios_12", type="string", length=60, nullable=true)
+     */
+    private $strdiashorarios12;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDiasHorarios_13", type="string", length=60, nullable=true)
+     */
+    private $strdiashorarios13;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrPaginaElectronica", type="string", length=60, nullable=true)
+     */
+    private $strpaginaelectronica;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCorreoElectronico_1", type="string", length=60, nullable=true)
+     */
+    private $strcorreoelectronico1;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCorreoElectronico_2", type="string", length=60, nullable=true)
+     */
+    private $strcorreoelectronico2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCorreoElectronico_3", type="string", length=60, nullable=true)
+     */
+    private $strcorreoelectronico3;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMoneda_id", type="integer", nullable=true)
+     */
+    private $nummonedaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumRegionImpuesto_id", type="integer", nullable=true)
+     */
+    private $numregionimpuestoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCondicion_id", type="integer", nullable=true)
+     */
+    private $numcondicionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDiaRevisionPago_id", type="integer", nullable=true)
+     */
+    private $numdiarevisionpagoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivelPrecio", type="integer", nullable=true)
+     */
+    private $numnivelprecio = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMedioEnvio_id", type="integer", nullable=true)
+     */
+    private $nummedioenvioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEjecutivo_id", type="integer", nullable=true)
+     */
+    private $numejecutivoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumVendedor_1_id", type="integer", nullable=true)
+     */
+    private $numvendedor1Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumContactoLegal_id", type="integer", nullable=true)
+     */
+    private $numcontactolegalId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumContactoCompras_id", type="integer", nullable=true)
+     */
+    private $numcontactocomprasId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumContactoPagos_id", type="integer", nullable=true)
+     */
+    private $numcontactopagosId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrMetodoPago", type="string", length=40, nullable=true)
+     */
+    private $strmetodopago;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNumeroCuentaPago", type="string", length=10, nullable=true)
+     */
+    private $strnumerocuentapago;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemObservaciones", type="text", length=16, nullable=true)
+     */
+    private $memobservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEntidad_id", type="integer", nullable=true)
+     */
+    private $numentidadId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

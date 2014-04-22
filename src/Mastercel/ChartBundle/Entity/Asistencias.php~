@@ -1,0 +1,95 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Asistencias
+ *
+ * @ORM\Table(name="Asistencias", indexes={@ORM\Index(name="Indice_1", columns={"DteAsistencia", "NumEmpleado_id"}), @ORM\Index(name="Indice_2", columns={"NumEmpleado_id", "DteAsistencia"})})
+ * @ORM\Entity
+ */
+class Asistencias
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numconsecutivoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpleado_id", type="integer", nullable=true)
+     */
+    private $numempleadoId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteAsistencia", type="datetime", nullable=true)
+     */
+    private $dteasistencia;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=true)
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=true)
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrIdentificadorEquipo_ky", type="string", length=60, nullable=true)
+     */
+    private $stridentificadorequipoKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSesion_id", type="integer", nullable=true)
+     */
+    private $numsesionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoAsistencia", type="integer", nullable=true)
+     */
+    private $numtipoasistencia = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPermiso_id", type="integer", nullable=true)
+     */
+    private $numpermisoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAutorizadoPor_id", type="integer", nullable=true)
+     */
+    private $numautorizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteAutorizacion", type="datetime", nullable=true)
+     */
+    private $dteautorizacion;
+
+
+}

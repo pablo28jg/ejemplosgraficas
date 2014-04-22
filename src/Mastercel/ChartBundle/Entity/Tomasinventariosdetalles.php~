@@ -1,0 +1,337 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tomasinventariosdetalles
+ *
+ * @ORM\Table(name="TomasInventariosDetalles", indexes={@ORM\Index(name="Indice_1", columns={"NumToma_id", "NumAlmacen_id"}), @ORM\Index(name="Indice_2", columns={"NumAlmacen_id", "StrDocumento"}), @ORM\Index(name="Indice_3", columns={"NumEjercicio_id", "NumPeriodo_id"}), @ORM\Index(name="Indice_4", columns={"DteDocumento"}), @ORM\Index(name="Indice_5", columns={"DteInventario"}), @ORM\Index(name="Indice_6", columns={"NumProveedor_id"}), @ORM\Index(name="Indice_7", columns={"DteInventario", "NumAlmacen_id", "StrArticulo_ky", "NumTipoEstado"})})
+ * @ORM\Entity
+ */
+class Tomasinventariosdetalles
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumToma_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtomaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numconsecutivoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDocumento", type="string", length=10, nullable=true)
+     */
+    private $strdocumento;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteDocumento", type="datetime", nullable=true)
+     */
+    private $dtedocumento;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeDocumento", type="datetime", nullable=true)
+     */
+    private $tmedocumento;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEjercicio_id", type="integer", nullable=true)
+     */
+    private $numejercicioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPeriodo_id", type="integer", nullable=true)
+     */
+    private $numperiodoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSemana_id", type="integer", nullable=true)
+     */
+    private $numsemanaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCentroControl_id", type="integer", nullable=true)
+     */
+    private $numcentrocontrolId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=true)
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteInventario", type="datetime", nullable=true)
+     */
+    private $dteinventario;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoConteo", type="integer", nullable=true)
+     */
+    private $numtipoconteo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMoneda_id", type="integer", nullable=true)
+     */
+    private $nummonedaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrAsociado_ky", type="string", length=20, nullable=true)
+     */
+    private $strasociadoKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticulo_ky", type="string", length=20, nullable=true)
+     */
+    private $strarticuloKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=100, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumProveedor_id", type="integer", nullable=true)
+     */
+    private $numproveedorId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumUnidadMedida_id", type="integer", nullable=true)
+     */
+    private $numunidadmedidaId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorConversion", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactorconversion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoAfectacion", type="integer", nullable=true)
+     */
+    private $numtipoafectacion = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidad", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidad = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPrecioVenta", type="integer", nullable=true)
+     */
+    private $numprecioventa = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTipoCambio", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtipocambio = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogImpuestoIncluido", type="boolean", nullable=true)
+     */
+    private $logimpuestoincluido = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImpuesto_1_id", type="integer", nullable=true)
+     */
+    private $numimpuesto1Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImpuesto_2_id", type="integer", nullable=true)
+     */
+    private $numimpuesto2Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImpuesto_3_id", type="integer", nullable=true)
+     */
+    private $numimpuesto3Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImpuesto_4_id", type="integer", nullable=true)
+     */
+    private $numimpuesto4Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImpuesto_5_id", type="integer", nullable=true)
+     */
+    private $numimpuesto5Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImpuesto_6_id", type="integer", nullable=true)
+     */
+    private $numimpuesto6Id = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPrctjImpuesto_1", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numprctjimpuesto1 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPrctjImpuesto_2", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numprctjimpuesto2 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPrctjImpuesto_3", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numprctjimpuesto3 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPrctjImpuesto_4", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numprctjimpuesto4 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPrctjImpuesto_5", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numprctjimpuesto5 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPrctjImpuesto_6", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numprctjimpuesto6 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoCompra", type="integer", nullable=true)
+     */
+    private $numcostocompra = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoEstandar", type="integer", nullable=true)
+     */
+    private $numcostoestandar = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoPromedio", type="integer", nullable=true)
+     */
+    private $numcostopromedio = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoPEPS", type="integer", nullable=true)
+     */
+    private $numcostopeps = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoUEPS", type="integer", nullable=true)
+     */
+    private $numcostoueps = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPeso", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numpeso = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumIdentificador_id", type="integer", nullable=true)
+     */
+    private $numidentificadorId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+
+}

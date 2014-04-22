@@ -1,0 +1,43 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tablasindicescampos
+ *
+ * @ORM\Table(name="TablasIndicesCampos")
+ * @ORM\Entity
+ */
+class Tablasindicescampos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTabla_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtablaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumIndice_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numindiceId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCampo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numcampoId = '0';
+
+
+}

@@ -1,0 +1,153 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Listasmaterialesdetalles
+ *
+ * @ORM\Table(name="ListasMaterialesDetalles", indexes={@ORM\Index(name="Indice_1", columns={"StrArticulo_ky"}), @ORM\Index(name="Indice_2", columns={"NumAlmacenRequisicionMaterial_id"}), @ORM\Index(name="Indice_3", columns={"NumOperacionEstandar_id"}), @ORM\Index(name="Indice_4", columns={"StrListaMaterial_ky", "NumSecuencia"})})
+ * @ORM\Entity
+ */
+class Listasmaterialesdetalles
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrListaMaterial_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strlistamaterialKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numconsecutivoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSecuencia", type="integer", nullable=true)
+     */
+    private $numsecuencia = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticulo_ky", type="string", length=20, nullable=true)
+     */
+    private $strarticuloKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumUnidadMedida_id", type="integer", nullable=true)
+     */
+    private $numunidadmedidaId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorConversion", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactorconversion = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidadRequerida", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidadrequerida = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoFactorDesperdicio", type="integer", nullable=true)
+     */
+    private $numtipofactordesperdicio = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorDesperdicio", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactordesperdicio = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogDesperdicioUnidad", type="boolean", nullable=true)
+     */
+    private $logdesperdiciounidad = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacenRequisicionMaterial_id", type="integer", nullable=true)
+     */
+    private $numalmacenrequisicionmaterialId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOperacionEstandar_id", type="integer", nullable=true)
+     */
+    private $numoperacionestandarId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDibujo_id", type="integer", nullable=true)
+     */
+    private $numdibujoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNumeroDibujo", type="string", length=20, nullable=true)
+     */
+    private $strnumerodibujo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCategoriaCosto_id", type="integer", nullable=true)
+     */
+    private $numcategoriacostoId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteEfectiva", type="datetime", nullable=true)
+     */
+    private $dteefectiva;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteExpiracion", type="datetime", nullable=true)
+     */
+    private $dteexpiracion;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogUsarFormulaCantidad", type="boolean", nullable=true)
+     */
+    private $logusarformulacantidad = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemFormulaCantidad", type="text", length=16, nullable=true)
+     */
+    private $memformulacantidad;
+
+
+}

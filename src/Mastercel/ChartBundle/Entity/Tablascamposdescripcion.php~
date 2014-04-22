@@ -1,0 +1,64 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tablascamposdescripcion
+ *
+ * @ORM\Table(name="TablasCamposDescripcion")
+ * @ORM\Entity
+ */
+class Tablascamposdescripcion
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTabla_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtablaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCampo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numcampoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOpcion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numopcionId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrOpcion_ky", type="string", length=60, nullable=true)
+     */
+    private $stropcionKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=100, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogValorOmision", type="boolean", nullable=true)
+     */
+    private $logvaloromision = '0';
+
+
+}

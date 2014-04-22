@@ -1,0 +1,158 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Objetivosplanesproductos
+ *
+ * @ORM\Table(name="ObjetivosPlanesProductos", indexes={@ORM\Index(name="Indice_1", columns={"NumObjetivoPlan_id"})})
+ * @ORM\Entity
+ */
+class Objetivosplanesproductos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumObjetivoPlanProducto_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numobjetivoplanproductoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumObjetivoPlan_id", type="integer", nullable=true)
+     */
+    private $numobjetivoplanId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrGrupo", type="string", length=60, nullable=true)
+     */
+    private $strgrupo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrdenAparicion", type="integer", nullable=true)
+     */
+    private $numordenaparicion = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticulo_ky", type="string", length=20, nullable=true)
+     */
+    private $strarticuloKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrModelo_ky", type="string", length=20, nullable=true)
+     */
+    private $strmodeloKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumFamilia_id", type="integer", nullable=true)
+     */
+    private $numfamiliaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMarca_id", type="integer", nullable=true)
+     */
+    private $nummarcaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTemporada_id", type="integer", nullable=true)
+     */
+    private $numtemporadaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCoordinado_id", type="integer", nullable=true)
+     */
+    private $numcoordinadoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumProveedor_id", type="integer", nullable=true)
+     */
+    private $numproveedorId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumColor_id", type="integer", nullable=true)
+     */
+    private $numcolorId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLargo_id", type="integer", nullable=true)
+     */
+    private $numlargoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTalla_id", type="integer", nullable=true)
+     */
+    private $numtallaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_1_id", type="integer", nullable=true)
+     */
+    private $numclasificacion1Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_2_id", type="integer", nullable=true)
+     */
+    private $numclasificacion2Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_3_id", type="integer", nullable=true)
+     */
+    private $numclasificacion3Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_4_id", type="integer", nullable=true)
+     */
+    private $numclasificacion4Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCaracteristica_id", type="integer", nullable=true)
+     */
+    private $numcaracteristicaId = '0';
+
+
+}

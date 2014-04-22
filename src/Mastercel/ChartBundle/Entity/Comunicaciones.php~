@@ -1,0 +1,151 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Comunicaciones
+ *
+ * @ORM\Table(name="Comunicaciones", indexes={@ORM\Index(name="Indice_1", columns={"NumTipoComunicacion", "NumOrden", "LogLimpiarTabla"}), @ORM\Index(name="Indice_2", columns={"DteActualizacion"}), @ORM\Index(name="Indice_3", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Comunicaciones
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumComunicacion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numcomunicacionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoComunicacion", type="integer", nullable=true)
+     */
+    private $numtipocomunicacion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrden", type="integer", nullable=true)
+     */
+    private $numorden = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivelComunicaciones", type="integer", nullable=true)
+     */
+    private $numnivelcomunicaciones = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreTabla", type="string", length=60, nullable=true)
+     */
+    private $strnombretabla;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogLimpiarTabla", type="boolean", nullable=true)
+     */
+    private $loglimpiartabla = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTabla", type="integer", nullable=true)
+     */
+    private $numtipotabla = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemSQLValidacion", type="text", length=16, nullable=true)
+     */
+    private $memsqlvalidacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemSQLSeleccion", type="text", length=16, nullable=true)
+     */
+    private $memsqlseleccion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemSQLActualizacionAccess", type="text", length=16, nullable=true)
+     */
+    private $memsqlactualizacionaccess;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemSQLActualizacionSqlSrv", type="text", length=16, nullable=true)
+     */
+    private $memsqlactualizacionsqlsrv;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemSQLCorreos", type="text", length=16, nullable=true)
+     */
+    private $memsqlcorreos;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemCondicionSeleccion", type="text", length=16, nullable=true)
+     */
+    private $memcondicionseleccion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemCamposNoCambiar", type="text", length=16, nullable=true)
+     */
+    private $memcamposnocambiar;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

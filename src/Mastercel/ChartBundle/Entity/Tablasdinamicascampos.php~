@@ -1,0 +1,228 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tablasdinamicascampos
+ *
+ * @ORM\Table(name="TablasDinamicasCampos", indexes={@ORM\Index(name="Indice_1", columns={"NumTablaDinamica_id", "NumOrden", "NumCampo_id"})})
+ * @ORM\Entity
+ */
+class Tablasdinamicascampos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCampo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numcampoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTablaDinamica_id", type="integer", nullable=true)
+     */
+    private $numtabladinamicaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrden", type="integer", nullable=true)
+     */
+    private $numorden = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreTabla", type="string", length=60, nullable=true)
+     */
+    private $strnombretabla;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreCampo", type="string", length=60, nullable=true)
+     */
+    private $strnombrecampo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrAlias", type="string", length=60, nullable=true)
+     */
+    private $stralias;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreGrupo", type="string", length=60, nullable=true)
+     */
+    private $strnombregrupo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoDato", type="integer", nullable=true)
+     */
+    private $numtipodato = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLongitud", type="integer", nullable=true)
+     */
+    private $numlongitud = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrValorOmision", type="string", length=60, nullable=true)
+     */
+    private $strvaloromision;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogValorRequerido", type="boolean", nullable=true)
+     */
+    private $logvalorrequerido = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrFormato", type="string", length=15, nullable=true)
+     */
+    private $strformato;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoUbicacion", type="integer", nullable=true)
+     */
+    private $numtipoubicacion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoArea", type="integer", nullable=true)
+     */
+    private $numtipoarea = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoIntervalo", type="integer", nullable=true)
+     */
+    private $numtipointervalo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoResumen", type="integer", nullable=true)
+     */
+    private $numtiporesumen = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoVariacion", type="integer", nullable=true)
+     */
+    private $numtipovariacion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoOrdenar", type="integer", nullable=true)
+     */
+    private $numtipoordenar = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTiposAreasPermitidas", type="integer", nullable=true)
+     */
+    private $numtiposareaspermitidas = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTiposOpciones", type="integer", nullable=true)
+     */
+    private $numtiposopciones = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoComponente", type="integer", nullable=true)
+     */
+    private $numtipocomponente = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoOperador", type="integer", nullable=true)
+     */
+    private $numtipooperador = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEmpresa", type="integer", nullable=true)
+     */
+    private $numtipoempresa = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreTablaBusqueda", type="string", length=60, nullable=true)
+     */
+    private $strnombretablabusqueda;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreCampoMostrar", type="string", length=150, nullable=true)
+     */
+    private $strnombrecampomostrar;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreCampoRetornar", type="string", length=60, nullable=true)
+     */
+    private $strnombrecamporetornar;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreCampoIndice", type="string", length=150, nullable=true)
+     */
+    private $strnombrecampoindice;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreCampoNivel", type="string", length=60, nullable=true)
+     */
+    private $strnombrecamponivel;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCriterioSeleccion", type="string", length=120, nullable=true)
+     */
+    private $strcriterioseleccion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrComandoSeleccion", type="text", length=16, nullable=true)
+     */
+    private $strcomandoseleccion;
+
+
+}

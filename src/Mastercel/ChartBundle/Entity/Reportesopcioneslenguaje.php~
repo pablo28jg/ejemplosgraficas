@@ -1,0 +1,55 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Reportesopcioneslenguaje
+ *
+ * @ORM\Table(name="ReportesOpcionesLenguaje", indexes={@ORM\Index(name="Indice_1", columns={"NumReporte_id"})})
+ * @ORM\Entity
+ */
+class Reportesopcioneslenguaje
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOpcion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numopcionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLenguaje_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numlenguajeId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumReporte_id", type="integer", nullable=true)
+     */
+    private $numreporteId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemAyuda", type="text", length=16, nullable=true)
+     */
+    private $memayuda;
+
+
+}

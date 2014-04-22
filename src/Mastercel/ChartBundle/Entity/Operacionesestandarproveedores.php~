@@ -1,0 +1,104 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Operacionesestandarproveedores
+ *
+ * @ORM\Table(name="OperacionesEstandarProveedores", indexes={@ORM\Index(name="Indice_1", columns={"NumProveedor_id", "NumOperacionEstandar_id"}), @ORM\Index(name="Indice_2", columns={"NumProveedor_id", "StrArticulo_ky"}), @ORM\Index(name="Indice_3", columns={"StrArticulo_ky", "NumProveedor_id"}), @ORM\Index(name="Indice_4", columns={"StrArticulo_ky", "NumOperacionEstandar_id"})})
+ * @ORM\Entity
+ */
+class Operacionesestandarproveedores
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOperacionEstandar_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numoperacionestandarId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumProveedor_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numproveedorId = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogProveedorOmision", type="boolean", nullable=true)
+     */
+    private $logproveedoromision = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticulo_ky", type="string", length=20, nullable=true)
+     */
+    private $strarticuloKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumUnidadMedida_id", type="integer", nullable=true)
+     */
+    private $numunidadmedidaId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorConversion", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactorconversion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=true)
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoUnitario", type="integer", nullable=true)
+     */
+    private $numcostounitario = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMoneda_id", type="integer", nullable=true)
+     */
+    private $nummonedaId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidadMinima", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidadminima = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDiasEntrega", type="integer", nullable=true)
+     */
+    private $numdiasentrega = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCategoriaCosto_id", type="integer", nullable=true)
+     */
+    private $numcategoriacostoId = '0';
+
+
+}

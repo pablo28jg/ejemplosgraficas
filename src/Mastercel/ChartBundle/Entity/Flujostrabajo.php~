@@ -1,0 +1,67 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Flujostrabajo
+ *
+ * @ORM\Table(name="FlujosTrabajo")
+ * @ORM\Entity
+ */
+class Flujostrabajo
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumFlujoTrabajo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numflujotrabajoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombre", type="string", length=60, nullable=true)
+     */
+    private $strnombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemDiagrama", type="text", length=16, nullable=true)
+     */
+    private $memdiagrama;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+
+}

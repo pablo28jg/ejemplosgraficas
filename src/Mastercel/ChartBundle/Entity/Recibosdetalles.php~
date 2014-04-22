@@ -1,0 +1,113 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Recibosdetalles
+ *
+ * @ORM\Table(name="RecibosDetalles", indexes={@ORM\Index(name="Indice_1", columns={"NumRecibo_id", "NumTipo", "NumLinea"})})
+ * @ORM\Entity
+ */
+class Recibosdetalles
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumRecibo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numreciboId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipo", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtipo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numconsecutivoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLinea", type="integer", nullable=true)
+     */
+    private $numlinea = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTitulo", type="string", length=60, nullable=true)
+     */
+    private $strtitulo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoAlineacion", type="integer", nullable=true)
+     */
+    private $numtipoalineacion = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrLetraNombre", type="string", length=20, nullable=true)
+     */
+    private $strletranombre;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLetraAncho", type="integer", nullable=true)
+     */
+    private $numletraancho = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLetraColor", type="integer", nullable=true)
+     */
+    private $numletracolor = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogLetraEstiloGruesa", type="boolean", nullable=true)
+     */
+    private $logletraestilogruesa = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogLetraEstiloCursiva", type="boolean", nullable=true)
+     */
+    private $logletraestilocursiva = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogLetraEstiloSubrayada", type="boolean", nullable=true)
+     */
+    private $logletraestilosubrayada = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogLetraEstiloTachada", type="boolean", nullable=true)
+     */
+    private $logletraestilotachada = '0';
+
+
+}

@@ -1,0 +1,242 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Cuentasbancarias
+ *
+ * @ORM\Table(name="CuentasBancarias", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_1", columns={"StrCuentaBancaria_ky"})}, indexes={@ORM\Index(name="Indice_2", columns={"StrDescripcion"}), @ORM\Index(name="Indice_3", columns={"NumSucursalBancaria_id"}), @ORM\Index(name="Indice_4", columns={"DteActualizacion"}), @ORM\Index(name="Indice_5", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Cuentasbancarias
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCuentaBancaria_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numcuentabancariaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuentaBancaria_ky", type="string", length=10, nullable=true)
+     */
+    private $strcuentabancariaKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNoCuenta", type="string", length=20, nullable=true)
+     */
+    private $strnocuenta;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipo", type="integer", nullable=true)
+     */
+    private $numtipo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=true)
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=true)
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMoneda_id", type="integer", nullable=true)
+     */
+    private $nummonedaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSucursalBancaria_id", type="integer", nullable=true)
+     */
+    private $numsucursalbancariaId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteApertura", type="datetime", nullable=true)
+     */
+    private $dteapertura;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDiaCorte", type="integer", nullable=true)
+     */
+    private $numdiacorte = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNoChequeSiguiente", type="integer", nullable=true)
+     */
+    private $numnochequesiguiente = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSiguienteCheque", type="integer", nullable=true)
+     */
+    private $numsiguientecheque = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrFormatoCheques", type="string", length=20, nullable=true)
+     */
+    private $strformatocheques;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrFormatoEstadoCuenta", type="string", length=30, nullable=true)
+     */
+    private $strformatoestadocuenta;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLimiteCredito", type="integer", nullable=true)
+     */
+    private $numlimitecredito = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPorcentajeComision", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numporcentajecomision = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPorcentajeInteres", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numporcentajeinteres = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPagoMinimo", type="integer", nullable=true)
+     */
+    private $numpagominimo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCodigoAcceso", type="integer", nullable=true)
+     */
+    private $numcodigoacceso = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_1_id", type="integer", nullable=true)
+     */
+    private $numclasificacion1Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_2_id", type="integer", nullable=true)
+     */
+    private $numclasificacion2Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_3_id", type="integer", nullable=true)
+     */
+    private $numclasificacion3Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_4_id", type="integer", nullable=true)
+     */
+    private $numclasificacion4Id = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemObservaciones", type="text", length=16, nullable=true)
+     */
+    private $memobservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuentaContable_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuentacontableKy;
+
+
+}

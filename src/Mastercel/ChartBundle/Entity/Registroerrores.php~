@@ -1,0 +1,83 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Registroerrores
+ *
+ * @ORM\Table(name="RegistroErrores")
+ * @ORM\Entity
+ */
+class Registroerrores
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numconsecutivoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteProceso", type="datetime", nullable=true)
+     */
+    private $dteproceso;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoModulo", type="integer", nullable=true)
+     */
+    private $numtipomodulo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoMensaje", type="integer", nullable=true)
+     */
+    private $numtipomensaje = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoProceso", type="integer", nullable=true)
+     */
+    private $numtipoproceso = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrMensaje", type="string", length=100, nullable=true)
+     */
+    private $strmensaje;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrExcepcion", type="string", length=100, nullable=true)
+     */
+    private $strexcepcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+
+}

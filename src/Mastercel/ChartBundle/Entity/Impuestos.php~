@@ -1,0 +1,151 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Impuestos
+ *
+ * @ORM\Table(name="Impuestos", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_1", columns={"StrImpuesto_ky"})}, indexes={@ORM\Index(name="Indice_2", columns={"StrDescripcion"}), @ORM\Index(name="Indice_3", columns={"DteActualizacion"}), @ORM\Index(name="Indice_4", columns={"NumEstadoComunicacion"}), @ORM\Index(name="Indice_5", columns={"StrCuentaAcreditar_ky"}), @ORM\Index(name="Indice_6", columns={"StrCuentaAcreditado_ky"}), @ORM\Index(name="Indice_7", columns={"StrCuentaTrasladar_ky"}), @ORM\Index(name="Indice_8", columns={"StrCuentaTrasladado_ky"})})
+ * @ORM\Entity
+ */
+class Impuestos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImpuesto_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numimpuestoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrImpuesto_ky", type="string", length=10, nullable=true)
+     */
+    private $strimpuestoKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCategoria_id", type="integer", nullable=true)
+     */
+    private $numcategoriaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipo", type="integer", nullable=true)
+     */
+    private $numtipo = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogRetencion", type="boolean", nullable=true)
+     */
+    private $logretencion = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPorcentaje", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numporcentaje = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoRedondeo", type="integer", nullable=true)
+     */
+    private $numtiporedondeo = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuentaAcreditar_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuentaacreditarKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuentaAcreditado_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuentaacreditadoKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuentaTrasladar_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuentatrasladarKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuentaTrasladado_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuentatrasladadoKy;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogImpuestoEnRecibo", type="boolean", nullable=true)
+     */
+    private $logimpuestoenrecibo = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ChrIdentificadorImpuesto", type="string", length=1, nullable=true)
+     */
+    private $chridentificadorimpuesto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

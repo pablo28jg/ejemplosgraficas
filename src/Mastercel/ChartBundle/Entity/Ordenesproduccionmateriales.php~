@@ -1,0 +1,200 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Ordenesproduccionmateriales
+ *
+ * @ORM\Table(name="OrdenesProduccionMateriales", indexes={@ORM\Index(name="Indice_1", columns={"NumAlmacen_id", "NumOrdenProduccion_id", "NumSecuencia"}), @ORM\Index(name="Indice_2", columns={"NumAlmacen_id", "NumOrdenProduccionPadre_id", "NumSecuencia"}), @ORM\Index(name="Indice_3", columns={"StrArticulo_ky"}), @ORM\Index(name="Indice_4", columns={"NumAlmacenRequisicionMaterial_id"}), @ORM\Index(name="Indice_5", columns={"NumCategoriaCosto_id"}), @ORM\Index(name="Indice_6", columns={"NumOrdenOperacion_id"}), @ORM\Index(name="Indice_7", columns={"NumOperacionEstandar_id"})})
+ * @ORM\Entity
+ */
+class Ordenesproduccionmateriales
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrdenMaterial_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numordenmaterialId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrdenProduccionPadre_id", type="integer", nullable=true)
+     */
+    private $numordenproduccionpadreId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrdenProduccion_id", type="integer", nullable=true)
+     */
+    private $numordenproduccionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=true)
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSecuencia", type="integer", nullable=true)
+     */
+    private $numsecuencia = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticulo_ky", type="string", length=20, nullable=true)
+     */
+    private $strarticuloKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumUnidadMedida_id", type="integer", nullable=true)
+     */
+    private $numunidadmedidaId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorConversion", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactorconversion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacenRequisicionMaterial_id", type="integer", nullable=true)
+     */
+    private $numalmacenrequisicionmaterialId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidadRequerida", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidadrequerida = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidadEntregada", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidadentregada = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOperacionEstandar_id", type="integer", nullable=true)
+     */
+    private $numoperacionestandarId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrdenOperacion_id", type="integer", nullable=true)
+     */
+    private $numordenoperacionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoEstandarCompra", type="integer", nullable=true)
+     */
+    private $numcostoestandarcompra = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoEstandarEstandar", type="integer", nullable=true)
+     */
+    private $numcostoestandarestandar = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoEstandarPromedio", type="integer", nullable=true)
+     */
+    private $numcostoestandarpromedio = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoEstandarPEPS", type="integer", nullable=true)
+     */
+    private $numcostoestandarpeps = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoEstandarUEPS", type="integer", nullable=true)
+     */
+    private $numcostoestandarueps = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoRealCompra", type="integer", nullable=true)
+     */
+    private $numcostorealcompra = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoRealEstandar", type="integer", nullable=true)
+     */
+    private $numcostorealestandar = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoRealPromedio", type="integer", nullable=true)
+     */
+    private $numcostorealpromedio = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoRealPEPS", type="integer", nullable=true)
+     */
+    private $numcostorealpeps = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoRealUEPS", type="integer", nullable=true)
+     */
+    private $numcostorealueps = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCategoriaCosto_id", type="integer", nullable=true)
+     */
+    private $numcategoriacostoId = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogMaterialEntregado", type="boolean", nullable=true)
+     */
+    private $logmaterialentregado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+
+}

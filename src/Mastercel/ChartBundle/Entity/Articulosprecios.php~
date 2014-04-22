@@ -1,0 +1,232 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Articulosprecios
+ *
+ * @ORM\Table(name="ArticulosPrecios", indexes={@ORM\Index(name="Indice_3", columns={"DteActualizacion"}), @ORM\Index(name="Indice_4", columns={"NumEstadoComunicacion"}), @ORM\Index(name="Indice_2", columns={"StrModelo_ky", "NumListaPrecio_id", "NumNivelPrecio_id"})})
+ * @ORM\Entity
+ */
+class Articulosprecios
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticulo_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strarticuloKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumListaPrecio_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numlistaprecioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivelPrecio_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numnivelprecioId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrModelo_ky", type="string", length=20, nullable=true)
+     */
+    private $strmodeloKy;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumMargenUtilidad", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $nummargenutilidad = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMonedaVenta_id", type="integer", nullable=true)
+     */
+    private $nummonedaventaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumUnidadMedidaVenta_id", type="integer", nullable=true)
+     */
+    private $numunidadmedidaventaId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPrctjDescuentoMaximo", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numprctjdescuentomaximo = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NumPrecioVenta", type="decimal", precision=18, scale=8, nullable=true)
+     */
+    private $numprecioventa = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCambioPrecio", type="datetime", nullable=true)
+     */
+    private $dtecambioprecio;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGrupoComisionVenta_1_id", type="integer", nullable=true)
+     */
+    private $numgrupocomisionventa1Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGrupoComisionVenta_2_id", type="integer", nullable=true)
+     */
+    private $numgrupocomisionventa2Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGrupoComisionVenta_3_id", type="integer", nullable=true)
+     */
+    private $numgrupocomisionventa3Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGrupoComisionVenta_4_id", type="integer", nullable=true)
+     */
+    private $numgrupocomisionventa4Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGrupoComisionVenta_5_id", type="integer", nullable=true)
+     */
+    private $numgrupocomisionventa5Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGrupoComisionVenta_6_id", type="integer", nullable=true)
+     */
+    private $numgrupocomisionventa6Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClaseComision_1_id", type="integer", nullable=true)
+     */
+    private $numclasecomision1Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClaseComision_2_id", type="integer", nullable=true)
+     */
+    private $numclasecomision2Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClaseComision_3_id", type="integer", nullable=true)
+     */
+    private $numclasecomision3Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClaseComision_4_id", type="integer", nullable=true)
+     */
+    private $numclasecomision4Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClaseComision_5_id", type="integer", nullable=true)
+     */
+    private $numclasecomision5Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClaseComision_6_id", type="integer", nullable=true)
+     */
+    private $numclasecomision6Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoComision_1_id", type="integer", nullable=true)
+     */
+    private $numtipocomision1Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoComision_2_id", type="integer", nullable=true)
+     */
+    private $numtipocomision2Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoComision_3_id", type="integer", nullable=true)
+     */
+    private $numtipocomision3Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoComision_4_id", type="integer", nullable=true)
+     */
+    private $numtipocomision4Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoComision_5_id", type="integer", nullable=true)
+     */
+    private $numtipocomision5Id = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoComision_6_id", type="integer", nullable=true)
+     */
+    private $numtipocomision6Id = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

@@ -1,0 +1,56 @@
+#barralateral{
+	height: 100%;
+	width: 15%;
+	left: 1%;
+	padding: 0px;
+	margin: 0px; 
+	position: fixed;
+	top: 51px;
+}
+
+#contenido{
+	left: 16%;
+	padding: 5px;
+	top: 51px;
+	width: 68%;
+	margin: 0px; 
+	position: relative;
+}
+#menu{
+	left: 16%;
+	padding-right: 5px;
+	top: 1px;
+	width: 68%;
+	margin: 0px; 
+	position: relative;
+}
+#menu ul li{
+	float: left;
+	list-style: none;
+	padding-right: 20px;
+}
+#barraestado{
+	height: 100%;
+	width: 15%;
+	left: 84%;
+	padding: 0px;
+	margin: 0px; 
+	position: fixed;
+	top: 51px;	
+}
+.div_barraestado{
+	padding-left: 5px;	
+}
+.div_barraestado a{
+	text-decoration: none;
+	color: blue;
+}
+.div_titulo_ventana{
+	position: relative;
+	width:100%;
+	background-color: maroon;
+}
+.div_titulo_ventana_titulo{
+	float:left;
+	width:98%;
+}

@@ -1,0 +1,123 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Correosconfiguraciones
+ *
+ * @ORM\Table(name="CorreosConfiguraciones", indexes={@ORM\Index(name="Indice_1", columns={"NumServidorCorreo_id"})})
+ * @ORM\Entity
+ */
+class Correosconfiguraciones
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConfiguracionCorreo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numconfiguracioncorreoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=128, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogArchivarEnviados", type="boolean", nullable=true)
+     */
+    private $logarchivarenviados = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogArchivarEliminados", type="boolean", nullable=true)
+     */
+    private $logarchivareliminados = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogEliminarAntiguos", type="boolean", nullable=true)
+     */
+    private $logeliminarantiguos = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEliminarDespuesDias", type="integer", nullable=true)
+     */
+    private $numeliminardespuesdias = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogIncluirmeCopiaOculta", type="boolean", nullable=true)
+     */
+    private $logincluirmecopiaoculta = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogMostrarNoLeidos", type="boolean", nullable=true)
+     */
+    private $logmostrarnoleidos = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogCerrarSinLeer", type="boolean", nullable=true)
+     */
+    private $logcerrarsinleer = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumServidorCorreo_id", type="integer", nullable=true)
+     */
+    private $numservidorcorreoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

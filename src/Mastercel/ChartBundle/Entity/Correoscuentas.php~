@@ -1,0 +1,130 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Correoscuentas
+ *
+ * @ORM\Table(name="CorreosCuentas", indexes={@ORM\Index(name="Indice_1", columns={"StrNombre"}), @ORM\Index(name="Indice_2", columns={"NumConfiguracionCorreo_id"}), @ORM\Index(name="Indice_3", columns={"NumServidorCorreoEntrante_id"}), @ORM\Index(name="Indice_4", columns={"NumServidorCorreoSaliente_id"}), @ORM\Index(name="Indice_5", columns={"NumEntidad_id"})})
+ * @ORM\Entity
+ */
+class Correoscuentas
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCuentaCorreo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numcuentacorreoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombre", type="string", length=128, nullable=true)
+     */
+    private $strnombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=256, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDireccionCorreo", type="string", length=128, nullable=true)
+     */
+    private $strdireccioncorreo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrContrasena", type="string", length=128, nullable=true)
+     */
+    private $strcontrasena;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrMostrarComo", type="string", length=128, nullable=true)
+     */
+    private $strmostrarcomo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemFirma", type="text", length=16, nullable=true)
+     */
+    private $memfirma;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConfiguracionCorreo_id", type="integer", nullable=true)
+     */
+    private $numconfiguracioncorreoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumServidorCorreoEntrante_id", type="integer", nullable=true)
+     */
+    private $numservidorcorreoentranteId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumServidorCorreoSaliente_id", type="integer", nullable=true)
+     */
+    private $numservidorcorreosalienteId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEntidad_id", type="integer", nullable=true)
+     */
+    private $numentidadId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

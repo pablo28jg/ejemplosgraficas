@@ -1,0 +1,62 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Reportesdiccionariouniones
+ *
+ * @ORM\Table(name="ReportesDiccionarioUniones")
+ * @ORM\Entity
+ */
+class Reportesdiccionariouniones
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreTabla_1_ky", type="string", length=60, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strnombretabla1Ky;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreTabla_2_ky", type="string", length=60, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strnombretabla2Ky;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ChrTipoUnion", type="string", length=60, nullable=true)
+     */
+    private $chrtipounion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreCampos_1", type="string", length=255, nullable=true)
+     */
+    private $strnombrecampos1;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreCampos_2", type="string", length=255, nullable=true)
+     */
+    private $strnombrecampos2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrOperadores", type="string", length=60, nullable=true)
+     */
+    private $stroperadores;
+
+
+}

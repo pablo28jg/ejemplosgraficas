@@ -1,0 +1,169 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tecladosdetalles
+ *
+ * @ORM\Table(name="TecladosDetalles")
+ * @ORM\Entity
+ */
+class Tecladosdetalles
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTeclado_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtecladoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivel_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numnivelId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTecla_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numteclaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTitulo", type="string", length=30, nullable=true)
+     */
+    private $strtitulo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="GraDibujo", type="text", length=16, nullable=true)
+     */
+    private $gradibujo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumColor", type="integer", nullable=true)
+     */
+    private $numcolor = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTeclasRapidas", type="string", length=20, nullable=true)
+     */
+    private $strteclasrapidas;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoFuncion", type="integer", nullable=true)
+     */
+    private $numtipofuncion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivelCargar", type="integer", nullable=true)
+     */
+    private $numnivelcargar = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDato", type="string", length=20, nullable=true)
+     */
+    private $strdato;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidad", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidad = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogDatoSegmentado", type="boolean", nullable=true)
+     */
+    private $logdatosegmentado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSegmentoDato", type="integer", nullable=true)
+     */
+    private $numsegmentodato = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivelAutorizacion", type="integer", nullable=true)
+     */
+    private $numnivelautorizacion = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrLetraNombre", type="string", length=20, nullable=true)
+     */
+    private $strletranombre;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLetraAncho", type="integer", nullable=true)
+     */
+    private $numletraancho = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLetraColor", type="integer", nullable=true)
+     */
+    private $numletracolor = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogLetraEstiloGruesa", type="boolean", nullable=true)
+     */
+    private $logletraestilogruesa = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogLetraEstiloCursiva", type="boolean", nullable=true)
+     */
+    private $logletraestilocursiva = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogLetraEstiloSubrayada", type="boolean", nullable=true)
+     */
+    private $logletraestilosubrayada = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogLetraEstiloTachada", type="boolean", nullable=true)
+     */
+    private $logletraestilotachada = '0';
+
+
+}

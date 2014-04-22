@@ -1,0 +1,53 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Parametrosvalores
+ *
+ * @ORM\Table(name="ParametrosValores", indexes={@ORM\Index(name="Indice_1", columns={"NumParametro_id"})})
+ * @ORM\Entity
+ */
+class Parametrosvalores
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumValor_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numvalorId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCampo_id", type="integer", nullable=true)
+     */
+    private $numcampoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumParametro_id", type="integer", nullable=true)
+     */
+    private $numparametroId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrden", type="integer", nullable=true)
+     */
+    private $numorden = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrValor", type="string", length=60, nullable=true)
+     */
+    private $strvalor;
+
+
+}

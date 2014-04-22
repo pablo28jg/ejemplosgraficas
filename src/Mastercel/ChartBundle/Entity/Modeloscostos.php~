@@ -1,0 +1,183 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Modeloscostos
+ *
+ * @ORM\Table(name="ModelosCostos", indexes={@ORM\Index(name="Indice_1", columns={"DteActualizacion"}), @ORM\Index(name="Indice_2", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Modeloscostos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEjercicio_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numejercicioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrModelo_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strmodeloKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPeriodo_id", type="integer", nullable=true)
+     */
+    private $numperiodoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCosto_0", type="integer", nullable=true)
+     */
+    private $numcosto0 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCosto_1", type="integer", nullable=true)
+     */
+    private $numcosto1 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCosto_2", type="integer", nullable=true)
+     */
+    private $numcosto2 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCosto_3", type="integer", nullable=true)
+     */
+    private $numcosto3 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCosto_4", type="integer", nullable=true)
+     */
+    private $numcosto4 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCosto_5", type="integer", nullable=true)
+     */
+    private $numcosto5 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCosto_6", type="integer", nullable=true)
+     */
+    private $numcosto6 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCosto_7", type="integer", nullable=true)
+     */
+    private $numcosto7 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCosto_8", type="integer", nullable=true)
+     */
+    private $numcosto8 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCosto_9", type="integer", nullable=true)
+     */
+    private $numcosto9 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCosto_10", type="integer", nullable=true)
+     */
+    private $numcosto10 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCosto_11", type="integer", nullable=true)
+     */
+    private $numcosto11 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCosto_12", type="integer", nullable=true)
+     */
+    private $numcosto12 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCosto_13", type="integer", nullable=true)
+     */
+    private $numcosto13 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

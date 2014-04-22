@@ -1,0 +1,34 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Formaspagodenominaciones
+ *
+ * @ORM\Table(name="FormasPagoDenominaciones")
+ * @ORM\Entity
+ */
+class Formaspagodenominaciones
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumFormaPago_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numformapagoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDenominacion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numdenominacionId = '0';
+
+
+}

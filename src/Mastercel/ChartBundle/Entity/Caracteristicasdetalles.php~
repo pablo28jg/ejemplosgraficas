@@ -1,0 +1,60 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Caracteristicasdetalles
+ *
+ * @ORM\Table(name="CaracteristicasDetalles", indexes={@ORM\Index(name="Indice_1", columns={"NumCaracteristica_id", "NumCaracteristicaEspecifica_id", "NumCaracteristicaGeneral_id"}), @ORM\Index(name="Indice_2", columns={"NumCaracteristicaEspecifica_id"}), @ORM\Index(name="Indice_3", columns={"NumCaracteristicaGeneral_id"})})
+ * @ORM\Entity
+ */
+class Caracteristicasdetalles
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numconsecutivoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCaracteristica_id", type="integer", nullable=true)
+     */
+    private $numcaracteristicaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCaracteristicaEspecifica_id", type="integer", nullable=true)
+     */
+    private $numcaracteristicaespecificaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCaracteristicaGeneral_id", type="integer", nullable=true)
+     */
+    private $numcaracteristicageneralId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrden", type="integer", nullable=true)
+     */
+    private $numorden = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogOpcionOmision", type="boolean", nullable=true)
+     */
+    private $logopcionomision = '0';
+
+
+}

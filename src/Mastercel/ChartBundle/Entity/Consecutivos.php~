@@ -1,0 +1,46 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Consecutivos
+ *
+ * @ORM\Table(name="Consecutivos", indexes={@ORM\Index(name="Indice_1", columns={"DteActualizacion"}), @ORM\Index(name="Indice_2", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Consecutivos
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTabla_id", type="string", length=100, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $strtablaId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSiguiente", type="integer", nullable=true)
+     */
+    private $numsiguiente = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

@@ -1,0 +1,104 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tablascampos
+ *
+ * @ORM\Table(name="TablasCampos", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_1", columns={"NumTabla_id", "StrCampo_ky"})})
+ * @ORM\Entity
+ */
+class Tablascampos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTabla_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtablaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCampo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numcampoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCampo_ky", type="string", length=100, nullable=true)
+     */
+    private $strcampoKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=100, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLongitud", type="integer", nullable=true)
+     */
+    private $numlongitud = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrValorMinimo", type="string", length=10, nullable=true)
+     */
+    private $strvalorminimo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrValorMaximo", type="string", length=10, nullable=true)
+     */
+    private $strvalormaximo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrValorOmision", type="string", length=10, nullable=true)
+     */
+    private $strvaloromision;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrFormato", type="string", length=10, nullable=true)
+     */
+    private $strformato;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogRequerido", type="boolean", nullable=true)
+     */
+    private $logrequerido = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoDato", type="integer", nullable=true)
+     */
+    private $numtipodato = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoLlave", type="integer", nullable=true)
+     */
+    private $numtipollave = '0';
+
+
+}

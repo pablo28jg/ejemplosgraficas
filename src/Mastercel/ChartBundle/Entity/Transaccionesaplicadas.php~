@@ -1,0 +1,121 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Transaccionesaplicadas
+ *
+ * @ORM\Table(name="TransaccionesAplicadas", indexes={@ORM\Index(name="Indice_1", columns={"NumTransaccionAbono_id", "NumAlmacenAbono_id", "NumTipoTransaccionAbono", "NumTransaccionCargo_id", "NumAlmacenCargo_id", "NumTipoTransaccionCargo"}), @ORM\Index(name="Indice_3", columns={"DteActualizacion"}), @ORM\Index(name="Indice_4", columns={"NumImporte"})})
+ * @ORM\Entity
+ */
+class Transaccionesaplicadas
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTransaccionCargo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtransaccioncargoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacenCargo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacencargoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTransaccionCargo", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtipotransaccioncargo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTransaccionAbono_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtransaccionabonoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacenAbono_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacenabonoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTransaccionAbono", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtipotransaccionabono = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImporte", type="integer", nullable=true)
+     */
+    private $numimporte = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtipoestado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

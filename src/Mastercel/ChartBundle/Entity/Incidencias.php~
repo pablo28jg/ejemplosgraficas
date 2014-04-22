@@ -1,0 +1,181 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Incidencias
+ *
+ * @ORM\Table(name="Incidencias", indexes={@ORM\Index(name="Indice_1", columns={"DteIncidencia", "NumTipoIncidencia", "NumEmpleado_id"}), @ORM\Index(name="Indice_2", columns={"DteIncidencia", "NumEmpleado_id", "NumTipoIncidencia"}), @ORM\Index(name="Indice_3", columns={"NumTipoIncidencia", "DteIncidencia", "NumEmpleado_id"}), @ORM\Index(name="Indice_4", columns={"NumTipoIncidencia", "NumEmpleado_id", "DteIncidencia"})})
+ * @ORM\Entity
+ */
+class Incidencias
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpleado_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numempleadoId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteIncidencia", type="datetime", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $dteincidencia;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=true)
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumHorario_id", type="integer", nullable=true)
+     */
+    private $numhorarioId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmePrimerRegistro", type="datetime", nullable=true)
+     */
+    private $tmeprimerregistro;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeUltimoRegistro", type="datetime", nullable=true)
+     */
+    private $tmeultimoregistro;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTiempoEntradaTemprano", type="integer", nullable=true)
+     */
+    private $numtiempoentradatemprano = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTiempoSalidaTarde", type="integer", nullable=true)
+     */
+    private $numtiemposalidatarde = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTiempoLaboradoIntervalos", type="integer", nullable=true)
+     */
+    private $numtiempolaboradointervalos = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTiempoLaboradoExtra", type="integer", nullable=true)
+     */
+    private $numtiempolaboradoextra = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTiempoLaborado", type="integer", nullable=true)
+     */
+    private $numtiempolaborado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTiempoAusenciasConPermiso", type="integer", nullable=true)
+     */
+    private $numtiempoausenciasconpermiso = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTiempoAusenciasSinPermiso", type="integer", nullable=true)
+     */
+    private $numtiempoausenciassinpermiso = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotalAusenciasConPermiso", type="integer", nullable=true)
+     */
+    private $numtotalausenciasconpermiso = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotalAusenciasSinPermiso", type="integer", nullable=true)
+     */
+    private $numtotalausenciassinpermiso = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoIncidencia", type="integer", nullable=true)
+     */
+    private $numtipoincidencia = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoPermisoLaboral", type="integer", nullable=true)
+     */
+    private $numtipopermisolaboral = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoGoceSueldo", type="integer", nullable=true)
+     */
+    private $numtipogocesueldo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoJustificanteLaboral", type="integer", nullable=true)
+     */
+    private $numtipojustificantelaboral = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumJornada_id", type="integer", nullable=true)
+     */
+    private $numjornadaId = '0';
+
+
+}

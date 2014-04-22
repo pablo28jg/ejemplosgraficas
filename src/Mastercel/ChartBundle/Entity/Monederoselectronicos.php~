@@ -1,0 +1,109 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Monederoselectronicos
+ *
+ * @ORM\Table(name="MonederosElectronicos", indexes={@ORM\Index(name="Indice_1", columns={"NumAlmacen_id"}), @ORM\Index(name="Indice_2", columns={"NumEmpresa_id"}), @ORM\Index(name="Indice_3", columns={"NumCreadoPor_id"}), @ORM\Index(name="Indice_4", columns={"NumActivadoPor_id"}), @ORM\Index(name="Indice_5", columns={"DteCreacion"}), @ORM\Index(name="Indice_6", columns={"DteVigencia"}), @ORM\Index(name="Indice_7", columns={"DteActivacion"}), @ORM\Index(name="Indice_8", columns={"DteUltimaVenta"}), @ORM\Index(name="Indice_9", columns={"NumTipoEstado"})})
+ * @ORM\Entity
+ */
+class Monederoselectronicos
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrMonedero_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $strmonederoKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteVigencia", type="datetime", nullable=true)
+     */
+    private $dtevigencia;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActivadoPor_id", type="integer", nullable=true)
+     */
+    private $numactivadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActivacion", type="datetime", nullable=true)
+     */
+    private $dteactivacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=true)
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=true)
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteUltimaVenta", type="datetime", nullable=true)
+     */
+    private $dteultimaventa;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotalObtenido", type="integer", nullable=true)
+     */
+    private $numtotalobtenido = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotalUtilizado", type="integer", nullable=true)
+     */
+    private $numtotalutilizado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEntidad_id", type="integer", nullable=true)
+     */
+    private $numentidadId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+
+}

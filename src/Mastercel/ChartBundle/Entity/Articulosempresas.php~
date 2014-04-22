@@ -1,0 +1,132 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Articulosempresas
+ *
+ * @ORM\Table(name="ArticulosEmpresas", indexes={@ORM\Index(name="Indice_1", columns={"NumEmpresa_id", "StrArticulo_ky"}), @ORM\Index(name="Indice_2", columns={"NumProveedor_id"}), @ORM\Index(name="Indice_3", columns={"StrModelo_ky", "NumEmpresa_id"}), @ORM\Index(name="Indice_4", columns={"DteActualizacion"}), @ORM\Index(name="Indice_5", columns={"NumEstadoComunicacion"}), @ORM\Index(name="Indice_6", columns={"NumEmpresa_id", "StrModelo_ky"})})
+ * @ORM\Entity
+ */
+class Articulosempresas
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticulo_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strarticuloKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrModelo_ky", type="string", length=20, nullable=true)
+     */
+    private $strmodeloKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumProveedor_id", type="integer", nullable=true)
+     */
+    private $numproveedorId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMonedaCompra_id", type="integer", nullable=true)
+     */
+    private $nummonedacompraId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumUnidadMedidaCompra_id", type="integer", nullable=true)
+     */
+    private $numunidadmedidacompraId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoMercancia", type="integer", nullable=true)
+     */
+    private $numtipomercancia = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogEmpresaCalculoPrecio", type="boolean", nullable=true)
+     */
+    private $logempresacalculoprecio = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NumPrecioCompra", type="decimal", precision=18, scale=8, nullable=true)
+     */
+    private $numpreciocompra = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NumCostoCompra", type="decimal", precision=18, scale=8, nullable=true)
+     */
+    private $numcostocompra = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoEstandar", type="integer", nullable=true)
+     */
+    private $numcostoestandar = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoPromedio", type="integer", nullable=true)
+     */
+    private $numcostopromedio = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoPEPS", type="integer", nullable=true)
+     */
+    private $numcostopeps = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoUEPS", type="integer", nullable=true)
+     */
+    private $numcostoueps = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

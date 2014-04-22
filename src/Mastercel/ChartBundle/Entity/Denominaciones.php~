@@ -1,0 +1,81 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Denominaciones
+ *
+ * @ORM\Table(name="Denominaciones", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_1", columns={"StrDenominacion_ky"}), @ORM\UniqueConstraint(name="Indice_2", columns={"NumTipoDenominacion", "NumValor"})}, indexes={@ORM\Index(name="Indice_3", columns={"DteActualizacion"}), @ORM\Index(name="Indice_4", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Denominaciones
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDenominacion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numdenominacionId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDenominacion_ky", type="string", length=10, nullable=true)
+     */
+    private $strdenominacionKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoDenominacion", type="integer", nullable=true)
+     */
+    private $numtipodenominacion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumValor", type="integer", nullable=true)
+     */
+    private $numvalor = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

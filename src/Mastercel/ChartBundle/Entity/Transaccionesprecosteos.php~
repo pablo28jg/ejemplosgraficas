@@ -1,0 +1,283 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Transaccionesprecosteos
+ *
+ * @ORM\Table(name="TransaccionesPrecosteos", indexes={@ORM\Index(name="Indice_1", columns={"StrArticulo_ky"}), @ORM\Index(name="Indice_2", columns={"DteCreacion"}), @ORM\Index(name="Indice_3", columns={"DteActualizacion"})})
+ * @ORM\Entity
+ */
+class Transaccionesprecosteos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTransaccion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtransaccionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTransaccion", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtipotransaccion = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticulo_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strarticuloKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=100, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumUnidadMedida_id", type="integer", nullable=true)
+     */
+    private $numunidadmedidaId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorConversion", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactorconversion = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidad", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidad = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMoneda_id", type="integer", nullable=true)
+     */
+    private $nummonedaId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTipoCambio", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtipocambio = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumFactorTipoCambio", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numfactortipocambio = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NumPrecioCompra", type="decimal", precision=18, scale=8, nullable=true)
+     */
+    private $numpreciocompra = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NumPrecioCompraNeto", type="decimal", precision=18, scale=8, nullable=true)
+     */
+    private $numpreciocompraneto = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NumCostoCompra", type="decimal", precision=18, scale=8, nullable=true)
+     */
+    private $numcostocompra = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NumCostoPromedio", type="decimal", precision=18, scale=8, nullable=true)
+     */
+    private $numcostopromedio = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NumPrecioVenta", type="decimal", precision=18, scale=8, nullable=true)
+     */
+    private $numprecioventa = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NumPrecioVentaNeto", type="decimal", precision=18, scale=8, nullable=true)
+     */
+    private $numprecioventaneto = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NumPrecioVentaMonedaNacional", type="decimal", precision=18, scale=8, nullable=true)
+     */
+    private $numprecioventamonedanacional = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPorcentajeDescuento", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numporcentajedescuento = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPorcentajeImportacion", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numporcentajeimportacion = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPorcentajeFlete", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numporcentajeflete = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPorcentajeGastos", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numporcentajegastos = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPorcentajeDTA", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numporcentajedta = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPorcentajeMargenUtilidad", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numporcentajemargenutilidad = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPorcentajeDescuentoArticulo", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numporcentajedescuentoarticulo = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPorcentajeMargenVenta", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numporcentajemargenventa = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NumImporteDescuento", type="decimal", precision=18, scale=8, nullable=true)
+     */
+    private $numimportedescuento = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NumImporteImportacion", type="decimal", precision=18, scale=8, nullable=true)
+     */
+    private $numimporteimportacion = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NumImporteFlete", type="decimal", precision=18, scale=8, nullable=true)
+     */
+    private $numimporteflete = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NumImporteGastos", type="decimal", precision=18, scale=8, nullable=true)
+     */
+    private $numimportegastos = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NumImporteDTA", type="decimal", precision=18, scale=8, nullable=true)
+     */
+    private $numimportedta = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NumImporteDescuentoArticulo", type="decimal", precision=18, scale=8, nullable=true)
+     */
+    private $numimportedescuentoarticulo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

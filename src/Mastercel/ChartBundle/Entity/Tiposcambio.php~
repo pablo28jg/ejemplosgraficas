@@ -1,0 +1,90 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tiposcambio
+ *
+ * @ORM\Table(name="TiposCambio", indexes={@ORM\Index(name="Indice_1", columns={"DteTipoCambio_id", "NumMoneda_id"}), @ORM\Index(name="Indice_2", columns={"DteActualizacion"}), @ORM\Index(name="Indice_3", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Tiposcambio
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMoneda_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $nummonedaId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteTipoCambio_id", type="datetime", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $dtetipocambioId;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTipoCambioPromedio", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtipocambiopromedio = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTipoCambioCompra", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtipocambiocompra = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTipoCambioVenta", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtipocambioventa = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

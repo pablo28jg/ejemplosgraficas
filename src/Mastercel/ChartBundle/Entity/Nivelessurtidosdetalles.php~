@@ -1,0 +1,67 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Nivelessurtidosdetalles
+ *
+ * @ORM\Table(name="NivelesSurtidosDetalles", indexes={@ORM\Index(name="Indice_1", columns={"NumNivelSurtido_id", "DteInicio"})})
+ * @ORM\Entity
+ */
+class Nivelessurtidosdetalles
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numconsecutivoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivelSurtido_id", type="integer", nullable=true)
+     */
+    private $numnivelsurtidoId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteInicio", type="datetime", nullable=true)
+     */
+    private $dteinicio;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteTermino", type="datetime", nullable=true)
+     */
+    private $dtetermino;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidadMinima", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidadminima = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidadMaxima", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidadmaxima = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidadPuntoReorden", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidadpuntoreorden = '0';
+
+
+}

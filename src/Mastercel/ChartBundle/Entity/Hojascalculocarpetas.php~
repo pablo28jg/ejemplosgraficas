@@ -1,0 +1,74 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Hojascalculocarpetas
+ *
+ * @ORM\Table(name="HojasCalculoCarpetas", indexes={@ORM\Index(name="Indice_1", columns={"NumJerarquia_id"}), @ORM\Index(name="Indice_2", columns={"NumEstadoComunicacion"}), @ORM\Index(name="Indice_3", columns={"DteActualizacion"})})
+ * @ORM\Entity
+ */
+class Hojascalculocarpetas
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCarpeta_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numcarpetaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombre", type="string", length=100, nullable=true)
+     */
+    private $strnombre;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumJerarquia_id", type="integer", nullable=true)
+     */
+    private $numjerarquiaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

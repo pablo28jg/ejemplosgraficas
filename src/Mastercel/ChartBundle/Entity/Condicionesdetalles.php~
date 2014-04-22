@@ -1,0 +1,83 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Condicionesdetalles
+ *
+ * @ORM\Table(name="CondicionesDetalles", indexes={@ORM\Index(name="Indice_1", columns={"StrArticulo_ky"}), @ORM\Index(name="Indice_2", columns={"StrModelo_ky"})})
+ * @ORM\Entity
+ */
+class Condicionesdetalles
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCondicion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numcondicionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numconsecutivoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticulo_ky", type="string", length=20, nullable=true)
+     */
+    private $strarticuloKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrModelo_ky", type="string", length=20, nullable=true)
+     */
+    private $strmodeloKy;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPorcentaje_1", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numporcentaje1 = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPorcentaje_2", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numporcentaje2 = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NumPrecioCompra", type="decimal", precision=18, scale=8, nullable=true)
+     */
+    private $numpreciocompra = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogPorcentajeSobreCantidad", type="boolean", nullable=true)
+     */
+    private $logporcentajesobrecantidad = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogPorcentajeReal", type="boolean", nullable=true)
+     */
+    private $logporcentajereal = '0';
+
+
+}

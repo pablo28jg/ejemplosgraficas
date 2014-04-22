@@ -1,0 +1,214 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Comunicacionesalmacenes
+ *
+ * @ORM\Table(name="ComunicacionesAlmacenes", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_2", columns={"StrPrefijoArchivo"})}, indexes={@ORM\Index(name="Indice_1", columns={"NumTipoComunicacion"}), @ORM\Index(name="Indice_3", columns={"DteActualizacion"}), @ORM\Index(name="Indice_4", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Comunicacionesalmacenes
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoComunicacion", type="integer", nullable=true)
+     */
+    private $numtipocomunicacion = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDireccionCorreo", type="string", length=60, nullable=true)
+     */
+    private $strdireccioncorreo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrServidorCorreoEntrante", type="string", length=60, nullable=true)
+     */
+    private $strservidorcorreoentrante;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPuertoCorreoEntrante", type="integer", nullable=true)
+     */
+    private $numpuertocorreoentrante = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrServidorCorreoSaliente", type="string", length=60, nullable=true)
+     */
+    private $strservidorcorreosaliente;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPuertoCorreoSaliente", type="integer", nullable=true)
+     */
+    private $numpuertocorreosaliente = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogRequiereAutentificacion", type="boolean", nullable=true)
+     */
+    private $logrequiereautentificacion = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuentaCorreo", type="string", length=30, nullable=true)
+     */
+    private $strcuentacorreo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrContrasenaCorreo", type="string", length=30, nullable=true)
+     */
+    private $strcontrasenacorreo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumIntentosConexion", type="integer", nullable=true)
+     */
+    private $numintentosconexion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTiempoEsperaConexion", type="integer", nullable=true)
+     */
+    private $numtiempoesperaconexion = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreMaquina", type="string", length=30, nullable=true)
+     */
+    private $strnombremaquina;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDirectorioEnviados", type="string", length=200, nullable=true)
+     */
+    private $strdirectorioenviados;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrPrefijoArchivo", type="string", length=30, nullable=true)
+     */
+    private $strprefijoarchivo;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogBorrarArchivosEnviados", type="boolean", nullable=true)
+     */
+    private $logborrararchivosenviados = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSiguienteArchivoEnviado", type="integer", nullable=true)
+     */
+    private $numsiguientearchivoenviado = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrContrasenaArchivo", type="string", length=10, nullable=true)
+     */
+    private $strcontrasenaarchivo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDirectorioRecibidos", type="string", length=200, nullable=true)
+     */
+    private $strdirectoriorecibidos;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogSobrescribirArchivosRecibidos", type="boolean", nullable=true)
+     */
+    private $logsobrescribirarchivosrecibidos = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDirectorioActualizados", type="string", length=200, nullable=true)
+     */
+    private $strdirectorioactualizados;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogBorrarArchivosActualizados", type="boolean", nullable=true)
+     */
+    private $logborrararchivosactualizados = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

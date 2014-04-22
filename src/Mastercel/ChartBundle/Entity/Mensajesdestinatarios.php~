@@ -1,0 +1,48 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Mensajesdestinatarios
+ *
+ * @ORM\Table(name="MensajesDestinatarios", indexes={@ORM\Index(name="Indice_1", columns={"NumUsuario_id", "NumMensaje_id"}), @ORM\Index(name="Indice_2", columns={"DteLeido"})})
+ * @ORM\Entity
+ */
+class Mensajesdestinatarios
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMensaje_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $nummensajeId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumUsuario_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numusuarioId = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogLeido", type="boolean", nullable=true)
+     */
+    private $logleido = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteLeido", type="datetime", nullable=true)
+     */
+    private $dteleido;
+
+
+}

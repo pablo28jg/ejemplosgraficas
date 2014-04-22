@@ -1,0 +1,48 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Modelosatributoscampos
+ *
+ * @ORM\Table(name="ModelosAtributosCampos", indexes={@ORM\Index(name="Indice_1", columns={"NumAtributoModelo_id", "NumOrden"})})
+ * @ORM\Entity
+ */
+class Modelosatributoscampos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAtributoModelo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numatributomodeloId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoCampoModelo", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtipocampomodelo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrden", type="integer", nullable=true)
+     */
+    private $numorden = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLongitud", type="integer", nullable=true)
+     */
+    private $numlongitud = '0';
+
+
+}

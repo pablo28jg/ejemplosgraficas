@@ -1,0 +1,256 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Cuentascontables
+ *
+ * @ORM\Table(name="CuentasContables", indexes={@ORM\Index(name="Indice_1", columns={"StrDescripcion"}), @ORM\Index(name="Indice_2", columns={"NumGrupo_id"}), @ORM\Index(name="Indice_3", columns={"NumMoneda_id"}), @ORM\Index(name="Indice_4", columns={"DteActualizacion"}), @ORM\Index(name="Indice_5", columns={"NumEstadoComunicacion"}), @ORM\Index(name="Indice_6", columns={"NumOrden_id", "NumNivel_id"}), @ORM\Index(name="Indice_7", columns={"StrCuentaMayor_ky"}), @ORM\Index(name="Indice_8", columns={"StrCuenta_1_ky"}), @ORM\Index(name="Indice_9", columns={"StrCuenta_2_ky"}), @ORM\Index(name="Indice_10", columns={"StrCuenta_3_ky"}), @ORM\Index(name="Indice_11", columns={"StrCuenta_4_ky"}), @ORM\Index(name="Indice_12", columns={"StrCuenta_5_ky"}), @ORM\Index(name="Indice_13", columns={"StrCuenta_6_ky"}), @ORM\Index(name="Indice_14", columns={"StrCuenta_7_ky"}), @ORM\Index(name="Indice_15", columns={"StrCuenta_8_ky"}), @ORM\Index(name="Indice_16", columns={"StrCuenta_9_ky"}), @ORM\Index(name="Indice_17", columns={"StrCuenta_10_ky"})})
+ * @ORM\Entity
+ */
+class Cuentascontables
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuenta_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $strcuentaKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuentaMayor_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuentamayorKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrden_id", type="integer", nullable=true)
+     */
+    private $numordenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivel_id", type="integer", nullable=true)
+     */
+    private $numnivelId = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogUltimoNivel", type="boolean", nullable=true)
+     */
+    private $logultimonivel = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumGrupo_id", type="integer", nullable=true)
+     */
+    private $numgrupoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoCategoriaCuenta", type="integer", nullable=true)
+     */
+    private $numtipocategoriacuenta = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoCuenta", type="integer", nullable=true)
+     */
+    private $numtipocuenta = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoNaturaleza", type="integer", nullable=true)
+     */
+    private $numtiponaturaleza = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMoneda_id", type="integer", nullable=true)
+     */
+    private $nummonedaId = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogRegistroDiferenteMoneda", type="boolean", nullable=true)
+     */
+    private $logregistrodiferentemoneda = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoRegistro", type="integer", nullable=true)
+     */
+    private $numtiporegistro = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumValidacionEmpresa_id", type="integer", nullable=true)
+     */
+    private $numvalidacionempresaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumValidacionCentroControl_id", type="integer", nullable=true)
+     */
+    private $numvalidacioncentrocontrolId = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogCuentaUtilidadPerdida", type="boolean", nullable=true)
+     */
+    private $logcuentautilidadperdida = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemObservaciones", type="text", length=16, nullable=true)
+     */
+    private $memobservaciones;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuenta_1_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuenta1Ky;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuenta_2_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuenta2Ky;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuenta_3_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuenta3Ky;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuenta_4_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuenta4Ky;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuenta_5_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuenta5Ky;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuenta_6_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuenta6Ky;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuenta_7_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuenta7Ky;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuenta_8_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuenta8Ky;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuenta_9_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuenta9Ky;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuenta_10_ky", type="string", length=20, nullable=true)
+     */
+    private $strcuenta10Ky;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogAplicarCentroControl", type="boolean", nullable=true)
+     */
+    private $logaplicarcentrocontrol = '0';
+
+
+}

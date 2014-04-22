@@ -1,0 +1,235 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Politicascomision
+ *
+ * @ORM\Table(name="PoliticasComision", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_1", columns={"StrPoliticaComision_ky"})}, indexes={@ORM\Index(name="Indice_2", columns={"StrDescripcion"}), @ORM\Index(name="Indice_3", columns={"DteActualizacion"}), @ORM\Index(name="Indice_4", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Politicascomision
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPoliticaComision_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numpoliticacomisionId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrPoliticaComision_ky", type="string", length=10, nullable=true)
+     */
+    private $strpoliticacomisionKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoMetodoPago", type="integer", nullable=true)
+     */
+    private $numtipometodopago = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoCondicionPago", type="integer", nullable=true)
+     */
+    private $numtipocondicionpago = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoValor", type="integer", nullable=true)
+     */
+    private $numtipovalor = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLimite_1", type="integer", nullable=true)
+     */
+    private $numlimite1 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImporte_1", type="integer", nullable=true)
+     */
+    private $numimporte1 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLimite_2", type="integer", nullable=true)
+     */
+    private $numlimite2 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImporte_2", type="integer", nullable=true)
+     */
+    private $numimporte2 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLimite_3", type="integer", nullable=true)
+     */
+    private $numlimite3 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImporte_3", type="integer", nullable=true)
+     */
+    private $numimporte3 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLimite_4", type="integer", nullable=true)
+     */
+    private $numlimite4 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImporte_4", type="integer", nullable=true)
+     */
+    private $numimporte4 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLimite_5", type="integer", nullable=true)
+     */
+    private $numlimite5 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImporte_5", type="integer", nullable=true)
+     */
+    private $numimporte5 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLimite_6", type="integer", nullable=true)
+     */
+    private $numlimite6 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImporte_6", type="integer", nullable=true)
+     */
+    private $numimporte6 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLimite_7", type="integer", nullable=true)
+     */
+    private $numlimite7 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImporte_7", type="integer", nullable=true)
+     */
+    private $numimporte7 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLimite_8", type="integer", nullable=true)
+     */
+    private $numlimite8 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImporte_8", type="integer", nullable=true)
+     */
+    private $numimporte8 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLimite_9", type="integer", nullable=true)
+     */
+    private $numlimite9 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImporte_9", type="integer", nullable=true)
+     */
+    private $numimporte9 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLimite_10", type="integer", nullable=true)
+     */
+    private $numlimite10 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImporte_10", type="integer", nullable=true)
+     */
+    private $numimporte10 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

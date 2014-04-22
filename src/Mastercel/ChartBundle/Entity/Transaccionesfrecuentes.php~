@@ -1,0 +1,99 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Transaccionesfrecuentes
+ *
+ * @ORM\Table(name="TransaccionesFrecuentes", indexes={@ORM\Index(name="Indice_1", columns={"DteAplicacion"}), @ORM\Index(name="Indice_2", columns={"NumAlmacen_id", "DteAplicacion"})})
+ * @ORM\Entity
+ */
+class Transaccionesfrecuentes
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTransaccion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtransaccionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTransaccion", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtipotransaccion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoFrecuencia", type="integer", nullable=true)
+     */
+    private $numtipofrecuencia = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoDia", type="integer", nullable=true)
+     */
+    private $numtipodia = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumIntervalo_1", type="integer", nullable=true)
+     */
+    private $numintervalo1 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumIntervalo_2", type="integer", nullable=true)
+     */
+    private $numintervalo2 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumIntervalo_3", type="integer", nullable=true)
+     */
+    private $numintervalo3 = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogExpira", type="boolean", nullable=true)
+     */
+    private $logexpira = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteExpiracion", type="datetime", nullable=true)
+     */
+    private $dteexpiracion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteAplicacion", type="datetime", nullable=true)
+     */
+    private $dteaplicacion;
+
+
+}

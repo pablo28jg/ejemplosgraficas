@@ -1,0 +1,139 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Solicitudespagos
+ *
+ * @ORM\Table(name="SolicitudesPagos", indexes={@ORM\Index(name="Indice_1", columns={"DteSolicitud", "TmeSolicitud"}), @ORM\Index(name="Indice_2", columns={"DteActualizacion"}), @ORM\Index(name="Indice_3", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Solicitudespagos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSolicitud_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numsolicitudId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacenSolicitud_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacensolicitudId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteSolicitud", type="datetime", nullable=true)
+     */
+    private $dtesolicitud;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeSolicitud", type="datetime", nullable=true)
+     */
+    private $tmesolicitud;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteVencimiento", type="datetime", nullable=true)
+     */
+    private $dtevencimiento;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=true)
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMoneda_id", type="integer", nullable=true)
+     */
+    private $nummonedaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEjecutivo_id", type="integer", nullable=true)
+     */
+    private $numejecutivoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumProveedor_id", type="integer", nullable=true)
+     */
+    private $numproveedorId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCategoria_id", type="integer", nullable=true)
+     */
+    private $numcategoriaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAutorizador_id", type="integer", nullable=true)
+     */
+    private $numautorizadorId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

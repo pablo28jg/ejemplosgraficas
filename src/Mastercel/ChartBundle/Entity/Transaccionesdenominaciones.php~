@@ -1,0 +1,181 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Transaccionesdenominaciones
+ *
+ * @ORM\Table(name="TransaccionesDenominaciones", indexes={@ORM\Index(name="Indice_1", columns={"DteActualizacion"})})
+ * @ORM\Entity
+ */
+class Transaccionesdenominaciones
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCaja_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numcajaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCorte_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numcorteId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCortePreliminar_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numcortepreliminarId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumBalance_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numbalanceId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumFolio_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numfolioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumFormaPago_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numformapagoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDenominacion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numdenominacionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numconsecutivoId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteTransaccion", type="datetime", nullable=true)
+     */
+    private $dtetransaccion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeTransaccion", type="datetime", nullable=true)
+     */
+    private $tmetransaccion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMoneda_id", type="integer", nullable=true)
+     */
+    private $nummonedaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoCambio", type="integer", nullable=true)
+     */
+    private $numtipocambio = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoDenominacion", type="integer", nullable=true)
+     */
+    private $numtipodenominacion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCantidad", type="integer", nullable=true)
+     */
+    private $numcantidad = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImporte", type="integer", nullable=true)
+     */
+    private $numimporte = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotal", type="integer", nullable=true)
+     */
+    private $numtotal = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+
+}

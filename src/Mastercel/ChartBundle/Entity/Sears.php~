@@ -1,0 +1,222 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Sears
+ *
+ * @ORM\Table(name="Sears")
+ * @ORM\Entity
+ */
+class Sears
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCodigoProveedor", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strcodigoproveedor;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrPedido", type="string", length=15, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strpedido;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrEmbarcar", type="string", length=10, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strembarcar;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrConsignar", type="string", length=10, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strconsignar;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLinea", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numlinea = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DtePedido", type="datetime", nullable=true)
+     */
+    private $dtepedido;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteEntrega", type="datetime", nullable=true)
+     */
+    private $dteentrega;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCancelacion", type="datetime", nullable=true)
+     */
+    private $dtecancelacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTipoEtiqueta", type="string", length=5, nullable=true)
+     */
+    private $strtipoetiqueta;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDivision", type="string", length=10, nullable=true)
+     */
+    private $strdivision;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrEdad", type="string", length=2, nullable=true)
+     */
+    private $stredad;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotal", type="integer", nullable=true)
+     */
+    private $numtotal = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTotalCantidad", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtotalcantidad = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreProveedor", type="string", length=100, nullable=true)
+     */
+    private $strnombreproveedor;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTipoMoneda", type="string", length=5, nullable=true)
+     */
+    private $strtipomoneda;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrSKU", type="string", length=20, nullable=true)
+     */
+    private $strsku;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrEAN", type="string", length=20, nullable=true)
+     */
+    private $strean;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrModeloProveedor", type="string", length=20, nullable=true)
+     */
+    private $strmodeloproveedor;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrClaveTalla", type="string", length=10, nullable=true)
+     */
+    private $strclavetalla;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrTalla", type="string", length=30, nullable=true)
+     */
+    private $strtalla;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrClaveColor", type="string", length=10, nullable=true)
+     */
+    private $strclavecolor;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrColor", type="string", length=30, nullable=true)
+     */
+    private $strcolor;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoUnitario", type="integer", nullable=true)
+     */
+    private $numcostounitario = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPrecioVenta", type="integer", nullable=true)
+     */
+    private $numprecioventa = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidad", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidad = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogArticuloInexistente", type="boolean", nullable=true)
+     */
+    private $logarticuloinexistente = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogArticuloCostosCero", type="boolean", nullable=true)
+     */
+    private $logarticulocostoscero = '0';
+
+
+}

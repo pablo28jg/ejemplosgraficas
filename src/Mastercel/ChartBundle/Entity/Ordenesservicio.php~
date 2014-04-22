@@ -1,0 +1,265 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Ordenesservicio
+ *
+ * @ORM\Table(name="OrdenesServicio", indexes={@ORM\Index(name="Indice_1", columns={"DteDocumento"}), @ORM\Index(name="Indice_2", columns={"StrArticulo_ky", "StrSerie_ky"}), @ORM\Index(name="Indice_3", columns={"StrSerie_ky", "StrArticulo_ky"}), @ORM\Index(name="Indice_4", columns={"StrArticuloRelacionado_ky", "StrSerieRelacionado_ky"}), @ORM\Index(name="Indice_5", columns={"StrSerieRelacionado_ky", "StrArticuloRelacionado_ky"}), @ORM\Index(name="Indice_6", columns={"NumEstadoComunicacion"}), @ORM\Index(name="Indice_7", columns={"DteActualizacion"})})
+ * @ORM\Entity
+ */
+class Ordenesservicio
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrdenServicio_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numordenservicioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDocumento", type="string", length=10, nullable=true)
+     */
+    private $strdocumento;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteDocumento", type="datetime", nullable=true)
+     */
+    private $dtedocumento;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeDocumento", type="datetime", nullable=true)
+     */
+    private $tmedocumento;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCancelacion", type="datetime", nullable=true)
+     */
+    private $dtecancelacion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeCancelacion", type="datetime", nullable=true)
+     */
+    private $tmecancelacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrReferencia", type="string", length=20, nullable=true)
+     */
+    private $strreferencia;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=true)
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticulo_ky", type="string", length=20, nullable=true)
+     */
+    private $strarticuloKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrSerie_ky", type="string", length=20, nullable=true)
+     */
+    private $strserieKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticuloRelacionado_ky", type="string", length=20, nullable=true)
+     */
+    private $strarticulorelacionadoKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrSerieRelacionado_ky", type="string", length=20, nullable=true)
+     */
+    private $strserierelacionadoKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCaracteristica_id", type="integer", nullable=true)
+     */
+    private $numcaracteristicaId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteExpiracionGarantia", type="datetime", nullable=true)
+     */
+    private $dteexpiraciongarantia;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCliente_id", type="integer", nullable=true)
+     */
+    private $numclienteId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumVendedor_id", type="integer", nullable=true)
+     */
+    private $numvendedorId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumFallaReportada_id", type="integer", nullable=true)
+     */
+    private $numfallareportadaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemFallaReportada", type="text", length=16, nullable=true)
+     */
+    private $memfallareportada;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DtePromesaReparacion", type="datetime", nullable=true)
+     */
+    private $dtepromesareparacion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteEnvioReparacion", type="datetime", nullable=true)
+     */
+    private $dteenvioreparacion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteRecepcionReparacion", type="datetime", nullable=true)
+     */
+    private $dterecepcionreparacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumReingreso", type="integer", nullable=true)
+     */
+    private $numreingreso = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrdenVenta_id", type="integer", nullable=true)
+     */
+    private $numordenventaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacenOrdenVenta_id", type="integer", nullable=true)
+     */
+    private $numalmacenordenventaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrdenCompra_id", type="integer", nullable=true)
+     */
+    private $numordencompraId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacenOrdenCompra_id", type="integer", nullable=true)
+     */
+    private $numalmacenordencompraId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumClasificacion_id", type="integer", nullable=true)
+     */
+    private $numclasificacionId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemObservaciones", type="text", length=16, nullable=true)
+     */
+    private $memobservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

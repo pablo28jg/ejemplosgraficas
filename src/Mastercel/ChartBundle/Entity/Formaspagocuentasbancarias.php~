@@ -1,0 +1,34 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Formaspagocuentasbancarias
+ *
+ * @ORM\Table(name="FormasPagoCuentasBancarias", indexes={@ORM\Index(name="Indice_1", columns={"NumCuentaBancaria_id", "NumFormaPago_id"})})
+ * @ORM\Entity
+ */
+class Formaspagocuentasbancarias
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumFormaPago_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numformapagoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCuentaBancaria_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numcuentabancariaId = '0';
+
+
+}

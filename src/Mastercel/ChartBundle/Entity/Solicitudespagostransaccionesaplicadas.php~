@@ -1,0 +1,95 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Solicitudespagostransaccionesaplicadas
+ *
+ * @ORM\Table(name="SolicitudesPagosTransaccionesAplicadas", indexes={@ORM\Index(name="Indice_1", columns={"NumTransaccion_id", "NumAlmacen_id", "NumTipoTransaccion"}), @ORM\Index(name="Indice_2", columns={"NumTransaccionAplicada_id", "NumAlmacenAplicada_id", "NumTipoTransaccionAplicada"})})
+ * @ORM\Entity
+ */
+class Solicitudespagostransaccionesaplicadas
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSolicitud_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numsolicitudId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacenSolicitud_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacensolicitudId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTransaccion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtransaccionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTransaccion", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtipotransaccion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTransaccionAplicada_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtransaccionaplicadaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacenAplicada_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacenaplicadaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTransaccionAplicada", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtipotransaccionaplicada = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumImporte", type="integer", nullable=true)
+     */
+    private $numimporte = '0';
+
+
+}

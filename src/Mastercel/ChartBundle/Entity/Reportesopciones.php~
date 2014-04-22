@@ -1,0 +1,67 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Reportesopciones
+ *
+ * @ORM\Table(name="ReportesOpciones", indexes={@ORM\Index(name="Indice_1", columns={"NumReporte_id", "NumOrden"}), @ORM\Index(name="Indice_2", columns={"StrNombreReporte"})})
+ * @ORM\Entity
+ */
+class Reportesopciones
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOpcion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numopcionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumReporte_id", type="integer", nullable=true)
+     */
+    private $numreporteId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrden", type="integer", nullable=true)
+     */
+    private $numorden = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreReporte", type="string", length=30, nullable=true)
+     */
+    private $strnombrereporte;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogOpcionOmision", type="boolean", nullable=true)
+     */
+    private $logopcionomision = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemInstruccionAccess", type="text", length=16, nullable=true)
+     */
+    private $meminstruccionaccess;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemInstruccionSqlSrv", type="text", length=16, nullable=true)
+     */
+    private $meminstruccionsqlsrv;
+
+
+}

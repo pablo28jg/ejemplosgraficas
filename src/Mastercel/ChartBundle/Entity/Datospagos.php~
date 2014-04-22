@@ -1,0 +1,136 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Datospagos
+ *
+ * @ORM\Table(name="DatosPagos")
+ * @ORM\Entity
+ */
+class Datospagos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="Consecutivo", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $consecutivo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumeroPago", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numeropago = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumeroFactura", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numerofactura = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="LineaArchivo", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $lineaarchivo = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NombreArchivo", type="string", length=60, nullable=true)
+     */
+    private $nombrearchivo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Hoja", type="string", length=60, nullable=true)
+     */
+    private $hoja;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NombrePlaza", type="string", length=60, nullable=true)
+     */
+    private $nombreplaza;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="FechaPago", type="datetime", nullable=true)
+     */
+    private $fechapago;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NombreCliente", type="string", length=120, nullable=true)
+     */
+    private $nombrecliente;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="NombreFactura", type="string", length=120, nullable=true)
+     */
+    private $nombrefactura;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="FormaPago", type="string", length=60, nullable=true)
+     */
+    private $formapago;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Banco", type="string", length=60, nullable=true)
+     */
+    private $banco;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Cuenta", type="string", length=60, nullable=true)
+     */
+    private $cuenta;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Referencia", type="string", length=60, nullable=true)
+     */
+    private $referencia;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="Deposito", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $deposito;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Almacen", type="string", length=100, nullable=true)
+     */
+    private $almacen;
+
+
+}

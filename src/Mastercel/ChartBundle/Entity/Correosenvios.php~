@@ -1,0 +1,81 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Correosenvios
+ *
+ * @ORM\Table(name="CorreosEnvios", indexes={@ORM\Index(name="Indice_1", columns={"NumMensajeCorreo_id"})})
+ * @ORM\Entity
+ */
+class Correosenvios
+{
+    /**
+     * @var guid
+     *
+     * @ORM\Column(name="NumEnvio_id", type="guid", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numenvioId;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMensajeCorreo_id", type="integer", nullable=true)
+     */
+    private $nummensajecorreoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotalIntentos", type="integer", nullable=true)
+     */
+    private $numtotalintentos = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DtePrimerIntento", type="datetime", nullable=true)
+     */
+    private $dteprimerintento;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteUltimoIntento", type="datetime", nullable=true)
+     */
+    private $dteultimointento;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemMensajeError", type="text", length=16, nullable=true)
+     */
+    private $memmensajeerror;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

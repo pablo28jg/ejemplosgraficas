@@ -1,0 +1,256 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Entidadesempleados
+ *
+ * @ORM\Table(name="EntidadesEmpleados", indexes={@ORM\Index(name="Indice_14", columns={"NumTipoEstado"}), @ORM\Index(name="Indice_16", columns={"DteActualizacion"}), @ORM\Index(name="Indice_19", columns={"NumEstadoComunicacion"}), @ORM\Index(name="Indice_3", columns={"NumDepartamento_id"}), @ORM\Index(name="Indice_4", columns={"NumPuesto_id"}), @ORM\Index(name="Indice_5", columns={"NumTarifaServicio_id"}), @ORM\Index(name="Indice_6", columns={"NumCategoria_id"})})
+ * @ORM\Entity
+ */
+class Entidadesempleados
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEntidad_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numentidadId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCategoria_id", type="integer", nullable=true)
+     */
+    private $numcategoriaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=true)
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCentroControl_id", type="integer", nullable=true)
+     */
+    private $numcentrocontrolId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDepartamento_id", type="integer", nullable=true)
+     */
+    private $numdepartamentoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPuesto_id", type="integer", nullable=true)
+     */
+    private $numpuestoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrIMSS", type="string", length=20, nullable=true)
+     */
+    private $strimss;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumFoto_id", type="integer", nullable=true)
+     */
+    private $numfotoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTarifaServicio_id", type="integer", nullable=true)
+     */
+    private $numtarifaservicioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNivelServicio", type="integer", nullable=true)
+     */
+    private $numnivelservicio = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteIngreso", type="datetime", nullable=true)
+     */
+    private $dteingreso;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSueldoBruto", type="integer", nullable=true)
+     */
+    private $numsueldobruto = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoEstandar", type="integer", nullable=true)
+     */
+    private $numcostoestandar = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoPromedio", type="integer", nullable=true)
+     */
+    private $numcostopromedio = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCostoReal", type="integer", nullable=true)
+     */
+    private $numcostoreal = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumContrasena", type="integer", nullable=true)
+     */
+    private $numcontrasena = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemObservaciones", type="text", length=16, nullable=true)
+     */
+    private $memobservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoSexo", type="integer", nullable=true)
+     */
+    private $numtiposexo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstadoCivil", type="integer", nullable=true)
+     */
+    private $numtipoestadocivil = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumNacionalidad_id", type="integer", nullable=true)
+     */
+    private $numnacionalidadId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrAFORE", type="string", length=20, nullable=true)
+     */
+    private $strafore;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrINFONAVIT", type="string", length=20, nullable=true)
+     */
+    private $strinfonavit;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrPASAPORTE", type="string", length=20, nullable=true)
+     */
+    private $strpasaporte;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrIFE", type="string", length=20, nullable=true)
+     */
+    private $strife;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumHorario_id", type="integer", nullable=true)
+     */
+    private $numhorarioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumJefeInmediato_id", type="integer", nullable=true)
+     */
+    private $numjefeinmediatoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoNomina", type="integer", nullable=true)
+     */
+    private $numtiponomina = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoContratoLaboral", type="integer", nullable=true)
+     */
+    private $numtipocontratolaboral = '0';
+
+
+}

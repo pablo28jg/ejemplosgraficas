@@ -1,0 +1,69 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Entidadesproveedorescuentasbancarias
+ *
+ * @ORM\Table(name="EntidadesProveedoresCuentasBancarias")
+ * @ORM\Entity
+ */
+class Entidadesproveedorescuentasbancarias
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEntidad_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numentidadId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuentaBancaria_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strcuentabancariaKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipo", type="integer", nullable=true)
+     */
+    private $numtipo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMoneda_id", type="integer", nullable=true)
+     */
+    private $nummonedaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumBanco_id", type="integer", nullable=true)
+     */
+    private $numbancoId = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogOmision", type="boolean", nullable=true)
+     */
+    private $logomision = '0';
+
+
+}

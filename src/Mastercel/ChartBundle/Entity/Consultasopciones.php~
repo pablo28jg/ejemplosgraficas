@@ -1,0 +1,60 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Consultasopciones
+ *
+ * @ORM\Table(name="ConsultasOpciones", indexes={@ORM\Index(name="Indice_1", columns={"NumConsulta_id", "NumCampo_id", "NumOrden", "NumOpcion_id"})})
+ * @ORM\Entity
+ */
+class Consultasopciones
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOpcion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numopcionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCampo_id", type="integer", nullable=true)
+     */
+    private $numcampoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsulta_id", type="integer", nullable=true)
+     */
+    private $numconsultaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrden", type="integer", nullable=true)
+     */
+    private $numorden = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrOpcion", type="string", length=20, nullable=true)
+     */
+    private $stropcion;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogSeleccionGeneral", type="boolean", nullable=true)
+     */
+    private $logselecciongeneral = '0';
+
+
+}

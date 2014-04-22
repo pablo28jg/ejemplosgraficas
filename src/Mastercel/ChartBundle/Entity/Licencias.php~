@@ -1,0 +1,71 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Licencias
+ *
+ * @ORM\Table(name="Licencias", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_1", columns={"StrIdentificadorEquipo_ky", "NumSesion_id"})})
+ * @ORM\Entity
+ */
+class Licencias
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrSerie_ky", type="string", length=60, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strserieKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrIdentificadorEquipo_ky", type="string", length=60, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $stridentificadorequipoKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSesion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numsesionId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCodigoActivacion", type="string", length=60, nullable=true)
+     */
+    private $strcodigoactivacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAutenticacion", type="integer", nullable=true)
+     */
+    private $numautenticacion = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteAutenticacion", type="datetime", nullable=true)
+     */
+    private $dteautenticacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrAutenticacion", type="string", length=60, nullable=true)
+     */
+    private $strautenticacion;
+
+
+}

@@ -1,0 +1,137 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Certificadosdigitales
+ *
+ * @ORM\Table(name="CertificadosDigitales", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_1", columns={"StrCertificadoDigital_ky"})}, indexes={@ORM\Index(name="Indice_2", columns={"StrNombre"}), @ORM\Index(name="Indice_3", columns={"DteActualizacion"}), @ORM\Index(name="Indice_4", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Certificadosdigitales
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCertificadoDigital_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numcertificadodigitalId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCertificadoDigital_ky", type="string", length=20, nullable=true)
+     */
+    private $strcertificadodigitalKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombre", type="string", length=60, nullable=true)
+     */
+    private $strnombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrRFC", type="string", length=13, nullable=true)
+     */
+    private $strrfc;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteValidoDesde", type="datetime", nullable=true)
+     */
+    private $dtevalidodesde;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteValidoHasta", type="datetime", nullable=true)
+     */
+    private $dtevalidohasta;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=true)
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ImgCertificadoDigital", type="text", length=16, nullable=true)
+     */
+    private $imgcertificadodigital;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ImgLlavePrivada", type="text", length=16, nullable=true)
+     */
+    private $imgllaveprivada;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrContrasenaAcceso", type="string", length=100, nullable=true)
+     */
+    private $strcontrasenaacceso;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDiasAvisoVigencia", type="integer", nullable=true)
+     */
+    private $numdiasavisovigencia = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

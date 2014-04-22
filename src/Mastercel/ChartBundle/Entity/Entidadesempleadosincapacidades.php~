@@ -1,0 +1,83 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Entidadesempleadosincapacidades
+ *
+ * @ORM\Table(name="EntidadesEmpleadosIncapacidades", indexes={@ORM\Index(name="Indice_1", columns={"DteInicio", "NumEntidad_id"})})
+ * @ORM\Entity
+ */
+class Entidadesempleadosincapacidades
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEntidad_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numentidadId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numconsecutivoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteInicio", type="datetime", nullable=true)
+     */
+    private $dteinicio;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteTermino", type="datetime", nullable=true)
+     */
+    private $dtetermino;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoGoceSueldo", type="integer", nullable=true)
+     */
+    private $numtipogocesueldo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoJustificanteLaboral", type="integer", nullable=true)
+     */
+    private $numtipojustificantelaboral = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAutorizadoPor_id", type="integer", nullable=true)
+     */
+    private $numautorizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteAutorizacion", type="datetime", nullable=true)
+     */
+    private $dteautorizacion;
+
+
+}

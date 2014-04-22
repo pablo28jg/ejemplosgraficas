@@ -1,0 +1,460 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Cuentascontablessaldosmonedas
+ *
+ * @ORM\Table(name="CuentasContablesSaldosMonedas", indexes={@ORM\Index(name="Indice_1", columns={"NumEjercicio_id", "NumEmpresa_id", "NumCentroControl_id", "StrCuenta_ky", "NumMoneda_id"}), @ORM\Index(name="Indice_2", columns={"DteActualizacion"}), @ORM\Index(name="Indice_3", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Cuentascontablessaldosmonedas
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEjercicio_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numejercicioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuenta_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strcuentaKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCentroControl_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numcentrocontrolId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMoneda_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $nummonedaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPeriodoInicial", type="integer", nullable=true)
+     */
+    private $numperiodoinicial = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldoInicial_MN", type="integer", nullable=true)
+     */
+    private $numsaldoinicialMn = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldoInicial_ME", type="integer", nullable=true)
+     */
+    private $numsaldoinicialMe = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_MN_1", type="integer", nullable=true)
+     */
+    private $numsaldoPerMn1 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_MN_2", type="integer", nullable=true)
+     */
+    private $numsaldoPerMn2 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_MN_3", type="integer", nullable=true)
+     */
+    private $numsaldoPerMn3 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_MN_4", type="integer", nullable=true)
+     */
+    private $numsaldoPerMn4 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_MN_5", type="integer", nullable=true)
+     */
+    private $numsaldoPerMn5 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_MN_6", type="integer", nullable=true)
+     */
+    private $numsaldoPerMn6 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_MN_7", type="integer", nullable=true)
+     */
+    private $numsaldoPerMn7 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_MN_8", type="integer", nullable=true)
+     */
+    private $numsaldoPerMn8 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_MN_9", type="integer", nullable=true)
+     */
+    private $numsaldoPerMn9 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_MN_10", type="integer", nullable=true)
+     */
+    private $numsaldoPerMn10 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_MN_11", type="integer", nullable=true)
+     */
+    private $numsaldoPerMn11 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_MN_12", type="integer", nullable=true)
+     */
+    private $numsaldoPerMn12 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_MN_13", type="integer", nullable=true)
+     */
+    private $numsaldoPerMn13 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_MN_1", type="integer", nullable=true)
+     */
+    private $numsaldoEapMn1 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_MN_2", type="integer", nullable=true)
+     */
+    private $numsaldoEapMn2 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_MN_3", type="integer", nullable=true)
+     */
+    private $numsaldoEapMn3 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_MN_4", type="integer", nullable=true)
+     */
+    private $numsaldoEapMn4 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_MN_5", type="integer", nullable=true)
+     */
+    private $numsaldoEapMn5 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_MN_6", type="integer", nullable=true)
+     */
+    private $numsaldoEapMn6 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_MN_7", type="integer", nullable=true)
+     */
+    private $numsaldoEapMn7 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_MN_8", type="integer", nullable=true)
+     */
+    private $numsaldoEapMn8 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_MN_9", type="integer", nullable=true)
+     */
+    private $numsaldoEapMn9 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_MN_10", type="integer", nullable=true)
+     */
+    private $numsaldoEapMn10 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_MN_11", type="integer", nullable=true)
+     */
+    private $numsaldoEapMn11 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_MN_12", type="integer", nullable=true)
+     */
+    private $numsaldoEapMn12 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_MN_13", type="integer", nullable=true)
+     */
+    private $numsaldoEapMn13 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_ME_1", type="integer", nullable=true)
+     */
+    private $numsaldoPerMe1 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_ME_2", type="integer", nullable=true)
+     */
+    private $numsaldoPerMe2 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_ME_3", type="integer", nullable=true)
+     */
+    private $numsaldoPerMe3 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_ME_4", type="integer", nullable=true)
+     */
+    private $numsaldoPerMe4 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_ME_5", type="integer", nullable=true)
+     */
+    private $numsaldoPerMe5 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_ME_6", type="integer", nullable=true)
+     */
+    private $numsaldoPerMe6 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_ME_7", type="integer", nullable=true)
+     */
+    private $numsaldoPerMe7 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_ME_8", type="integer", nullable=true)
+     */
+    private $numsaldoPerMe8 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_ME_9", type="integer", nullable=true)
+     */
+    private $numsaldoPerMe9 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_ME_10", type="integer", nullable=true)
+     */
+    private $numsaldoPerMe10 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_ME_11", type="integer", nullable=true)
+     */
+    private $numsaldoPerMe11 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_ME_12", type="integer", nullable=true)
+     */
+    private $numsaldoPerMe12 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_PER_ME_13", type="integer", nullable=true)
+     */
+    private $numsaldoPerMe13 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_ME_1", type="integer", nullable=true)
+     */
+    private $numsaldoEapMe1 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_ME_2", type="integer", nullable=true)
+     */
+    private $numsaldoEapMe2 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_ME_3", type="integer", nullable=true)
+     */
+    private $numsaldoEapMe3 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_ME_4", type="integer", nullable=true)
+     */
+    private $numsaldoEapMe4 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_ME_5", type="integer", nullable=true)
+     */
+    private $numsaldoEapMe5 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_ME_6", type="integer", nullable=true)
+     */
+    private $numsaldoEapMe6 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_ME_7", type="integer", nullable=true)
+     */
+    private $numsaldoEapMe7 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_ME_8", type="integer", nullable=true)
+     */
+    private $numsaldoEapMe8 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_ME_9", type="integer", nullable=true)
+     */
+    private $numsaldoEapMe9 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_ME_10", type="integer", nullable=true)
+     */
+    private $numsaldoEapMe10 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_ME_11", type="integer", nullable=true)
+     */
+    private $numsaldoEapMe11 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_ME_12", type="integer", nullable=true)
+     */
+    private $numsaldoEapMe12 = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSaldo_EAP_ME_13", type="integer", nullable=true)
+     */
+    private $numsaldoEapMe13 = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

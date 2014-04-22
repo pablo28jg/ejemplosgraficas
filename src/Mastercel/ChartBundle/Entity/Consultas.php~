@@ -1,0 +1,95 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Consultas
+ *
+ * @ORM\Table(name="Consultas", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_1", columns={"StrConsulta_ky"})}, indexes={@ORM\Index(name="Indice_2", columns={"DteActualizacion"}), @ORM\Index(name="Indice_3", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Consultas
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsulta_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numconsultaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrConsulta_ky", type="string", length=20, nullable=true)
+     */
+    private $strconsultaKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemInstruccion", type="text", length=16, nullable=true)
+     */
+    private $meminstruccion;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogCerrarSeleccionar", type="boolean", nullable=true)
+     */
+    private $logcerrarseleccionar = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArchivoAyuda", type="string", length=30, nullable=true)
+     */
+    private $strarchivoayuda;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumContextoAyuda", type="integer", nullable=true)
+     */
+    private $numcontextoayuda = '0';
+
+
+}

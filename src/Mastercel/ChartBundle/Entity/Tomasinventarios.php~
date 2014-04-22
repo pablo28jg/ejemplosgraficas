@@ -1,0 +1,251 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tomasinventarios
+ *
+ * @ORM\Table(name="TomasInventarios", indexes={@ORM\Index(name="Indice_1", columns={"NumAlmacen_id", "StrDocumento"}), @ORM\Index(name="Indice_2", columns={"DteDocumento"}), @ORM\Index(name="Indice_3", columns={"DteInventario"}), @ORM\Index(name="Indice_4", columns={"DteActualizacion"}), @ORM\Index(name="Indice_5", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Tomasinventarios
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumToma_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtomaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDocumento", type="string", length=10, nullable=true)
+     */
+    private $strdocumento;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteDocumento", type="datetime", nullable=true)
+     */
+    private $dtedocumento;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeDocumento", type="datetime", nullable=true)
+     */
+    private $tmedocumento;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEjercicio_id", type="integer", nullable=true)
+     */
+    private $numejercicioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPeriodo_id", type="integer", nullable=true)
+     */
+    private $numperiodoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSemana_id", type="integer", nullable=true)
+     */
+    private $numsemanaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCentroControl_id", type="integer", nullable=true)
+     */
+    private $numcentrocontrolId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=true)
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMoneda_id", type="integer", nullable=true)
+     */
+    private $nummonedaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrReferencia", type="string", length=10, nullable=true)
+     */
+    private $strreferencia;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteInventario", type="datetime", nullable=true)
+     */
+    private $dteinventario;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoConteo", type="integer", nullable=true)
+     */
+    private $numtipoconteo = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTipoCambio", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtipocambio = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotalPartidas", type="integer", nullable=true)
+     */
+    private $numtotalpartidas = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTotalCantidad", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtotalcantidad = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotalPrecioVenta", type="integer", nullable=true)
+     */
+    private $numtotalprecioventa = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotalCostoCompra", type="integer", nullable=true)
+     */
+    private $numtotalcostocompra = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotalCostoEstandar", type="integer", nullable=true)
+     */
+    private $numtotalcostoestandar = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotalCostoPromedio", type="integer", nullable=true)
+     */
+    private $numtotalcostopromedio = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotalCostoUEPS", type="integer", nullable=true)
+     */
+    private $numtotalcostoueps = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTotalCostoPEPS", type="integer", nullable=true)
+     */
+    private $numtotalcostopeps = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumTotalPeso", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numtotalpeso = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumSuperviso_id", type="integer", nullable=true)
+     */
+    private $numsupervisoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConto_id", type="integer", nullable=true)
+     */
+    private $numcontoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemObservaciones", type="text", length=16, nullable=true)
+     */
+    private $memobservaciones;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

@@ -1,0 +1,55 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Tablasdinamicasvaloreslenguaje
+ *
+ * @ORM\Table(name="TablasDinamicasValoresLenguaje", indexes={@ORM\Index(name="Indice_1", columns={"NumTablaDinamica_id", "NumCampo_id", "NumValor_id", "NumLenguaje_id"})})
+ * @ORM\Entity
+ */
+class Tablasdinamicasvaloreslenguaje
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumValor_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numvalorId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLenguaje_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numlenguajeId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCampo_id", type="integer", nullable=true)
+     */
+    private $numcampoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTablaDinamica_id", type="integer", nullable=true)
+     */
+    private $numtabladinamicaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=30, nullable=true)
+     */
+    private $strdescripcion;
+
+
+}

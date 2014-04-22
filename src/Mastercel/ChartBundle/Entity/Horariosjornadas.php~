@@ -1,0 +1,48 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Horariosjornadas
+ *
+ * @ORM\Table(name="HorariosJornadas")
+ * @ORM\Entity
+ */
+class Horariosjornadas
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumHorario_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numhorarioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDiaPeriodo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numdiaperiodoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoDia", type="integer", nullable=true)
+     */
+    private $numtipodia = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumJornada_id", type="integer", nullable=true)
+     */
+    private $numjornadaId = '0';
+
+
+}

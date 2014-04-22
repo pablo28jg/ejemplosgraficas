@@ -1,0 +1,55 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Etiquetasdetalles
+ *
+ * @ORM\Table(name="EtiquetasDetalles", indexes={@ORM\Index(name="Indice_1", columns={"NumEtiqueta_id", "NumOrden"})})
+ * @ORM\Entity
+ */
+class Etiquetasdetalles
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numconsecutivoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEtiqueta_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numetiquetaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrden", type="integer", nullable=true)
+     */
+    private $numorden = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrInstruccion", type="string", length=200, nullable=true)
+     */
+    private $strinstruccion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEjecucion", type="integer", nullable=true)
+     */
+    private $numtipoejecucion = '0';
+
+
+}

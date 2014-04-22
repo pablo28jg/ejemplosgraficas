@@ -1,0 +1,176 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Reportesselecciones
+ *
+ * @ORM\Table(name="ReportesSelecciones", indexes={@ORM\Index(name="Indice_1", columns={"DteActualizacion"}), @ORM\Index(name="Indice_2", columns={"NumEstadoComunicacion"}), @ORM\Index(name="Indice_3", columns={"DteSiguienteEjecucion"})})
+ * @ORM\Entity
+ */
+class Reportesselecciones
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumUsuario_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numusuarioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumReporte_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numreporteId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=100, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strdescripcion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ObjDatos", type="text", length=16, nullable=true)
+     */
+    private $objdatos;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEjecucion", type="integer", nullable=true)
+     */
+    private $numtipoejecucion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEjecutarCada", type="integer", nullable=true)
+     */
+    private $numejecutarcada = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEjecutarCadaDias", type="integer", nullable=true)
+     */
+    private $numejecutarcadadias = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEjecutarCadaMeses", type="integer", nullable=true)
+     */
+    private $numejecutarcadameses = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEjecutarCada", type="integer", nullable=true)
+     */
+    private $numtipoejecutarcada = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEjecucionDiaria", type="integer", nullable=true)
+     */
+    private $numtipoejecuciondiaria = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEjecucionDiaria", type="integer", nullable=true)
+     */
+    private $numejecuciondiaria = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEjecucionTiempo", type="integer", nullable=true)
+     */
+    private $numtipoejecuciontiempo = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeInicio", type="datetime", nullable=true)
+     */
+    private $tmeinicio;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeTermino", type="datetime", nullable=true)
+     */
+    private $tmetermino;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteInicio", type="datetime", nullable=true)
+     */
+    private $dteinicio;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteTermino", type="datetime", nullable=true)
+     */
+    private $dtetermino;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogExpira", type="boolean", nullable=true)
+     */
+    private $logexpira = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteSiguienteEjecucion", type="datetime", nullable=true)
+     */
+    private $dtesiguienteejecucion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoFormatoExportacion", type="integer", nullable=true)
+     */
+    private $numtipoformatoexportacion = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemCorreosElectronicos", type="text", length=16, nullable=true)
+     */
+    private $memcorreoselectronicos;
+
+
+}

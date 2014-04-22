@@ -1,0 +1,172 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Reportescampos
+ *
+ * @ORM\Table(name="ReportesCampos", uniqueConstraints={@ORM\UniqueConstraint(name="Indice_2", columns={"StrNombreTabla", "StrNombreCampo", "NumReporte_id"})}, indexes={@ORM\Index(name="Indice_1", columns={"NumReporte_id", "NumOrden"})})
+ * @ORM\Entity
+ */
+class Reportescampos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCampo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numcampoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumReporte_id", type="integer", nullable=true)
+     */
+    private $numreporteId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOrden", type="integer", nullable=true)
+     */
+    private $numorden = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreTabla", type="string", length=60, nullable=true)
+     */
+    private $strnombretabla;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreCampo", type="string", length=60, nullable=true)
+     */
+    private $strnombrecampo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreGrupo", type="string", length=60, nullable=true)
+     */
+    private $strnombregrupo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoDato", type="integer", nullable=true)
+     */
+    private $numtipodato = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLongitud", type="integer", nullable=true)
+     */
+    private $numlongitud = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrValorOmision", type="string", length=200, nullable=true)
+     */
+    private $strvaloromision;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEmpresa", type="integer", nullable=true)
+     */
+    private $numtipoempresa = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogIncluirSubtitulo", type="boolean", nullable=true)
+     */
+    private $logincluirsubtitulo = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogVariable", type="boolean", nullable=true)
+     */
+    private $logvariable = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogValorRequerido", type="boolean", nullable=true)
+     */
+    private $logvalorrequerido = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoComponente", type="integer", nullable=true)
+     */
+    private $numtipocomponente = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoOperador", type="integer", nullable=true)
+     */
+    private $numtipooperador = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreTablaBusqueda", type="string", length=60, nullable=true)
+     */
+    private $strnombretablabusqueda;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreCampoMostrar", type="string", length=150, nullable=true)
+     */
+    private $strnombrecampomostrar;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreCampoRetornar", type="string", length=60, nullable=true)
+     */
+    private $strnombrecamporetornar;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreCampoIndice", type="string", length=150, nullable=true)
+     */
+    private $strnombrecampoindice;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreCampoNivel", type="string", length=150, nullable=true)
+     */
+    private $strnombrecamponivel;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCriterioSeleccion", type="string", length=120, nullable=true)
+     */
+    private $strcriterioseleccion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrComandoSeleccion", type="text", length=16, nullable=true)
+     */
+    private $strcomandoseleccion;
+
+
+}

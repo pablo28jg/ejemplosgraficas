@@ -1,0 +1,80 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Foliosdetalles
+ *
+ * @ORM\Table(name="FoliosDetalles", indexes={@ORM\Index(name="Indice_1", columns={"NumFolio_id", "NumAlmacen_id", "NumConcepto_id"}), @ORM\Index(name="Indice_2", columns={"NumFolio_id", "NumAlmacen_id"}), @ORM\Index(name="Indice_3", columns={"NumFolio_id", "NumConcepto_id"})})
+ * @ORM\Entity
+ */
+class Foliosdetalles
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumFolio_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numfolioId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConcepto_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numconceptoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConsecutivo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numconsecutivoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoFormato", type="integer", nullable=true)
+     */
+    private $numtipoformato = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrSerie", type="string", length=3, nullable=true)
+     */
+    private $strserie;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumFolio", type="integer", nullable=true)
+     */
+    private $numfolio = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumFolioDigital_id", type="integer", nullable=true)
+     */
+    private $numfoliodigitalId = '0';
+
+
+}

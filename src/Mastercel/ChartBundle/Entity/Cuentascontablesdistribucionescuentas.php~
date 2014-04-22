@@ -1,0 +1,84 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Cuentascontablesdistribucionescuentas
+ *
+ * @ORM\Table(name="CuentasContablesDistribucionesCuentas", indexes={@ORM\Index(name="Indice_1", columns={"NumDistribucion_id", "NumTipoCuentaDistribucion"})})
+ * @ORM\Entity
+ */
+class Cuentascontablesdistribucionescuentas
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDistribucion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numdistribucionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEmpresa_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numempresaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuentaOrigen_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strcuentaorigenKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCentroControlOrigen_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numcentrocontrolorigenId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrCuentaDestino_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strcuentadestinoKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCentroControlDestino_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numcentrocontroldestinoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoCuentaDistribucion", type="integer", nullable=true)
+     */
+    private $numtipocuentadistribucion = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPorcentaje", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numporcentaje = '0';
+
+
+}

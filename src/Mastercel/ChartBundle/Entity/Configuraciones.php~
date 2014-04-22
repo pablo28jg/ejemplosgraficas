@@ -1,0 +1,179 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Configuraciones
+ *
+ * @ORM\Table(name="Configuraciones", indexes={@ORM\Index(name="Indice_1", columns={"StrDescripcion"}), @ORM\Index(name="Indice_2", columns={"DteActualizacion"}), @ORM\Index(name="Indice_3", columns={"NumEstadoComunicacion"})})
+ * @ORM\Entity
+ */
+class Configuraciones
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumConfiguracion_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numconfiguracionId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumParametro_id", type="integer", nullable=true)
+     */
+    private $numparametroId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemAlmacen", type="text", length=16, nullable=true)
+     */
+    private $memalmacen;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemGeneral", type="text", length=16, nullable=true)
+     */
+    private $memgeneral;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemInventarios", type="text", length=16, nullable=true)
+     */
+    private $meminventarios;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemTomasInventario", type="text", length=16, nullable=true)
+     */
+    private $memtomasinventario;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemCompras", type="text", length=16, nullable=true)
+     */
+    private $memcompras;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemCuentasPagar", type="text", length=16, nullable=true)
+     */
+    private $memcuentaspagar;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemVentas", type="text", length=16, nullable=true)
+     */
+    private $memventas;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemCuentasCobrar", type="text", length=16, nullable=true)
+     */
+    private $memcuentascobrar;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemTesoreria", type="text", length=16, nullable=true)
+     */
+    private $memtesoreria;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemProduccion", type="text", length=16, nullable=true)
+     */
+    private $memproduccion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemProyectos", type="text", length=16, nullable=true)
+     */
+    private $memproyectos;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemContabilidad", type="text", length=16, nullable=true)
+     */
+    private $memcontabilidad;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemOrdenesServicio", type="text", length=16, nullable=true)
+     */
+    private $memordenesservicio;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemMonederosElectronicos", type="text", length=16, nullable=true)
+     */
+    private $memmonederoselectronicos;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemBancos", type="text", length=16, nullable=true)
+     */
+    private $membancos;
+
+
+}

@@ -1,0 +1,34 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Reportesdiccionariotablas
+ *
+ * @ORM\Table(name="ReportesDiccionarioTablas")
+ * @ORM\Entity
+ */
+class Reportesdiccionariotablas
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreTabla_ky", type="string", length=60, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $strnombretablaKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrAliasTabla", type="string", length=60, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $straliastabla;
+
+
+}

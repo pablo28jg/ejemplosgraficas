@@ -1,0 +1,151 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Documentos
+ *
+ * @ORM\Table(name="Documentos", indexes={@ORM\Index(name="Indice_1", columns={"StrDescripcion"}), @ORM\Index(name="Indice_2", columns={"NumEntidad_id"}), @ORM\Index(name="Indice_3", columns={"NumTransaccion_id", "NumAlmacen_id", "NumTipoTransaccion"}), @ORM\Index(name="Indice_4", columns={"NumOportunidad_id", "NumAlmacen_id"}), @ORM\Index(name="Indice_5", columns={"NumProspecto_id"})})
+ * @ORM\Entity
+ */
+class Documentos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDocumento_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numdocumentoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDocumentoTipo_id", type="integer", nullable=true)
+     */
+    private $numdocumentotipoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemObservaciones", type="text", length=16, nullable=true)
+     */
+    private $memobservaciones;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ImgDocumento", type="text", length=16, nullable=true)
+     */
+    private $imgdocumento;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrNombreArchivo", type="string", length=100, nullable=true)
+     */
+    private $strnombrearchivo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumLongitudArchivo", type="integer", nullable=true)
+     */
+    private $numlongitudarchivo = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEntidad", type="integer", nullable=true)
+     */
+    private $numtipoentidad = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEntidad_id", type="integer", nullable=true)
+     */
+    private $numentidadId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTransaccion_id", type="integer", nullable=true)
+     */
+    private $numtransaccionId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=true)
+     */
+    private $numalmacenId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoTransaccion", type="integer", nullable=true)
+     */
+    private $numtipotransaccion = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumOportunidad_id", type="integer", nullable=true)
+     */
+    private $numoportunidadId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumProspecto_id", type="integer", nullable=true)
+     */
+    private $numprospectoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+
+}

@@ -1,0 +1,88 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Flujostrabajoinstancias
+ *
+ * @ORM\Table(name="FlujosTrabajoInstancias")
+ * @ORM\Entity
+ */
+class Flujostrabajoinstancias
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumInstancia_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $numinstanciaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumFlujoTrabajo_id", type="integer", nullable=true)
+     */
+    private $numflujotrabajoId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemDiagrama", type="text", length=16, nullable=true)
+     */
+    private $memdiagrama;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTerminadoPor_id", type="integer", nullable=true)
+     */
+    private $numterminadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteTerminacion", type="datetime", nullable=true)
+     */
+    private $dteterminacion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteSiguienteEjecucion", type="datetime", nullable=true)
+     */
+    private $dtesiguienteejecucion;
+
+
+}

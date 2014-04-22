@@ -1,0 +1,172 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Correosmensajes
+ *
+ * @ORM\Table(name="CorreosMensajes", indexes={@ORM\Index(name="Indice_1", columns={"NumCuentaCorreo_id", "NumCarpeta_id"}), @ORM\Index(name="Indice_2", columns={"NumTipoEstado"})})
+ * @ORM\Entity
+ */
+class Correosmensajes
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMensajeCorreo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $nummensajecorreoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCuentaCorreo_id", type="integer", nullable=true)
+     */
+    private $numcuentacorreoId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCarpeta_id", type="integer", nullable=true)
+     */
+    private $numcarpetaId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDe", type="string", length=128, nullable=true)
+     */
+    private $strde;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemPara", type="text", length=16, nullable=true)
+     */
+    private $mempara;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemCopiaPara", type="text", length=16, nullable=true)
+     */
+    private $memcopiapara;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemCopiaOcultaPara", type="text", length=16, nullable=true)
+     */
+    private $memcopiaocultapara;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrAsunto", type="string", length=255, nullable=true)
+     */
+    private $strasunto;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemTexto", type="text", length=16, nullable=true)
+     */
+    private $memtexto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoFormato", type="integer", nullable=true)
+     */
+    private $numtipoformato = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoPrioridad", type="integer", nullable=true)
+     */
+    private $numtipoprioridad = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MemArchivosAdjuntos", type="text", length=16, nullable=true)
+     */
+    private $memarchivosadjuntos;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoCodificacionArchivos", type="integer", nullable=true)
+     */
+    private $numtipocodificacionarchivos = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteEnvioRecepcion", type="datetime", nullable=true)
+     */
+    private $dteenviorecepcion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteEnviadoLeido", type="datetime", nullable=true)
+     */
+    private $dteenviadoleido;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCreadoPor_id", type="integer", nullable=true)
+     */
+    private $numcreadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteCreacion", type="datetime", nullable=true)
+     */
+    private $dtecreacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumActualizadoPor_id", type="integer", nullable=true)
+     */
+    private $numactualizadoporId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteActualizacion", type="datetime", nullable=true)
+     */
+    private $dteactualizacion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoEstado", type="integer", nullable=true)
+     */
+    private $numtipoestado = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumEstadoComunicacion", type="integer", nullable=true)
+     */
+    private $numestadocomunicacion = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogSeleccionado", type="boolean", nullable=true)
+     */
+    private $logseleccionado = '0';
+
+
+}

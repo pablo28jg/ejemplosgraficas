@@ -1,0 +1,76 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Jornadasintervalos
+ *
+ * @ORM\Table(name="JornadasIntervalos")
+ * @ORM\Entity
+ */
+class Jornadasintervalos
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumJornada_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numjornadaId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumIntervalo_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numintervaloId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=60, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeInicioIntervalo", type="datetime", nullable=true)
+     */
+    private $tmeiniciointervalo;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeTerminoIntervalo", type="datetime", nullable=true)
+     */
+    private $tmeterminointervalo;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeDuracionIntervalo", type="datetime", nullable=true)
+     */
+    private $tmeduracionintervalo;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="TmeToleranciaIntervalo", type="datetime", nullable=true)
+     */
+    private $tmetoleranciaintervalo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoIntervalo", type="integer", nullable=true)
+     */
+    private $numtipointervalo = '0';
+
+
+}

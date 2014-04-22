@@ -1,0 +1,116 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Articulosasociados
+ *
+ * @ORM\Table(name="ArticulosAsociados", indexes={@ORM\Index(name="Indice_1", columns={"StrAsociado_ky", "StrArticulo_ky"}), @ORM\Index(name="Indice_2", columns={"StrArticulo_ky", "StrAsociado_ky"}), @ORM\Index(name="Indice_3", columns={"NumProveedor_id", "StrAsociado_ky"}), @ORM\Index(name="Indice_4", columns={"NumProveedor_id", "StrArticulo_ky"}), @ORM\Index(name="Indice_5", columns={"NumCodigoBarra_id", "StrAsociado_ky"}), @ORM\Index(name="Indice_6", columns={"NumCodigoBarra_id", "StrArticulo_ky"}), @ORM\Index(name="Indice_7", columns={"NumCodigoBarra_id", "StrModelo_ky"}), @ORM\Index(name="Indice_8", columns={"StrModelo_ky"})})
+ * @ORM\Entity
+ */
+class Articulosasociados
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrAsociado_ky", type="string", length=20, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $strasociadoKy;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumCodigoBarra_id", type="integer", nullable=true)
+     */
+    private $numcodigobarraId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTipoCodigoBarra", type="integer", nullable=true)
+     */
+    private $numtipocodigobarra = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumProveedor_id", type="integer", nullable=true)
+     */
+    private $numproveedorId = '0';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrArticulo_ky", type="string", length=20, nullable=true)
+     */
+    private $strarticuloKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrModelo_ky", type="string", length=20, nullable=true)
+     */
+    private $strmodeloKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrDescripcion", type="string", length=100, nullable=true)
+     */
+    private $strdescripcion;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumUnidadMedida_id", type="integer", nullable=true)
+     */
+    private $numunidadmedidaId = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumCantidadMinimaCompra", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numcantidadminimacompra = '0';
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="LogMultiplosEnCantidad", type="boolean", nullable=true)
+     */
+    private $logmultiplosencantidad = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumMonedaCompra_id", type="integer", nullable=true)
+     */
+    private $nummonedacompraId = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumPrecioCompra", type="integer", nullable=true)
+     */
+    private $numpreciocompra = '0';
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="NumPrctjDescuento", type="float", precision=53, scale=0, nullable=true)
+     */
+    private $numprctjdescuento = '0';
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumDiasEntrega", type="integer", nullable=true)
+     */
+    private $numdiasentrega = '0';
+
+
+}

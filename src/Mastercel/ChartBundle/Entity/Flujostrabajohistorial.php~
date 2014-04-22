@@ -1,0 +1,64 @@
+<?php
+
+namespace Mastercel\ChartBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Flujostrabajohistorial
+ *
+ * @ORM\Table(name="FlujosTrabajoHistorial")
+ * @ORM\Entity
+ */
+class Flujostrabajohistorial
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="NumTarea_id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $numtareaId = '0';
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="DteEvento", type="datetime", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $dteevento;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrOperacion", type="string", length=1, nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="NONE")
+     */
+    private $stroperacion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrUsuario_ky", type="string", length=50, nullable=true)
+     */
+    private $strusuarioKy;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrInformacionAnterior", type="string", length=100, nullable=true)
+     */
+    private $strinformacionanterior;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="StrInformacionActual", type="string", length=100, nullable=true)
+     */
+    private $strinformacionactual;
+
+
+}
