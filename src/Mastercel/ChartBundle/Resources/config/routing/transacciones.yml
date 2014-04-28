@@ -1,0 +1,30 @@
+transacciones:
+    pattern:  /
+    defaults: { _controller: "MastercelChartBundle:Transacciones:index" }
+
+transacciones_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "MastercelChartBundle:Transacciones:show" }
+
+transacciones_new:
+    pattern:  /new
+    defaults: { _controller: "MastercelChartBundle:Transacciones:new" }
+
+transacciones_create:
+    pattern:  /create
+    defaults: { _controller: "MastercelChartBundle:Transacciones:create" }
+    requirements: { _method: post }
+
+transacciones_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "MastercelChartBundle:Transacciones:edit" }
+
+transacciones_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "MastercelChartBundle:Transacciones:update" }
+    requirements: { _method: post|put }
+
+transacciones_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "MastercelChartBundle:Transacciones:delete" }
+    requirements: { _method: post|delete }

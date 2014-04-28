@@ -1,0 +1,684 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Transacciones</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Numalmacenid</th>
+                <td>{{ entity.numalmacenId }}</td>
+            </tr>
+            <tr>
+                <th>Numtipotransaccion</th>
+                <td>{{ entity.numtipotransaccion }}</td>
+            </tr>
+            <tr>
+                <th>Strtransaccion</th>
+                <td>{{ entity.strtransaccion }}</td>
+            </tr>
+            <tr>
+                <th>Dtetransaccion</th>
+                <td>{{ entity.dtetransaccion|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Tmetransaccion</th>
+                <td>{{ entity.tmetransaccion|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Dtecancelacion</th>
+                <td>{{ entity.dtecancelacion|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Tmecancelacion</th>
+                <td>{{ entity.tmecancelacion|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Numejercicioid</th>
+                <td>{{ entity.numejercicioId }}</td>
+            </tr>
+            <tr>
+                <th>Numperiodo</th>
+                <td>{{ entity.numperiodo }}</td>
+            </tr>
+            <tr>
+                <th>Numsemana</th>
+                <td>{{ entity.numsemana }}</td>
+            </tr>
+            <tr>
+                <th>Numdiarioid</th>
+                <td>{{ entity.numdiarioId }}</td>
+            </tr>
+            <tr>
+                <th>Numcajaid</th>
+                <td>{{ entity.numcajaId }}</td>
+            </tr>
+            <tr>
+                <th>Numcorteid</th>
+                <td>{{ entity.numcorteId }}</td>
+            </tr>
+            <tr>
+                <th>Numcortepreliminarid</th>
+                <td>{{ entity.numcortepreliminarId }}</td>
+            </tr>
+            <tr>
+                <th>Numfolioid</th>
+                <td>{{ entity.numfolioId }}</td>
+            </tr>
+            <tr>
+                <th>Numconceptoid</th>
+                <td>{{ entity.numconceptoId }}</td>
+            </tr>
+            <tr>
+                <th>Numconceptogenerarid</th>
+                <td>{{ entity.numconceptogenerarId }}</td>
+            </tr>
+            <tr>
+                <th>Numempresaid</th>
+                <td>{{ entity.numempresaId }}</td>
+            </tr>
+            <tr>
+                <th>Numcentrocontrolid</th>
+                <td>{{ entity.numcentrocontrolId }}</td>
+            </tr>
+            <tr>
+                <th>Numtipoentidad</th>
+                <td>{{ entity.numtipoentidad }}</td>
+            </tr>
+            <tr>
+                <th>Numentidadid</th>
+                <td>{{ entity.numentidadId }}</td>
+            </tr>
+            <tr>
+                <th>Numproyectoid</th>
+                <td>{{ entity.numproyectoId }}</td>
+            </tr>
+            <tr>
+                <th>Numvendedor1id</th>
+                <td>{{ entity.numvendedor1Id }}</td>
+            </tr>
+            <tr>
+                <th>Numvendedor2id</th>
+                <td>{{ entity.numvendedor2Id }}</td>
+            </tr>
+            <tr>
+                <th>Numvendedor3id</th>
+                <td>{{ entity.numvendedor3Id }}</td>
+            </tr>
+            <tr>
+                <th>Numvendedor4id</th>
+                <td>{{ entity.numvendedor4Id }}</td>
+            </tr>
+            <tr>
+                <th>Numvendedor5id</th>
+                <td>{{ entity.numvendedor5Id }}</td>
+            </tr>
+            <tr>
+                <th>Numvendedor6id</th>
+                <td>{{ entity.numvendedor6Id }}</td>
+            </tr>
+            <tr>
+                <th>Numsolicitadoporid</th>
+                <td>{{ entity.numsolicitadoporId }}</td>
+            </tr>
+            <tr>
+                <th>Numautorizadoporid</th>
+                <td>{{ entity.numautorizadoporId }}</td>
+            </tr>
+            <tr>
+                <th>Numdepartamentoid</th>
+                <td>{{ entity.numdepartamentoId }}</td>
+            </tr>
+            <tr>
+                <th>Numdireccionentidadid</th>
+                <td>{{ entity.numdireccionentidadId }}</td>
+            </tr>
+            <tr>
+                <th>Numdireccionenvioid</th>
+                <td>{{ entity.numdireccionenvioId }}</td>
+            </tr>
+            <tr>
+                <th>Strordencomprapedido</th>
+                <td>{{ entity.strordencomprapedido }}</td>
+            </tr>
+            <tr>
+                <th>Strreferencia</th>
+                <td>{{ entity.strreferencia }}</td>
+            </tr>
+            <tr>
+                <th>Strdescripcion</th>
+                <td>{{ entity.strdescripcion }}</td>
+            </tr>
+            <tr>
+                <th>Strordenproduccion</th>
+                <td>{{ entity.strordenproduccion }}</td>
+            </tr>
+            <tr>
+                <th>Numordenproduccionid</th>
+                <td>{{ entity.numordenproduccionId }}</td>
+            </tr>
+            <tr>
+                <th>Numalmacenordenproduccionid</th>
+                <td>{{ entity.numalmacenordenproduccionId }}</td>
+            </tr>
+            <tr>
+                <th>Numoperacionestandarid</th>
+                <td>{{ entity.numoperacionestandarId }}</td>
+            </tr>
+            <tr>
+                <th>Nummesaregaloid</th>
+                <td>{{ entity.nummesaregaloId }}</td>
+            </tr>
+            <tr>
+                <th>Nummedioenvioid</th>
+                <td>{{ entity.nummedioenvioId }}</td>
+            </tr>
+            <tr>
+                <th>Strnoguia</th>
+                <td>{{ entity.strnoguia }}</td>
+            </tr>
+            <tr>
+                <th>Dteenviomercancia</th>
+                <td>{{ entity.dteenviomercancia|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Numdiasenvio</th>
+                <td>{{ entity.numdiasenvio }}</td>
+            </tr>
+            <tr>
+                <th>Numcajassurtidas</th>
+                <td>{{ entity.numcajassurtidas }}</td>
+            </tr>
+            <tr>
+                <th>Dteprimeraentrega</th>
+                <td>{{ entity.dteprimeraentrega|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Dteultimaentrega</th>
+                <td>{{ entity.dteultimaentrega|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Dteentregamercancia</th>
+                <td>{{ entity.dteentregamercancia|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Numtipopago</th>
+                <td>{{ entity.numtipopago }}</td>
+            </tr>
+            <tr>
+                <th>Numcondicionid</th>
+                <td>{{ entity.numcondicionId }}</td>
+            </tr>
+            <tr>
+                <th>Numdiarevisionpagoid</th>
+                <td>{{ entity.numdiarevisionpagoId }}</td>
+            </tr>
+            <tr>
+                <th>Numdiascredito</th>
+                <td>{{ entity.numdiascredito }}</td>
+            </tr>
+            <tr>
+                <th>Dterevision</th>
+                <td>{{ entity.dterevision|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Dtevencimiento</th>
+                <td>{{ entity.dtevencimiento|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Dtepromesarevision</th>
+                <td>{{ entity.dtepromesarevision|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Dtepromesapago</th>
+                <td>{{ entity.dtepromesapago|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Numdiasprontopago</th>
+                <td>{{ entity.numdiasprontopago }}</td>
+            </tr>
+            <tr>
+                <th>Dteprontopago</th>
+                <td>{{ entity.dteprontopago|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Numdescuentoprontopago</th>
+                <td>{{ entity.numdescuentoprontopago }}</td>
+            </tr>
+            <tr>
+                <th>Dtevigencia</th>
+                <td>{{ entity.dtevigencia|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Logvaloresporcentajes</th>
+                <td>{{ entity.logvaloresporcentajes }}</td>
+            </tr>
+            <tr>
+                <th>Nummonedaid</th>
+                <td>{{ entity.nummonedaId }}</td>
+            </tr>
+            <tr>
+                <th>Numtipocambio</th>
+                <td>{{ entity.numtipocambio }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalpeso</th>
+                <td>{{ entity.numtotalpeso }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalpartidasinventarios</th>
+                <td>{{ entity.numtotalpartidasinventarios }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalpartidascontables</th>
+                <td>{{ entity.numtotalpartidascontables }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalpartidaspagos</th>
+                <td>{{ entity.numtotalpartidaspagos }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalcantidad</th>
+                <td>{{ entity.numtotalcantidad }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalcantidadsurtida</th>
+                <td>{{ entity.numtotalcantidadsurtida }}</td>
+            </tr>
+            <tr>
+                <th>Numtotaldescuento1</th>
+                <td>{{ entity.numtotaldescuento1 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotaldescuento2</th>
+                <td>{{ entity.numtotaldescuento2 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotaldescuento3</th>
+                <td>{{ entity.numtotaldescuento3 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotaldescuento4</th>
+                <td>{{ entity.numtotaldescuento4 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotaldescuento5</th>
+                <td>{{ entity.numtotaldescuento5 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotaldescuento6</th>
+                <td>{{ entity.numtotaldescuento6 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalimpuesto1</th>
+                <td>{{ entity.numtotalimpuesto1 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalimpuesto2</th>
+                <td>{{ entity.numtotalimpuesto2 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalimpuesto3</th>
+                <td>{{ entity.numtotalimpuesto3 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalimpuesto4</th>
+                <td>{{ entity.numtotalimpuesto4 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalimpuesto5</th>
+                <td>{{ entity.numtotalimpuesto5 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalimpuesto6</th>
+                <td>{{ entity.numtotalimpuesto6 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalimpuestoretenido1</th>
+                <td>{{ entity.numtotalimpuestoretenido1 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalimpuestoretenido2</th>
+                <td>{{ entity.numtotalimpuestoretenido2 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalimpuestoretenido3</th>
+                <td>{{ entity.numtotalimpuestoretenido3 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalimpuestoretenido4</th>
+                <td>{{ entity.numtotalimpuestoretenido4 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalimpuestoretenido5</th>
+                <td>{{ entity.numtotalimpuestoretenido5 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalimpuestoretenido6</th>
+                <td>{{ entity.numtotalimpuestoretenido6 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalcomision1</th>
+                <td>{{ entity.numtotalcomision1 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalcomision2</th>
+                <td>{{ entity.numtotalcomision2 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalcomision3</th>
+                <td>{{ entity.numtotalcomision3 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalcomision4</th>
+                <td>{{ entity.numtotalcomision4 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalcomision5</th>
+                <td>{{ entity.numtotalcomision5 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalcomision6</th>
+                <td>{{ entity.numtotalcomision6 }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalprecioventa</th>
+                <td>{{ entity.numtotalprecioventa }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalcostocompra</th>
+                <td>{{ entity.numtotalcostocompra }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalcostoestandar</th>
+                <td>{{ entity.numtotalcostoestandar }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalcostopromedio</th>
+                <td>{{ entity.numtotalcostopromedio }}</td>
+            </tr>
+            <tr>
+                <th>Numtotal</th>
+                <td>{{ entity.numtotal }}</td>
+            </tr>
+            <tr>
+                <th>Numsaldo</th>
+                <td>{{ entity.numsaldo }}</td>
+            </tr>
+            <tr>
+                <th>Numredondeo</th>
+                <td>{{ entity.numredondeo }}</td>
+            </tr>
+            <tr>
+                <th>Numbenefactorredondeoid</th>
+                <td>{{ entity.numbenefactorredondeoId }}</td>
+            </tr>
+            <tr>
+                <th>Strmonederoky</th>
+                <td>{{ entity.strmonederoKy }}</td>
+            </tr>
+            <tr>
+                <th>Numsaldoanteriormonedero</th>
+                <td>{{ entity.numsaldoanteriormonedero }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalobtenidomonedero</th>
+                <td>{{ entity.numtotalobtenidomonedero }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalutilizadomonedero</th>
+                <td>{{ entity.numtotalutilizadomonedero }}</td>
+            </tr>
+            <tr>
+                <th>Numtipolenguajeimporte</th>
+                <td>{{ entity.numtipolenguajeimporte }}</td>
+            </tr>
+            <tr>
+                <th>Logretenerpago</th>
+                <td>{{ entity.logretenerpago }}</td>
+            </tr>
+            <tr>
+                <th>Logcontrolarsaldo</th>
+                <td>{{ entity.logcontrolarsaldo }}</td>
+            </tr>
+            <tr>
+                <th>Numtransaccioninventarioid</th>
+                <td>{{ entity.numtransaccioninventarioId }}</td>
+            </tr>
+            <tr>
+                <th>Numalmaceninventarioid</th>
+                <td>{{ entity.numalmaceninventarioId }}</td>
+            </tr>
+            <tr>
+                <th>Numtipotransaccioninventario</th>
+                <td>{{ entity.numtipotransaccioninventario }}</td>
+            </tr>
+            <tr>
+                <th>Numalmacentransitoid</th>
+                <td>{{ entity.numalmacentransitoId }}</td>
+            </tr>
+            <tr>
+                <th>Numtransaccionorigenid</th>
+                <td>{{ entity.numtransaccionorigenId }}</td>
+            </tr>
+            <tr>
+                <th>Numalmacenorigenid</th>
+                <td>{{ entity.numalmacenorigenId }}</td>
+            </tr>
+            <tr>
+                <th>Numtipotransaccionorigen</th>
+                <td>{{ entity.numtipotransaccionorigen }}</td>
+            </tr>
+            <tr>
+                <th>Numtiporeversionautomatica</th>
+                <td>{{ entity.numtiporeversionautomatica }}</td>
+            </tr>
+            <tr>
+                <th>Numtransaccionreversionid</th>
+                <td>{{ entity.numtransaccionreversionId }}</td>
+            </tr>
+            <tr>
+                <th>Numalmacenreversionid</th>
+                <td>{{ entity.numalmacenreversionId }}</td>
+            </tr>
+            <tr>
+                <th>Numtipotransaccionreversion</th>
+                <td>{{ entity.numtipotransaccionreversion }}</td>
+            </tr>
+            <tr>
+                <th>Numdocumentoid</th>
+                <td>{{ entity.numdocumentoId }}</td>
+            </tr>
+            <tr>
+                <th>Numtipomodulo</th>
+                <td>{{ entity.numtipomodulo }}</td>
+            </tr>
+            <tr>
+                <th>Numtipodocumento</th>
+                <td>{{ entity.numtipodocumento }}</td>
+            </tr>
+            <tr>
+                <th>Numtipocontabilizacion</th>
+                <td>{{ entity.numtipocontabilizacion }}</td>
+            </tr>
+            <tr>
+                <th>Numtipocuenta</th>
+                <td>{{ entity.numtipocuenta }}</td>
+            </tr>
+            <tr>
+                <th>Numafectainventario</th>
+                <td>{{ entity.numafectainventario }}</td>
+            </tr>
+            <tr>
+                <th>Numafectacuentapagar</th>
+                <td>{{ entity.numafectacuentapagar }}</td>
+            </tr>
+            <tr>
+                <th>Numafectacuentacobrar</th>
+                <td>{{ entity.numafectacuentacobrar }}</td>
+            </tr>
+            <tr>
+                <th>Numafectabanco</th>
+                <td>{{ entity.numafectabanco }}</td>
+            </tr>
+            <tr>
+                <th>Numafectacontabilidad</th>
+                <td>{{ entity.numafectacontabilidad }}</td>
+            </tr>
+            <tr>
+                <th>Numafectaproduccion</th>
+                <td>{{ entity.numafectaproduccion }}</td>
+            </tr>
+            <tr>
+                <th>Numtipoconciliacion</th>
+                <td>{{ entity.numtipoconciliacion }}</td>
+            </tr>
+            <tr>
+                <th>Numconciliacionid</th>
+                <td>{{ entity.numconciliacionId }}</td>
+            </tr>
+            <tr>
+                <th>Dteconciliacion</th>
+                <td>{{ entity.dteconciliacion|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Numcuentabancariaid</th>
+                <td>{{ entity.numcuentabancariaId }}</td>
+            </tr>
+            <tr>
+                <th>Strtarjeta</th>
+                <td>{{ entity.strtarjeta }}</td>
+            </tr>
+            <tr>
+                <th>Numformapagoid</th>
+                <td>{{ entity.numformapagoId }}</td>
+            </tr>
+            <tr>
+                <th>Numbancoid</th>
+                <td>{{ entity.numbancoId }}</td>
+            </tr>
+            <tr>
+                <th>Numporcentajecomision</th>
+                <td>{{ entity.numporcentajecomision }}</td>
+            </tr>
+            <tr>
+                <th>Numimportecomision</th>
+                <td>{{ entity.numimportecomision }}</td>
+            </tr>
+            <tr>
+                <th>Numimpuestocomisionid</th>
+                <td>{{ entity.numimpuestocomisionId }}</td>
+            </tr>
+            <tr>
+                <th>Numporcentajeimpuestocomision</th>
+                <td>{{ entity.numporcentajeimpuestocomision }}</td>
+            </tr>
+            <tr>
+                <th>Dterecuperacion</th>
+                <td>{{ entity.dterecuperacion|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Numimagenid</th>
+                <td>{{ entity.numimagenId }}</td>
+            </tr>
+            <tr>
+                <th>Numtipoimpresiondocumento</th>
+                <td>{{ entity.numtipoimpresiondocumento }}</td>
+            </tr>
+            <tr>
+                <th>Numtipoenviodocumento</th>
+                <td>{{ entity.numtipoenviodocumento }}</td>
+            </tr>
+            <tr>
+                <th>Numclasificacionid</th>
+                <td>{{ entity.numclasificacionId }}</td>
+            </tr>
+            <tr>
+                <th>Nummensajeid</th>
+                <td>{{ entity.nummensajeId }}</td>
+            </tr>
+            <tr>
+                <th>Memobservaciones</th>
+                <td>{{ entity.memobservaciones }}</td>
+            </tr>
+            <tr>
+                <th>Logobservacionesdetalle</th>
+                <td>{{ entity.logobservacionesdetalle }}</td>
+            </tr>
+            <tr>
+                <th>Numcreadoporid</th>
+                <td>{{ entity.numcreadoporId }}</td>
+            </tr>
+            <tr>
+                <th>Dtecreacion</th>
+                <td>{{ entity.dtecreacion|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Numactualizadoporid</th>
+                <td>{{ entity.numactualizadoporId }}</td>
+            </tr>
+            <tr>
+                <th>Dteactualizacion</th>
+                <td>{{ entity.dteactualizacion|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Logtransaccionocupada</th>
+                <td>{{ entity.logtransaccionocupada }}</td>
+            </tr>
+            <tr>
+                <th>Numtipoestadosurtido</th>
+                <td>{{ entity.numtipoestadosurtido }}</td>
+            </tr>
+            <tr>
+                <th>Numtipoestado</th>
+                <td>{{ entity.numtipoestado }}</td>
+            </tr>
+            <tr>
+                <th>Numestadocomunicacion</th>
+                <td>{{ entity.numestadocomunicacion }}</td>
+            </tr>
+            <tr>
+                <th>Numcuentabancariagenerarid</th>
+                <td>{{ entity.numcuentabancariagenerarId }}</td>
+            </tr>
+            <tr>
+                <th>Strpedimentoky</th>
+                <td>{{ entity.strpedimentoKy }}</td>
+            </tr>
+            <tr>
+                <th>Numtotalapoyomarca</th>
+                <td>{{ entity.numtotalapoyomarca }}</td>
+            </tr>
+            <tr>
+                <th>Numtransacciondigitalid</th>
+                <td>{{ entity.numtransacciondigitalId }}</td>
+            </tr>
+            <tr>
+                <th>Numalmacendigitalid</th>
+                <td>{{ entity.numalmacendigitalId }}</td>
+            </tr>
+            <tr>
+                <th>Numtipotransacciondigital</th>
+                <td>{{ entity.numtipotransacciondigital }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('transacciones') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('transacciones_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

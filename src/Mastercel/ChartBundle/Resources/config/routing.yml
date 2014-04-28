@@ -1,3 +1,7 @@
 mastercel_chart_homepage:
     pattern:  /hello/{name}
     defaults: { _controller: MastercelChartBundle:Default:index }
+
+mastercel_chart_transacciones:
+    resource: "@MastercelChartBundle/Resources/config/routing/transacciones.yml"
+    prefix:   /transacciones

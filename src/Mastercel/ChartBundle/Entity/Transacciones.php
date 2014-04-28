@@ -19,14 +19,12 @@ class Transacciones
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="NONE")
      */
-    private $numtransaccionId = '0';
+    private $id = '0';
 
     /**
      * @var integer
      *
      * @ORM\Column(name="NumAlmacen_id", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
      */
     private $numalmacenId = '0';
 
@@ -34,8 +32,6 @@ class Transacciones
      * @var integer
      *
      * @ORM\Column(name="NumTipoTransaccion", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
      */
     private $numtipotransaccion = '0';
 
@@ -1181,9 +1177,9 @@ class Transacciones
      * @param integer $numtransaccionId
      * @return Transacciones
      */
-    public function setNumtransaccionId($numtransaccionId)
+    public function setId($numtransaccionId)
     {
-        $this->numtransaccionId = $numtransaccionId;
+        $this->id = $numtransaccionId;
 
         return $this;
     }
@@ -1193,9 +1189,9 @@ class Transacciones
      *
      * @return integer 
      */
-    public function getNumtransaccionId()
+    public function getId()
     {
-        return $this->numtransaccionId;
+        return $this->id;
     }
 
     /**
@@ -4760,7 +4756,10 @@ class Transacciones
      */
     public function getLogtransaccionocupada()
     {
-        return $this->logtransaccionocupada;
+    	/*if( $this->logtransaccionocupada === 1 )
+        	return true;
+    	else*/
+    		return $this->logtransaccionocupada;//false;
     }
 
     /**

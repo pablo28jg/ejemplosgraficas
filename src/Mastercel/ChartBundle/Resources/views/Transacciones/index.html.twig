@@ -1,0 +1,367 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Transacciones list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Numalmacenid</th>
+                <th>Numtipotransaccion</th>
+                <th>Strtransaccion</th>
+                <th>Dtetransaccion</th>
+                <th>Tmetransaccion</th>
+                <th>Dtecancelacion</th>
+                <th>Tmecancelacion</th>
+                <th>Numejercicioid</th>
+                <th>Numperiodo</th>
+                <th>Numsemana</th>
+                <th>Numdiarioid</th>
+                <th>Numcajaid</th>
+                <th>Numcorteid</th>
+                <th>Numcortepreliminarid</th>
+                <th>Numfolioid</th>
+                <th>Numconceptoid</th>
+                <th>Numconceptogenerarid</th>
+                <th>Numempresaid</th>
+                <th>Numcentrocontrolid</th>
+                <th>Numtipoentidad</th>
+                <th>Numentidadid</th>
+                <th>Numproyectoid</th>
+                <th>Numvendedor1id</th>
+                <th>Numvendedor2id</th>
+                <th>Numvendedor3id</th>
+                <th>Numvendedor4id</th>
+                <th>Numvendedor5id</th>
+                <th>Numvendedor6id</th>
+                <th>Numsolicitadoporid</th>
+                <th>Numautorizadoporid</th>
+                <th>Numdepartamentoid</th>
+                <th>Numdireccionentidadid</th>
+                <th>Numdireccionenvioid</th>
+                <th>Strordencomprapedido</th>
+                <th>Strreferencia</th>
+                <th>Strdescripcion</th>
+                <th>Strordenproduccion</th>
+                <th>Numordenproduccionid</th>
+                <th>Numalmacenordenproduccionid</th>
+                <th>Numoperacionestandarid</th>
+                <th>Nummesaregaloid</th>
+                <th>Nummedioenvioid</th>
+                <th>Strnoguia</th>
+                <th>Dteenviomercancia</th>
+                <th>Numdiasenvio</th>
+                <th>Numcajassurtidas</th>
+                <th>Dteprimeraentrega</th>
+                <th>Dteultimaentrega</th>
+                <th>Dteentregamercancia</th>
+                <th>Numtipopago</th>
+                <th>Numcondicionid</th>
+                <th>Numdiarevisionpagoid</th>
+                <th>Numdiascredito</th>
+                <th>Dterevision</th>
+                <th>Dtevencimiento</th>
+                <th>Dtepromesarevision</th>
+                <th>Dtepromesapago</th>
+                <th>Numdiasprontopago</th>
+                <th>Dteprontopago</th>
+                <th>Numdescuentoprontopago</th>
+                <th>Dtevigencia</th>
+                <th>Logvaloresporcentajes</th>
+                <th>Nummonedaid</th>
+                <th>Numtipocambio</th>
+                <th>Numtotalpeso</th>
+                <th>Numtotalpartidasinventarios</th>
+                <th>Numtotalpartidascontables</th>
+                <th>Numtotalpartidaspagos</th>
+                <th>Numtotalcantidad</th>
+                <th>Numtotalcantidadsurtida</th>
+                <th>Numtotaldescuento1</th>
+                <th>Numtotaldescuento2</th>
+                <th>Numtotaldescuento3</th>
+                <th>Numtotaldescuento4</th>
+                <th>Numtotaldescuento5</th>
+                <th>Numtotaldescuento6</th>
+                <th>Numtotalimpuesto1</th>
+                <th>Numtotalimpuesto2</th>
+                <th>Numtotalimpuesto3</th>
+                <th>Numtotalimpuesto4</th>
+                <th>Numtotalimpuesto5</th>
+                <th>Numtotalimpuesto6</th>
+                <th>Numtotalimpuestoretenido1</th>
+                <th>Numtotalimpuestoretenido2</th>
+                <th>Numtotalimpuestoretenido3</th>
+                <th>Numtotalimpuestoretenido4</th>
+                <th>Numtotalimpuestoretenido5</th>
+                <th>Numtotalimpuestoretenido6</th>
+                <th>Numtotalcomision1</th>
+                <th>Numtotalcomision2</th>
+                <th>Numtotalcomision3</th>
+                <th>Numtotalcomision4</th>
+                <th>Numtotalcomision5</th>
+                <th>Numtotalcomision6</th>
+                <th>Numtotalprecioventa</th>
+                <th>Numtotalcostocompra</th>
+                <th>Numtotalcostoestandar</th>
+                <th>Numtotalcostopromedio</th>
+                <th>Numtotal</th>
+                <th>Numsaldo</th>
+                <th>Numredondeo</th>
+                <th>Numbenefactorredondeoid</th>
+                <th>Strmonederoky</th>
+                <th>Numsaldoanteriormonedero</th>
+                <th>Numtotalobtenidomonedero</th>
+                <th>Numtotalutilizadomonedero</th>
+                <th>Numtipolenguajeimporte</th>
+                <th>Logretenerpago</th>
+                <th>Logcontrolarsaldo</th>
+                <th>Numtransaccioninventarioid</th>
+                <th>Numalmaceninventarioid</th>
+                <th>Numtipotransaccioninventario</th>
+                <th>Numalmacentransitoid</th>
+                <th>Numtransaccionorigenid</th>
+                <th>Numalmacenorigenid</th>
+                <th>Numtipotransaccionorigen</th>
+                <th>Numtiporeversionautomatica</th>
+                <th>Numtransaccionreversionid</th>
+                <th>Numalmacenreversionid</th>
+                <th>Numtipotransaccionreversion</th>
+                <th>Numdocumentoid</th>
+                <th>Numtipomodulo</th>
+                <th>Numtipodocumento</th>
+                <th>Numtipocontabilizacion</th>
+                <th>Numtipocuenta</th>
+                <th>Numafectainventario</th>
+                <th>Numafectacuentapagar</th>
+                <th>Numafectacuentacobrar</th>
+                <th>Numafectabanco</th>
+                <th>Numafectacontabilidad</th>
+                <th>Numafectaproduccion</th>
+                <th>Numtipoconciliacion</th>
+                <th>Numconciliacionid</th>
+                <th>Dteconciliacion</th>
+                <th>Numcuentabancariaid</th>
+                <th>Strtarjeta</th>
+                <th>Numformapagoid</th>
+                <th>Numbancoid</th>
+                <th>Numporcentajecomision</th>
+                <th>Numimportecomision</th>
+                <th>Numimpuestocomisionid</th>
+                <th>Numporcentajeimpuestocomision</th>
+                <th>Dterecuperacion</th>
+                <th>Numimagenid</th>
+                <th>Numtipoimpresiondocumento</th>
+                <th>Numtipoenviodocumento</th>
+                <th>Numclasificacionid</th>
+                <th>Nummensajeid</th>
+                <th>Memobservaciones</th>
+                <th>Logobservacionesdetalle</th>
+                <th>Numcreadoporid</th>
+                <th>Dtecreacion</th>
+                <th>Numactualizadoporid</th>
+                <th>Dteactualizacion</th>
+                <th>Logtransaccionocupada</th>
+                <th>Numtipoestadosurtido</th>
+                <th>Numtipoestado</th>
+                <th>Numestadocomunicacion</th>
+                <th>Numcuentabancariagenerarid</th>
+                <th>Strpedimentoky</th>
+                <th>Numtotalapoyomarca</th>
+                <th>Numtransacciondigitalid</th>
+                <th>Numalmacendigitalid</th>
+                <th>Numtipotransacciondigital</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('transacciones_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.numalmacenId }}</td>
+                <td>{{ entity.numtipotransaccion }}</td>
+                <td>{{ entity.strtransaccion }}</td>
+                <td>{% if entity.dtetransaccion %}{{ entity.dtetransaccion|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.tmetransaccion %}{{ entity.tmetransaccion|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.dtecancelacion %}{{ entity.dtecancelacion|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.tmecancelacion %}{{ entity.tmecancelacion|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.numejercicioId }}</td>
+                <td>{{ entity.numperiodo }}</td>
+                <td>{{ entity.numsemana }}</td>
+                <td>{{ entity.numdiarioId }}</td>
+                <td>{{ entity.numcajaId }}</td>
+                <td>{{ entity.numcorteId }}</td>
+                <td>{{ entity.numcortepreliminarId }}</td>
+                <td>{{ entity.numfolioId }}</td>
+                <td>{{ entity.numconceptoId }}</td>
+                <td>{{ entity.numconceptogenerarId }}</td>
+                <td>{{ entity.numempresaId }}</td>
+                <td>{{ entity.numcentrocontrolId }}</td>
+                <td>{{ entity.numtipoentidad }}</td>
+                <td>{{ entity.numentidadId }}</td>
+                <td>{{ entity.numproyectoId }}</td>
+                <td>{{ entity.numvendedor1Id }}</td>
+                <td>{{ entity.numvendedor2Id }}</td>
+                <td>{{ entity.numvendedor3Id }}</td>
+                <td>{{ entity.numvendedor4Id }}</td>
+                <td>{{ entity.numvendedor5Id }}</td>
+                <td>{{ entity.numvendedor6Id }}</td>
+                <td>{{ entity.numsolicitadoporId }}</td>
+                <td>{{ entity.numautorizadoporId }}</td>
+                <td>{{ entity.numdepartamentoId }}</td>
+                <td>{{ entity.numdireccionentidadId }}</td>
+                <td>{{ entity.numdireccionenvioId }}</td>
+                <td>{{ entity.strordencomprapedido }}</td>
+                <td>{{ entity.strreferencia }}</td>
+                <td>{{ entity.strdescripcion }}</td>
+                <td>{{ entity.strordenproduccion }}</td>
+                <td>{{ entity.numordenproduccionId }}</td>
+                <td>{{ entity.numalmacenordenproduccionId }}</td>
+                <td>{{ entity.numoperacionestandarId }}</td>
+                <td>{{ entity.nummesaregaloId }}</td>
+                <td>{{ entity.nummedioenvioId }}</td>
+                <td>{{ entity.strnoguia }}</td>
+                <td>{% if entity.dteenviomercancia %}{{ entity.dteenviomercancia|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.numdiasenvio }}</td>
+                <td>{{ entity.numcajassurtidas }}</td>
+                <td>{% if entity.dteprimeraentrega %}{{ entity.dteprimeraentrega|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.dteultimaentrega %}{{ entity.dteultimaentrega|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.dteentregamercancia %}{{ entity.dteentregamercancia|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.numtipopago }}</td>
+                <td>{{ entity.numcondicionId }}</td>
+                <td>{{ entity.numdiarevisionpagoId }}</td>
+                <td>{{ entity.numdiascredito }}</td>
+                <td>{% if entity.dterevision %}{{ entity.dterevision|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.dtevencimiento %}{{ entity.dtevencimiento|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.dtepromesarevision %}{{ entity.dtepromesarevision|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.dtepromesapago %}{{ entity.dtepromesapago|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.numdiasprontopago }}</td>
+                <td>{% if entity.dteprontopago %}{{ entity.dteprontopago|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.numdescuentoprontopago }}</td>
+                <td>{% if entity.dtevigencia %}{{ entity.dtevigencia|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.logvaloresporcentajes }}</td>
+                <td>{{ entity.nummonedaId }}</td>
+                <td>{{ entity.numtipocambio }}</td>
+                <td>{{ entity.numtotalpeso }}</td>
+                <td>{{ entity.numtotalpartidasinventarios }}</td>
+                <td>{{ entity.numtotalpartidascontables }}</td>
+                <td>{{ entity.numtotalpartidaspagos }}</td>
+                <td>{{ entity.numtotalcantidad }}</td>
+                <td>{{ entity.numtotalcantidadsurtida }}</td>
+                <td>{{ entity.numtotaldescuento1 }}</td>
+                <td>{{ entity.numtotaldescuento2 }}</td>
+                <td>{{ entity.numtotaldescuento3 }}</td>
+                <td>{{ entity.numtotaldescuento4 }}</td>
+                <td>{{ entity.numtotaldescuento5 }}</td>
+                <td>{{ entity.numtotaldescuento6 }}</td>
+                <td>{{ entity.numtotalimpuesto1 }}</td>
+                <td>{{ entity.numtotalimpuesto2 }}</td>
+                <td>{{ entity.numtotalimpuesto3 }}</td>
+                <td>{{ entity.numtotalimpuesto4 }}</td>
+                <td>{{ entity.numtotalimpuesto5 }}</td>
+                <td>{{ entity.numtotalimpuesto6 }}</td>
+                <td>{{ entity.numtotalimpuestoretenido1 }}</td>
+                <td>{{ entity.numtotalimpuestoretenido2 }}</td>
+                <td>{{ entity.numtotalimpuestoretenido3 }}</td>
+                <td>{{ entity.numtotalimpuestoretenido4 }}</td>
+                <td>{{ entity.numtotalimpuestoretenido5 }}</td>
+                <td>{{ entity.numtotalimpuestoretenido6 }}</td>
+                <td>{{ entity.numtotalcomision1 }}</td>
+                <td>{{ entity.numtotalcomision2 }}</td>
+                <td>{{ entity.numtotalcomision3 }}</td>
+                <td>{{ entity.numtotalcomision4 }}</td>
+                <td>{{ entity.numtotalcomision5 }}</td>
+                <td>{{ entity.numtotalcomision6 }}</td>
+                <td>{{ entity.numtotalprecioventa }}</td>
+                <td>{{ entity.numtotalcostocompra }}</td>
+                <td>{{ entity.numtotalcostoestandar }}</td>
+                <td>{{ entity.numtotalcostopromedio }}</td>
+                <td>{{ entity.numtotal }}</td>
+                <td>{{ entity.numsaldo }}</td>
+                <td>{{ entity.numredondeo }}</td>
+                <td>{{ entity.numbenefactorredondeoId }}</td>
+                <td>{{ entity.strmonederoKy }}</td>
+                <td>{{ entity.numsaldoanteriormonedero }}</td>
+                <td>{{ entity.numtotalobtenidomonedero }}</td>
+                <td>{{ entity.numtotalutilizadomonedero }}</td>
+                <td>{{ entity.numtipolenguajeimporte }}</td>
+                <td>{{ entity.logretenerpago }}</td>
+                <td>{{ entity.logcontrolarsaldo }}</td>
+                <td>{{ entity.numtransaccioninventarioId }}</td>
+                <td>{{ entity.numalmaceninventarioId }}</td>
+                <td>{{ entity.numtipotransaccioninventario }}</td>
+                <td>{{ entity.numalmacentransitoId }}</td>
+                <td>{{ entity.numtransaccionorigenId }}</td>
+                <td>{{ entity.numalmacenorigenId }}</td>
+                <td>{{ entity.numtipotransaccionorigen }}</td>
+                <td>{{ entity.numtiporeversionautomatica }}</td>
+                <td>{{ entity.numtransaccionreversionId }}</td>
+                <td>{{ entity.numalmacenreversionId }}</td>
+                <td>{{ entity.numtipotransaccionreversion }}</td>
+                <td>{{ entity.numdocumentoId }}</td>
+                <td>{{ entity.numtipomodulo }}</td>
+                <td>{{ entity.numtipodocumento }}</td>
+                <td>{{ entity.numtipocontabilizacion }}</td>
+                <td>{{ entity.numtipocuenta }}</td>
+                <td>{{ entity.numafectainventario }}</td>
+                <td>{{ entity.numafectacuentapagar }}</td>
+                <td>{{ entity.numafectacuentacobrar }}</td>
+                <td>{{ entity.numafectabanco }}</td>
+                <td>{{ entity.numafectacontabilidad }}</td>
+                <td>{{ entity.numafectaproduccion }}</td>
+                <td>{{ entity.numtipoconciliacion }}</td>
+                <td>{{ entity.numconciliacionId }}</td>
+                <td>{% if entity.dteconciliacion %}{{ entity.dteconciliacion|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.numcuentabancariaId }}</td>
+                <td>{{ entity.strtarjeta }}</td>
+                <td>{{ entity.numformapagoId }}</td>
+                <td>{{ entity.numbancoId }}</td>
+                <td>{{ entity.numporcentajecomision }}</td>
+                <td>{{ entity.numimportecomision }}</td>
+                <td>{{ entity.numimpuestocomisionId }}</td>
+                <td>{{ entity.numporcentajeimpuestocomision }}</td>
+                <td>{% if entity.dterecuperacion %}{{ entity.dterecuperacion|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.numimagenId }}</td>
+                <td>{{ entity.numtipoimpresiondocumento }}</td>
+                <td>{{ entity.numtipoenviodocumento }}</td>
+                <td>{{ entity.numclasificacionId }}</td>
+                <td>{{ entity.nummensajeId }}</td>
+                <td>{{ entity.memobservaciones }}</td>
+                <td>{{ entity.logobservacionesdetalle }}</td>
+                <td>{{ entity.numcreadoporId }}</td>
+                <td>{% if entity.dtecreacion %}{{ entity.dtecreacion|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.numactualizadoporId }}</td>
+                <td>{% if entity.dteactualizacion %}{{ entity.dteactualizacion|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ entity.logtransaccionocupada }}</td>
+                <td>{{ entity.numtipoestadosurtido }}</td>
+                <td>{{ entity.numtipoestado }}</td>
+                <td>{{ entity.numestadocomunicacion }}</td>
+                <td>{{ entity.numcuentabancariagenerarId }}</td>
+                <td>{{ entity.strpedimentoKy }}</td>
+                <td>{{ entity.numtotalapoyomarca }}</td>
+                <td>{{ entity.numtransacciondigitalId }}</td>
+                <td>{{ entity.numalmacendigitalId }}</td>
+                <td>{{ entity.numtipotransacciondigital }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('transacciones_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('transacciones_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('transacciones_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}
